@@ -6,10 +6,15 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXFileReference section */
+		CCDAB3422785FEBD00965F2C /* 01. Expressions, Variables & Constants.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "01. Expressions, Variables & Constants.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		CCDAB33B2785FE9400965F2C = {
 			isa = PBXGroup;
 			children = (
+				CCDAB3422785FEBD00965F2C /* 01. Expressions, Variables & Constants.playground */,
 			);
 			sourceTree = "<group>";
 		};
