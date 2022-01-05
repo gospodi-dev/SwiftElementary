@@ -1,8 +1,6 @@
 import UIKit
 
-//var greeting = "Hello, Swift!"
-
-//CODE COMMENTS
+// Part 1. CODE COMMENTS
 
 // ПЕРВЫЙ СПОСОБ. Однострочный комментарий (single-line comment)
 
@@ -20,7 +18,7 @@ import UIKit
    many...
    many lines. */
 
-// Пример многострочного комментария с вложенным комментарием
+// Пример многострочного комментария с вложенным комментарием.
 /*
  This is a comment.
  
@@ -31,3 +29,10 @@ import UIKit
  
  Back to the first
  */
+
+/* Вложенные многострочные комментарии позволяют быстро и легко комментировать большие блоки кода, даже если код уже содержит многострочные комментарии. */
+
+// Part 2. Printing out (Функция print)
+
+print("Hello, Swift !")
+/* public func print(_ items: Any..., separator: String = " ", terminator: String = "\n") */
