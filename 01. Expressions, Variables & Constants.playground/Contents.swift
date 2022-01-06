@@ -38,7 +38,18 @@ print("Hello, Swift !")
 /* public func print(_ items: Any..., separator: String = " ", terminator: String = "\n") */
 
 // Part 3. Simple operations (Простые операции)
+
 2 + 6
 10 - 2
 2 * 4
 24 / 3
+2+6
+// 2 +6
+// error: consecutive statements on a line must be separated by ';' (Последовательные операторы в строке должны быть разделены)
+
+// Part 4. Decimal numbers (Десятичные числа)
+
+27 / 7
+22.0 / 7.0
+
+
