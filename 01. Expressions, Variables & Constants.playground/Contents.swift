@@ -36,3 +36,9 @@ import UIKit
 
 print("Hello, Swift !")
 /* public func print(_ items: Any..., separator: String = " ", terminator: String = "\n") */
+
+// Part 3. Simple operations (Простые операции)
+2 + 6
+10 - 2
+2 * 4
+24 / 3
