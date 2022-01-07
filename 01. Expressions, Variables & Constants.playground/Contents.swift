@@ -135,6 +135,29 @@ counter *= 3 // same as counter = counter * 3
 counter /= 2 // same as counter = counter / 2
 // counter = 15
 
+// МИНИ-УПРАЖНЕНИЯ (Mini-exercises)
+
+// Exercise 1
+let myAge: Int = 39 // 39
+
+// Exercise 2
+var averageAge: Double = 39 // 39
+averageAge = (averageAge + 30) / 2 // 34.5
+
+// Exercise 3
+let testNumber: Int = 24 // 24
+let evenOdd: Int = testNumber % 2 // 0
+// «evenOdd» равно 0, когда «testNumber» четное. «evenOdd» равно 1, когда «testNumber» нечетное.
+
+// Exercise 4
+var answer = 0 // 0
+answer += 1 // 1
+answer += 10 // 11
+answer *= 10 // 110
+answer >>= 3 // 13
+
+print(answer)
+
 
 
 
