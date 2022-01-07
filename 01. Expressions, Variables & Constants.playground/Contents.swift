@@ -116,3 +116,25 @@ variableNumber = 1_000_000 // 1000000
 // Использование значимых имен (Using meaningful names)
 
 var 🐶💩: Int = -1 // -1
+
+// PART 10. Increment and decrement (Увеличение и уменьшение)
+
+//var counter: Int = 0
+//counter += 1
+//// counter = 1
+//counter -= 1
+//// counter = 0
+
+var counter: Int = 0 // 0
+counter = counter + 1 // 1
+counter = counter - 1 // 0
+
+counter = 10
+counter *= 3 // same as counter = counter * 3
+// counter = 30
+counter /= 2 // same as counter = counter / 2
+// counter = 15
+
+
+
+
