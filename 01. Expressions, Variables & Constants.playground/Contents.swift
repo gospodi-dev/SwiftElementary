@@ -1,6 +1,6 @@
 import UIKit
 
-// Part 1. CODE COMMENTS
+// PART 1. CODE COMMENTS
 
 // ПЕРВЫЙ СПОСОБ. Однострочный комментарий (single-line comment)
 
@@ -32,12 +32,12 @@ import UIKit
 
 /* Вложенные многострочные комментарии позволяют быстро и легко комментировать большие блоки кода, даже если код уже содержит многострочные комментарии. */
 
-// Part 2. Printing out (Функция print)
+// PART 2. Printing out (Функция print)
 
 print("Hello, Swift !")
 /* public func print(_ items: Any..., separator: String = " ", terminator: String = "\n") */
 
-// Part 3. Simple operations (Простые операции)
+// PART 3. Simple operations (Простые операции)
 
 2 + 6 // 8
 10 - 2 // 8
@@ -47,12 +47,12 @@ print("Hello, Swift !")
 // 2 +6
 // error: consecutive statements on a line must be separated by ';' (Последовательные операторы в строке должны быть разделены)
 
-// Part 4. Decimal numbers (Десятичные числа)
+// PART 4. Decimal numbers (Десятичные числа)
 
 27 / 7 // 3
 22.0 / 7.0 // 3.142857142857143
 
-// Part 5. The remainder operation (Оператор остатка)
+// PART 5. The remainder operation (Оператор остатка)
 
 28 % 10 // 8
 (28.0).truncatingRemainder(dividingBy: 10.0) // 8
@@ -62,7 +62,7 @@ print("Hello, Swift !")
 -9 % 4 // -1
 // 9 = (4 * 2) + -1
 
-// Part 6. Shift operations (Операторы сдвига)
+// PART 6. Shift operations (Операторы сдвига)
 
 1 << 3 // 8
 32 >> 2 // 8
@@ -71,11 +71,26 @@ print("Hello, Swift !")
 
 // Точно так же сдвиг вправо на `единицу` - это то же самое, что деление на `два`, сдвиг вправо на `два` - то же самое, что и деление на `четыре`, и так далее.
 
-// Part 7. Order of operations (Порядок действий)
+// PART 7. Order of operations (Порядок действий)
 
 ((8000 / (5 * 10)) - 32) >> (29 % 5) // 8
 350 / 5 + 2 // 72
 350 / (5 + 2) // 50
 
+// PART 8. Math functions (Математические функции)
+
+sin(45 * Double.pi / 180)
+// 0.7071067811865475
+cos(135 * Double.pi / 180)
+// -0.7071067811865475
+(2.0).squareRoot() // вычислить квадратный корень
+// 1.414213562373095
+
+max(5, 10) // 10
+min(-5, -10) // -10
+// вычисляют максимум и минимум двух чисел соответственно
+
+max((2.0).squareRoot(), Double.pi / 2)
+// 1.570796326794897
 
 
