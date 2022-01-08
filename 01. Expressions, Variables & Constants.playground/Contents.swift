@@ -1,3 +1,4 @@
+import Foundation
 import UIKit
 
 // PART 1. CODE COMMENTS
@@ -217,4 +218,9 @@ let power: Double = voltage * current // 372.654
 // Задача 7:  Электрическое сопротивление (Electrical resistance)
 
 let resistance: Double = power / (current * current) // 1.561165048543689
+
+// Задача 8: Случайное целое число (Random integer)
+
+let randomNumber = arc4random()
+let diceRoll = 1 + randomNumber % 6
 
