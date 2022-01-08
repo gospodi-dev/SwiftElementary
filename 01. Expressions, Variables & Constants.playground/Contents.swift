@@ -224,3 +224,10 @@ let resistance: Double = power / (current * current) // 1.561165048543689
 let randomNumber = arc4random()
 let diceRoll = 1 + randomNumber % 6
 
+// Задача 9: Квадратные уравнения (Quadratic equations)
+
+let a: Double = 2.0
+let b: Double = 3.0
+let c: Double = 1.0
+let root1: Double = (-b + (b*b - 4*a*c).squareRoot()) / (2*a) // -0.5
+let root2: Double = (-b - (b*b - 4*a*c).squareRoot()) / (2*a) // -1
