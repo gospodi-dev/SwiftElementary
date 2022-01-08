@@ -213,3 +213,8 @@ print(averageRating) // 39
 let voltage: Double = 24.12
 let current: Double = 15.45
 let power: Double = voltage * current // 372.654
+
+// Задача 7:  Электрическое сопротивление (Electrical resistance)
+
+let resistance: Double = power / (current * current) // 1.561165048543689
+
