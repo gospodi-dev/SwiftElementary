@@ -135,7 +135,7 @@ counter *= 3 // same as counter = counter * 3
 counter /= 2 // same as counter = counter / 2
 // counter = 15
 
-/*
+
 // МИНИ-УПРАЖНЕНИЯ (Mini-exercises)
 
 // Exercise 1
@@ -159,7 +159,7 @@ answer >>= 3 // 13
 
 print(answer)
 
-*/
+
 // Challenges
 
 // Задача 1: Переменные (Variables)
