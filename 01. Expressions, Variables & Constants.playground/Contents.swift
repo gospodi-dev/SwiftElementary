@@ -169,4 +169,10 @@ let myAge: Int = 39
 var dogs: Int = 5
 dogs += 1
 
+// Задача 2: Скомпилировать (Make it compile)
+
+var age: Int = 16 // используем var для определения переменной
+print(age)
+age = 30
+print(age)
 
