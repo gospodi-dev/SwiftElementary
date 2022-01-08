@@ -167,7 +167,7 @@ print(answer)
 
 let myAge: Int = 39
 var dogs: Int = 5
-dogs += 1
+dogs += 1 // 6
 
 // Задача 2: Скомпилировать (Make it compile)
 
@@ -176,3 +176,14 @@ print(age)
 age = 30
 print(age)
 
+// Задача 3: Вычислить ответ (Compute the answer)
+
+let x: Int = 46
+let y: Int = 10
+
+// 3.1
+let answer1: Int = (x * 100) + y // 4610
+// 3.2
+let answer2: Int = (x * 100) + (y * 100) // 5600
+// 3.3
+let answer3: Int = (x * 100) + (y / 10) // 4601
