@@ -135,6 +135,7 @@ counter *= 3 // same as counter = counter * 3
 counter /= 2 // same as counter = counter / 2
 // counter = 15
 
+/*
 // МИНИ-УПРАЖНЕНИЯ (Mini-exercises)
 
 // Exercise 1
@@ -158,6 +159,14 @@ answer >>= 3 // 13
 
 print(answer)
 
+*/
+// Challenges
 
+// Задача 1: Переменные (Variables)
+/* Объявите константу Int,  называемую myAge,  и установите ее равной вашему возрасту. Также объявите Int переменную с именем dogs и установите ее равной количеству ваших собак. Затем представьте, что вы купили нового щенка и увеличили значение dogs переменной на единицу.*/
+
+let myAge: Int = 39
+var dogs: Int = 5
+dogs += 1
 
 
