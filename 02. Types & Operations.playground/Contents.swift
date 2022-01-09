@@ -40,5 +40,42 @@ let characterDog: Character = "🐶"
 
 let stringDog = "Dog" // Inferred to be of type String (Предполагается, что он имеет тип String)
 
+// Конкатенация (Concatenation)
+
+var message = "Hello" + " my name is "
+let name = "Matt"
+message += name // "Hello my name is Matt"
+
+//let exclamationMark: Character = "!"
+//message += String(exclamationMark) // "Hello my name is Matt!"
+
+let string1 = "hello"
+let string2 = " there"
+var welcome = string1 + string2 // "hello there"
+
+let exclamationMark: Character = "!"
+welcome.append(exclamationMark) // "hello there!"
+
+let badStart = """
+one
+two
+"""
+
+let end = """
+three
+"""
+print(badStart + end)
+// one
+// twothree
+
+let goodStart = """
+one
+two
+
+"""
+print(goodStart + end)
+// one
+// two
+// three
 
 
