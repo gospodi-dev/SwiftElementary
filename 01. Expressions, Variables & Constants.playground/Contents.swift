@@ -231,3 +231,5 @@ let b: Double = 3.0
 let c: Double = 1.0
 let root1: Double = (-b + (b*b - 4*a*c).squareRoot()) / (2*a) // -0.5
 let root2: Double = (-b - (b*b - 4*a*c).squareRoot()) / (2*a) // -1
+
+

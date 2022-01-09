@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		CC24BA63278B1AB300AB20F4 /* 02. Types & Operations.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "02. Types & Operations.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCDAB3422785FEBD00965F2C /* 01. Expressions, Variables & Constants.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "01. Expressions, Variables & Constants.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -15,6 +16,7 @@
 			isa = PBXGroup;
 			children = (
 				CCDAB3422785FEBD00965F2C /* 01. Expressions, Variables & Constants.playground */,
+				CC24BA63278B1AB300AB20F4 /* 02. Types & Operations.playground */,
 			);
 			sourceTree = "<group>";
 		};
