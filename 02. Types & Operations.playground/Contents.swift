@@ -32,4 +32,13 @@ let avg1 = (age1 + age2) / 2 // 31
 let avg2 = (Double(age1) + Double(age2)) / 2 // 31.5
 // Первый операнд / теперь является двойным. Из-за этого 2 также считается двойным, и результат правильный.
 
+// Part 2. Strings (Строки)
+
+// Символы и строки (Characters and strings)
+let characterA: Character = "a"
+let characterDog: Character = "🐶"
+
+let stringDog = "Dog" // Inferred to be of type String (Предполагается, что он имеет тип String)
+
+
 
