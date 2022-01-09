@@ -49,6 +49,18 @@ message += name // "Hello my name is Matt"
 let exclamationMark: Character = "!"
 message += String(exclamationMark) // "Hello my name is Matt!"
 
+// 2.2. Интерполяция (Interpolation)
+
+message = "Hello my name is \(name)!" // "Hello my name is Matt!"
+
+let oneThird = 1.0 / 3.0 // 0.3333333333333333
+let oneThirdLongString = "One third is \(oneThird) as a decimal." // "One third is 0.3333333333333333 as a decimal." (Одна треть составляет 0,3333333333333333 в десятичном виде.)
+
+let multiplier = 3
+let messages = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)" // "3 times 2.5 is 7.5"
+
+// 2.3. Многострочные строки (Multi-line strings)
+
 /*
 let string1 = "hello"
 let string2 = " there"
@@ -80,12 +92,16 @@ print(goodStart + end)
 // three
 */
 
-// 2.2. Интерполяция (Interpolation)
-
-message = "Hello my name is \(name)!" // "Hello my name is Matt!"
-
-let oneThird = 1.0 / 3.0 // 0.3333333333333333
-let oneThirdLongString = "One third is \(oneThird) as a decimal." // "One third is 0.3333333333333333 as a decimal." (Одна треть составляет 0,3333333333333333 в десятичном виде.)
-
-let multiplier = 3
-let messages = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)" // "3 times 2.5 is 7.5"
+let bigString = """
+  You can have a string
+  that contains multiple
+  lines
+  by
+  doing this.
+  """
+print(bigString)
+//You can have a string
+//that contains multiple
+//lines
+//by
+//doing this.
