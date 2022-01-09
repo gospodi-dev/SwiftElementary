@@ -21,3 +21,13 @@ let wantADouble = 3
 //let actuallyDouble: Double = 3
 let actuallyDouble = 3 as Double
 
+// TYPES. Мини-упражнения (Mini-exercises)
+
+let age1 = 42
+let age2 = 21
+
+let avg1 = (age1 + age2) / 2 // 31
+// Оба операнда / являются целыми числами, поэтому операция представляет собой целочисленное деление, а результат усекается.
+
+let avg2 = (Double(age1) + Double(age2)) / 2 // 31.5
+// Первый операнд / теперь является двойным. Из-за этого 2 также считается двойным, и результат правильный.
