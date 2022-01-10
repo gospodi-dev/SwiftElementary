@@ -114,3 +114,38 @@ let lastName: String = "Piccalo"
 let fullName = firstName + " " + lastName // Serg Piccalo
 let myDetails = "Hello, my name is \(fullName)." // "Hello, my name is Serg Piccalo."
 
+// Part 3. Tuples (Кортежи)
+
+// let coordinates: (Int, Int) = (2, 3)
+let coordinates = (2, 3)
+let coordinatesDouble = (2.1, 3.5)
+// Inferred to be of type (Double, Double) (Предположительно относится к типу ... )
+
+let coordinatesMixed = (2.1, 3)
+// Inferred to be of type (Double, Int)
+
+// Получаем доступ к данным в кортеже
+let x1 = coordinates.0 // 2
+let y1 = coordinates.1 // 3
+
+let coordinatesNamed = (x: 2, y: 3) // Inferred to be of type (x: Int, y: Int)
+
+// доступ к части кортежа по имени
+let x2 = coordinatesNamed.x
+let y2 = coordinatesNamed.y
+
+// сокращенный синтаксис доступа к нескольким частям кортежа
+let coordinates3D = (x: 2, y: 3, z: 1)
+let (x3, y3, z3) = coordinates3D
+// код выше эквивалентен следующему
+//let x3 = coordinates3D.x
+//let y3 = coordinates3D.y
+//let z3 = coordinates3D.z
+
+// синтаксис игнорирования определенного элемента кортежа
+let (x4, y4, _) = coordinates3D
+
+
+
+
+
