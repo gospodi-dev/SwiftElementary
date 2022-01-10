@@ -154,3 +154,10 @@ let (_, day, _, averageTemperature) = temperature
 temperature.averageTemperature = 21.2
 
 
+// Part 4. Псевдонимы типов (Type aliases)
+typealias Animal = String
+let myPet: Animal = "Dog"
+
+typealias Coordinates = (Int, Int)
+let xy: Coordinates = (2, 4)
+
