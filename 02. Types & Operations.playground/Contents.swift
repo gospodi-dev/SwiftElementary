@@ -105,3 +105,12 @@ print(bigString)
 //lines
 //by
 //doing this.
+
+
+// STRINGS. Мини-упражнения (Mini-exercises)
+
+let firstName: String = "Serg"
+let lastName: String = "Piccalo"
+let fullName = firstName + " " + lastName // Serg Piccalo
+let myDetails = "Hello, my name is \(fullName)." // "Hello, my name is Serg Piccalo."
+
