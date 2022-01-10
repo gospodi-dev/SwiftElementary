@@ -145,7 +145,12 @@ let (x3, y3, z3) = coordinates3D
 // синтаксис игнорирования определенного элемента кортежа
 let (x4, y4, _) = coordinates3D
 
+// TUPLES. Мини-упражнения (Mini-exercises)
 
-
+// let temperature = (10, 01, 2022, 34.5)
+// let temperature = (month: 10, day: 01, year: 2022, averageTemperature: 34.5)
+var temperature = (month: 10, day: 01, year: 2022, averageTemperature: 34.5)
+let (_, day, _, averageTemperature) = temperature
+temperature.averageTemperature = 21.2
 
 
