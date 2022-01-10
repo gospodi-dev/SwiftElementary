@@ -161,3 +161,65 @@ let myPet: Animal = "Dog"
 typealias Coordinates = (Int, Int)
 let xy: Coordinates = (2, 4)
 
+// Challenges
+
+// Задача 1: Kоординаты (Coordinates)
+
+// let coordinates = (2, 3)
+
+// Задача 2: Именованная координата (Named coordinate)
+
+let namedCoordinate = (row: 5, column: 5)
+
+// Задача 3: Какие из них действительны? (Which are valid?)
+
+// let character: Character = "Dog" // ERROR
+let character: Character = "🐶" // VALID
+let string: String = "Dog" // VALID
+// let string: String = "🐶" // VALID
+
+// Задача 4. Компилируется ли он? (Does it compile?)
+
+//let tuple = (day: 15, month: 8, year: 2022)
+//let day = tuple.Day // error: value of tuple type '(day: Int, month: Int, year: Int)' has no member 'Day'
+// Invalid because it should be 'day' instead of 'Day' (Неверно, так как должно быть "день" вместо "День")
+
+// Задача 5: Найдите ошибку (Find the error)
+
+//let name = "Matt"
+//name += " Galloway" // error: left side of mutating operator has immutable type 'String'
+// 'name' является константой, поэтому вы не можете изменить его значение
+
+
+// Задача 6: Что это за тип value? (What is the type of value?)
+//let tuple = (100, 1.5, 10)
+//let value = tuple.1 // 1.5
+// value is Double
+
+// Задача 7: Сколько стоит месяц? (What is the value of month?)
+let tuple = (day: 15, month: 8, year: 2015)
+let month = tuple.month // month = 8 is Int
+
+// Задача 8: What is the value of summary?
+
+let number = 10
+let multiplier = 5
+let summary = "\(number) multiplied by \(multiplier) equals \(number * multiplier)"
+// summary = "10 multiplied by 5 equals 50"
+
+// Задача 9: Compute the value
+let a = 4
+let b: Int32 = 100
+let c: UInt8 = 12
+let answer = a + Int(b) - Int(c)
+
+// Задача 10: Различная точность (Different precision 𝜋s)
+// What is the difference between Double.pi and Float.pi?
+
+let difference = Double.pi - Double(Float.pi)
+
+// Float is a little less accurate so it makes sense to promote it to
+// a Double. Double is more accurate but it is not exact! That
+// would require an infinite number of bits. :]
+//
+// 1.50995798975373e-07, or 0.000000150995798975373
