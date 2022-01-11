@@ -53,4 +53,13 @@ let andOr = (1 < 2 && 3 > 4) || 1 < 4 // true
 //3. false || true
 //4. true
 
+// Part 3. String equality and Toggling a Bool (Строковое равенство и переключения)
+let guess = "dog"
+let dogEqualsCat = guess == "cat" // false, потому "dog" что не равно "cat"
 
+// let order = "cat" < "dog" // true, потому что "cat" стоит раньше "dog"
+
+// Переключение Bool (Toggling a Bool)
+var switchState = true
+switchState.toggle() // false
+switchState.toggle() // true
