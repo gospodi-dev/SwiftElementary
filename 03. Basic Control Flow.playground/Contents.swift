@@ -35,3 +35,22 @@ let isOneLessThanTwo = (1 < 2) // true
 1 >= 1 // true
 2 <= 1 // false
 
+// Part 2. Boolean logic (Булева логика)
+// И (AND) &&
+let and = true && true // true
+//В этом случае and будет true. Если бы любое из значений справа было false, то and было бы false.
+// ИЛИ (OR) ||
+let or = true || false // true
+
+let andTrue = 1 < 2 && 4 > 3 // true
+let andFalse = 1 < 2 && 3 > 4 // false
+let orTrue = 1 < 2 || 3 > 4 // true
+let orFalse = 1 == 2 || 3 == 4 // false
+
+let andOr = (1 < 2 && 3 > 4) || 1 < 4 // true
+//1. (1 < 2 && 3 > 4) || 1 < 4
+//2. (true && false) || true
+//3. false || true
+//4. true
+
+
