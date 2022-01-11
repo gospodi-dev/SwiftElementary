@@ -80,3 +80,39 @@ let authorIsReader = reader == author // false
 
 // Задача 4.
 let readerBeforeAuthor = reader < author // true
+
+// Part 4. The if statement (Оператор if)
+// ЕСЛИ (if)
+if 2 > 1 {
+    print("Yes, 2 is greater than 1.")
+} // Yes, 2 is greater than 1.
+
+// ИНАЧЕ (else)
+let animal = "Fox"
+
+if animal == "Cat" || animal == "Dog" {
+    print("Animal is a house pet.")
+} else {
+    print("Animal is not a house pet.")
+} // "Animal is not a house pet."
+
+// else-if
+
+let hourOfDay = 12
+var timeOfDay = ""
+
+if hourOfDay < 6 {
+  timeOfDay = "Early morning"
+} else if hourOfDay < 12 {
+  timeOfDay = "Morning"
+} else if hourOfDay < 17 {
+  timeOfDay = "Afternoon"
+} else if hourOfDay < 20 {
+  timeOfDay = "Evening"
+} else if hourOfDay < 24 {
+  timeOfDay = "Late evening"
+} else {
+  timeOfDay = "INVALID HOUR!"
+}
+print(timeOfDay) // Afternoon
+
