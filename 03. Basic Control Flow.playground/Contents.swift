@@ -63,3 +63,20 @@ let dogEqualsCat = guess == "cat" // false, потому "dog" что не ра
 var switchState = true
 switchState.toggle() // false
 switchState.toggle() // true
+
+// BOOLEAN LOGIC. Мини-упражнения (Mini-exercises)
+
+// Задача 1.
+let myAge = 56
+let isTeenager = myAge >= 13 && myAge <= 19 // false
+
+// Задача 2.
+let theirAge = 30
+let bothTeenagers = theirAge >= 13 && theirAge <= 19 && isTeenager // true
+// Задача 3.
+let reader = "Serg"
+let author = "Мет Галлоувей"
+let authorIsReader = reader == author // false
+
+// Задача 4.
+let readerBeforeAuthor = reader < author // true
