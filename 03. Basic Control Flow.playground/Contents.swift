@@ -125,3 +125,19 @@ if 1 < 2 || name == "Matt Galloway" {
     // ...
 } // true
 
+// Part 6. Encapsulating variables (Инкапсуляция переменных)
+//Вы зарабатываете 25 долларов за каждый час до 40 часов и 50 долларов за каждый час после этого. Рассчитайте комиссию
+var hoursWorked = 45
+var price = 0
+
+if hoursWorked > 40 {
+    let hoursOver40 = hoursWorked - 40 // 5
+    price += hoursOver40 * 50 // 250
+    hoursWorked -= hoursOver40 // 40
+}
+price += hoursWorked * 25 // 1250
+
+print(price)
+
+// print(hoursOver40) // error: cannot find 'hoursOver40' in scope
+
