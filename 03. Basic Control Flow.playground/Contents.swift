@@ -141,3 +141,28 @@ print(price)
 
 // print(hoursOver40) // error: cannot find 'hoursOver40' in scope
 
+// Part 7. Тернарный условный оператор (The ternary conditional operator)
+// Нужно определить минимум и максимум двух переменных
+//let a = 5
+//let b = 10
+//
+//let min: Int
+//if a < b {
+//    min = a
+//} else {
+//    min = b
+//} // 5
+//
+//let max: Int
+//if a > b {
+//  max = a
+//} else {
+//  max = b
+//} // 10
+// перепишем код с помощью использования тернарного оператора
+let a = 5
+let b = 10
+
+let min = a < b ? a : b // 5
+let max = a > b ? a : b // 10
+
