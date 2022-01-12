@@ -166,3 +166,14 @@ let b = 10
 let min = a < b ? a : b // 5
 let max = a > b ? a : b // 10
 
+// IF STATEMENTS. Мини-упражнения (Mini-exercises)
+// 1
+let myAge = 39
+if myAge >= 13 && myAge <= 19 {
+    print("Teenager")
+} else {
+    print("Not a teenager")
+}
+// 2
+let answer = myAge >= 13 && myAge <= 19 ? "Teenager" : "Not a teenager"
+print(answer)
