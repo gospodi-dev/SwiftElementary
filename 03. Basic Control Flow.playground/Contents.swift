@@ -116,3 +116,12 @@ if hourOfDay < 6 {
 }
 print(timeOfDay) // Afternoon
 
+// Part 5. Short-circuiting (Короткое замыкание)
+if 1 > 2 && name == "Matt Galloway" {
+    // ...
+} // false
+
+if 1 < 2 || name == "Matt Galloway" {
+    // ...
+} // true
+
