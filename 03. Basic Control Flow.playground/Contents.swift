@@ -404,3 +404,28 @@ if nextPosition == 3 {
 
 print("Board position after \(currentPosition) is \(nextPosition)")
 // Board position after 5 is 2
+
+// Challenge 4: Number of days in a month (количество дней в месяце)
+let month = "apr"
+let year = 2022
+
+var days = 0
+if month == "jan" || month == "mar" || month == "may" || month == "jul" || month == "aug" || month == "oct" || month == "dec" {
+  days = 31
+} else if month == "apr" || month == "jun" || month == "sep" || month == "nov" {
+  days = 30
+} else if month == "feb" {
+  if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    days = 29
+  } else {
+    days = 28
+  }
+}
+
+if days > 0 {
+  print("\(month) has 30 days")
+} else {
+  print("Invalid month!")
+}
+// apr has 30 days
+
