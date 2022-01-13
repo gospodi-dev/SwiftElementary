@@ -253,23 +253,23 @@ while true { }
 // 3
 
 //  An example of the game Snakes and Ladders (for repeat-while loop)
-let finalSquare = 25
-var board = [Int](repeating: 0, count: finalSquare + 1)
-board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
-board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
-var square = 0
-var diceRoll = 0
-
-repeat {
-  // идти вверх или вниз по змеям или лестницам
-  square += board[square]
-  // бросить кубик
-  diceRoll += 1
-  if diceRoll == 7 { diceRoll = 1 }
-  // начать ходить на выпавшее количество шагов
-  square += diceRoll
-} while square < finalSquare
-print("Game over!")
+//let finalSquare = 25
+//var board = [Int](repeating: 0, count: finalSquare + 1)
+//board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+//board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+//var square = 0
+//var diceRoll = 0
+//
+//repeat {
+//  // идти вверх или вниз по змеям или лестницам
+//  square += board[square]
+//  // бросить кубик
+//  diceRoll += 1
+//  if diceRoll == 7 { diceRoll = 1 }
+//  // начать ходить на выпавшее количество шагов
+//  square += diceRoll
+//} while square < finalSquare
+//print("Game over!")
 
 
 // Breaking out of a loop (Выход из цикла)
@@ -386,3 +386,21 @@ let fullName = firstName + " " + lastName
 // let answer = (true && 1 != 2) || (4 > 3 && 100 < 1) // true
 let answer = ((10 / 2) > 3) && ((10 % 2) == 0) // true
 
+// Challenge 3: Snakes and ladders
+
+let currentPosition = 5
+let diceRoll = 6
+
+var nextPosition = currentPosition + diceRoll // 11
+if nextPosition == 3 {
+    nextPosition = 15
+} else if nextPosition == 7 {
+    nextPosition = 12
+} else if nextPosition == 11 {
+    nextPosition = 2
+} else if nextPosition == 17 {
+    nextPosition = 9
+}
+
+print("Board position after \(currentPosition) is \(nextPosition)")
+// Board position after 5 is 2
