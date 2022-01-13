@@ -274,14 +274,14 @@ print("Game over!")
 
 // Breaking out of a loop (Выход из цикла)
 
-sum = 1
-
-while true {
-  sum = sum + (sum + 1)
-  if sum >= 1000 {
-    break
-  }
-}
+//sum = 1
+//
+//while true {
+//  sum = sum + (sum + 1)
+//  if sum >= 1000 {
+//    break
+//  }
+//}
 
 // Следующий пример переключается на символьные значение Character и определяет, является ли символ целым числом на одном из четырех языков.
 
@@ -305,3 +305,48 @@ if let integerValue = possibleIntegerValue {
     print("An integer value could not be found for \(numberSymbol).")
 }
 // Выведет "The integer value of 三 is 3."
+
+// WHILE LOOPS. Mini-exercises
+// 1
+/*
+var counter = 0
+
+while counter < 10 {
+    print("counter is \(counter)")
+    counter += 1
+}
+//counter is 0
+//counter is 1
+//counter is 2
+//counter is 3
+//counter is 4
+//counter is 5
+//counter is 6
+//counter is 7
+//counter is 8
+//counter is 9
+*/
+
+// 2
+var counter = 0
+var roll = 0
+
+repeat {
+    roll = Int.random(in: 0...5)
+    counter += 1
+    print("After \(counter) roll(s), roll is \(roll)")
+} while roll != 0
+// After 1 roll(s), roll is 5
+// After 2 roll(s), roll is 5
+// After 3 roll(s), roll is 5
+// After 4 roll(s), roll is 2
+// After 5 roll(s), roll is 4
+// After 6 roll(s), roll is 3
+// After 7 roll(s), roll is 1
+// After 8 roll(s), roll is 5
+// After 9 roll(s), roll is 3
+// After 10 roll(s), roll is 4
+// After 11 roll(s), roll is 4
+// After 12 roll(s), roll is 4
+// After 13 roll(s), roll is 2
+// After 14 roll(s), roll is 0
