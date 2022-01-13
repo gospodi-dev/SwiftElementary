@@ -350,3 +350,31 @@ repeat {
 // After 12 roll(s), roll is 4
 // After 13 roll(s), roll is 2
 // After 14 roll(s), roll is 0
+
+
+// Challenges
+
+// Challenge 1: Find the error (Найдите ошибку)
+// What’s wrong with the following code? (Что не так со следующим кодом?)
+
+//let firstName = "Ivan"
+//
+//if firstName == "Ivan" {
+//    let lastName = "Drago"
+//} else if firstName == "Serg" {
+//    let lastName = "D\'Crua"
+//}
+//let fullName = firstName + " " + lastName
+// error: cannot find 'lastName' in scope
+// `lastName` is no longer in scope when setting `fullName`.
+// A correct solution:
+let firstName = "Ivan"
+var lastName = ""
+
+if firstName == "Ivan" {
+    lastName = "Drago"
+} else if firstName == "Serg" {
+    lastName = "D\'Crua"
+}
+let fullName = firstName + " " + lastName
+// Ivan Drago
