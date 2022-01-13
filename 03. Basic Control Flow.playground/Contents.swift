@@ -464,3 +464,14 @@ while done < n {
 }
 print("Fibonacci number \(n) is \(current)")
 // Fibonacci number 10 is 55
+
+// Challenge 8: Make a loop (создать цикл)
+let factor = 7
+
+var i = 0
+var accumulator = 0
+while i <= 12 {
+  print("\(factor) x \(i) = \(accumulator)")
+  accumulator += 7
+  i += 1
+}
