@@ -225,4 +225,30 @@ while sum < 1000 {
     sum = sum + (sum + 1)
 }
 
+// Part 9. Циклы с повторением (Repeat-while loops)
+
+// repeat-while цикл
+//repeat {
+//  <LOOP CODE>
+//} while <CONDITION>
+
+sum = 1
+
+repeat {
+    sum = sum + (sum + 1)
+} while sum < 1000
+            
+sum = 1
+
+while sum < 1 {
+  sum = sum + (sum + 1)
+}
+// 1
+
+sum = 1
+
+repeat {
+  sum = sum + (sum + 1)
+} while sum < 1
+// 3
 
