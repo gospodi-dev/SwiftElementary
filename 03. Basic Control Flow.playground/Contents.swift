@@ -219,11 +219,11 @@ while true { }
 //}
 //print("Game over!")
 
-var sum = 1
-
-while sum < 1000 {
-    sum = sum + (sum + 1)
-}
+//var sum = 1
+//
+//while sum < 1000 {
+//    sum = sum + (sum + 1)
+//}
 
 // Part 9. Циклы с повторением (Repeat-while loops)
 
@@ -232,24 +232,24 @@ while sum < 1000 {
 //  <LOOP CODE>
 //} while <CONDITION>
 
-sum = 1
-
-repeat {
-    sum = sum + (sum + 1)
-} while sum < 1000
-            
-sum = 1
-
-while sum < 1 {
-  sum = sum + (sum + 1)
-}
-// 1
-
-sum = 1
-
-repeat {
-  sum = sum + (sum + 1)
-} while sum < 1
+//sum = 1
+//
+//repeat {
+//    sum = sum + (sum + 1)
+//} while sum < 1000
+//
+//sum = 1
+//
+//while sum < 1 {
+//  sum = sum + (sum + 1)
+//}
+//// 1
+//
+//sum = 1
+//
+//repeat {
+//  sum = sum + (sum + 1)
+//} while sum < 1
 // 3
 
 //  An example of the game Snakes and Ladders (for repeat-while loop)
@@ -270,3 +270,38 @@ repeat {
   square += diceRoll
 } while square < finalSquare
 print("Game over!")
+
+
+// Breaking out of a loop (Выход из цикла)
+
+sum = 1
+
+while true {
+  sum = sum + (sum + 1)
+  if sum >= 1000 {
+    break
+  }
+}
+
+// Следующий пример переключается на символьные значение Character и определяет, является ли символ целым числом на одном из четырех языков.
+
+let numberSymbol: Character = "三"  // Цифра 3 в упрощенном Китайском языке
+var possibleIntegerValue: Int?
+switch numberSymbol {
+case "1", "١", "一", "๑":
+    possibleIntegerValue = 1
+case "2", "٢", "二", "๒":
+    possibleIntegerValue = 2
+case "3", "٣", "三", "๓":
+    possibleIntegerValue = 3
+case "4", "٤", "四", "๔":
+    possibleIntegerValue = 4
+default:
+    break
+}
+if let integerValue = possibleIntegerValue {
+    print("The integer value of \(numberSymbol) is \(integerValue).")
+} else {
+    print("An integer value could not be found for \(numberSymbol).")
+}
+// Выведет "The integer value of 三 is 3."
