@@ -439,3 +439,14 @@ while trial < number {
 }
 print("Next power of 2 >= \(number) is \(trial) which is 2 to the power of \(times)")
 // Next power of 2 >= 946 is 1024 which is 2 to the power of 10
+
+// Challenge 6: Triangular number
+var depth = 5
+var count = 1
+var triangularNumber = 0
+while count <= depth {
+  triangularNumber += count
+  count += 1
+}
+print("Triangular number with depth \(depth) is \(triangularNumber)")
+// Triangular number with depth 5 is 15
