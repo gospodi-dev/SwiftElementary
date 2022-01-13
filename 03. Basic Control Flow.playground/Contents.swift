@@ -378,3 +378,11 @@ if firstName == "Ivan" {
 }
 let fullName = firstName + " " + lastName
 // Ivan Drago
+
+// Challenge 2: Boolean challenge (задача на булеву логику)
+
+// let answer = true && true // true
+// let answer = false || false // false
+// let answer = (true && 1 != 2) || (4 > 3 && 100 < 1) // true
+let answer = ((10 / 2) > 3) && ((10 % 2) == 0) // true
+
