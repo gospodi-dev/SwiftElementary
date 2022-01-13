@@ -475,3 +475,49 @@ while i <= 12 {
   accumulator += 7
   i += 1
 }
+//7 x 0 = 0
+//7 x 1 = 7
+//7 x 2 = 14
+//7 x 3 = 21
+//7 x 4 = 28
+//7 x 5 = 35
+//7 x 6 = 42
+//7 x 7 = 49
+//7 x 8 = 56
+//7 x 9 = 63
+//7 x 10 = 70
+//7 x 11 = 77
+//7 x 12 = 84
+
+// Challenge 9: Dice roll table (Таблица броска игральных костей)
+var target = 2
+
+while target <= 12 {
+  var combinationsFound = 0
+  var valueOnFirstDice = 1
+  while valueOnFirstDice <= 6 {
+    var valueOnSecondDice = 1
+    while valueOnSecondDice <= 6 {
+      if valueOnFirstDice + valueOnSecondDice == target {
+        combinationsFound += 1
+      }
+      valueOnSecondDice += 1
+    }
+    valueOnFirstDice += 1
+  }
+
+  print("\(target):\t\(combinationsFound)")
+
+  target += 1
+}
+//2:    1
+//3:    2
+//4:    3
+//5:    4
+//6:    5
+//7:    6
+//8:    5
+//9:    4
+//10:    3
+//11:    2
+//12:    1
