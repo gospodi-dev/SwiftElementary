@@ -429,3 +429,13 @@ if days > 0 {
 }
 // apr has 30 days
 
+// Challenge 5: Next power of two (следующая степень двойки)
+let number = 946
+var trial = 1
+var times = 0
+while trial < number {
+  trial = trial * 2
+  times += 1
+}
+print("Next power of 2 >= \(number) is \(trial) which is 2 to the power of \(times)")
+// Next power of 2 >= 946 is 1024 which is 2 to the power of 10
