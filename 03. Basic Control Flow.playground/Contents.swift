@@ -160,20 +160,69 @@ print(price)
 //  max = b
 //} // 10
 // перепишем код с помощью использования тернарного оператора
-let a = 5
-let b = 10
-
-let min = a < b ? a : b // 5
-let max = a > b ? a : b // 10
+//let a = 5
+//let b = 10
+//
+//let min = a < b ? a : b // 5
+//let max = a > b ? a : b // 10
 
 // IF STATEMENTS. Мини-упражнения (Mini-exercises)
 // 1
-let myAge = 39
-if myAge >= 13 && myAge <= 19 {
-    print("Teenager")
-} else {
-    print("Not a teenager")
+//let myAge = 39
+//if myAge >= 13 && myAge <= 19 {
+//    print("Teenager")
+//} else {
+//    print("Not a teenager")
+//}
+//// 2
+//let answer = myAge >= 13 && myAge <= 19 ? "Teenager" : "Not a teenager"
+//print(answer)
+
+// Part 8. While loops (Циклы While)
+
+/* Cтруктура while цикла
+ while <CONDITION> {
+    <LOOP CODE>
+ }
+ */
+/*
+бесконечный цикл (an infinite loop)
+while true { }
+*/
+
+//  An example of the game Snakes and Ladders
+let finalSquare = 25
+var board = [Int] (repeating: 0, count: finalSquare + 1)
+//  для обозначения лестниц и змей, некоторым квадратам присваиваются специальные значения
+board[03] = +08;
+board[06] = +11;
+board[09] = +09;
+board[10] = +02
+board[14] = -10;
+board[19] = -11;
+board[22] = -02;
+board[24] = -08
+//  Например, квадрат 3 с основанием лестницы перемещает вас вверх на 11 квадрат.
+var square = 0
+var diceRoll = 0
+while square < finalSquare {
+    // бросок кубика
+    diceRoll += 1
+    if diceRoll == 7 {
+        diceRoll = 1
+    } // начать ходить на выпавшее количество шагов
+    square += diceRoll
+    if square < board.count {
+        // если мы все еще на поле, идти вверх или вниз по змеям или лестницам
+        square += board[square]
+    }
 }
-// 2
-let answer = myAge >= 13 && myAge <= 19 ? "Teenager" : "Not a teenager"
-print(answer)
+print("Game over!")
+
+var sum = 1
+
+while sum < 1000 {
+    sum = sum + (sum + 1)
+}
+
+
