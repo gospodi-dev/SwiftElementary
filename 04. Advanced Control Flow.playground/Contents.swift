@@ -35,3 +35,27 @@ sum = 0
 for i in 1...count where i % 2 == 1 {
     sum += i
 }
+
+// Part 3. Continue and labeled statements
+
+sum = 0
+
+for row in 0..<8 {
+    if row % 2 == 0 {
+        continue
+    }
+    
+    for column in 0..<8 {
+        sum += row * column
+    }
+}
+sum = 0
+
+rowLoop: for row in 0..<8 {
+columnLoop: for column in 0..<8 {
+    if row == column {
+        continue rowLoop
+    }
+    sum += row * column
+    }
+}
