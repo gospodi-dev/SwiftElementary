@@ -327,3 +327,9 @@ let closedRange = 100...100 // закрытый диапазон содержи�
 
 halfOpenRange.isEmpty // true
 closedRange.isEmpty // false
+
+// Challenge 5: The final countdown (последний отсчет времени)
+// Распечатайте обратный отсчет от 10 до 0
+for i in 0...10 {
+    print(10 - i)
+}
