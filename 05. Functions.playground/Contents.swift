@@ -47,7 +47,7 @@ func printMultipleOf(_ multiplier: Int, _ value: Int = 1) {
 }
 printMultipleOf(4)
 // 4 * 1 = 4
- */
+ 
 // Part 3. Return values (Возвращаемые значения)
 func multiply(_ number: Int, by multiplier: Int) -> Int {
   return number * multiplier
@@ -75,3 +75,23 @@ func multiplyAndDivide(_ number: Int, by factor: Int)
 let results = multiplyAndDivide(4, by: 2)
 let product = results.product
 let quotient = results.quotient
+*/
+
+// Part 4. Advanced parameter handling (Расширенная обработка параметров)
+func incrementAndPrint(_value: Int) {
+    value += 1
+    print(value)
+}
+
+// a behavior known as copy-in copy-out or call by value result
+
+func incrementAndPrint(_ value: inout Int) {
+    value += 1
+    print(value)
+}
+
+var value = 5
+incrementAndPrint(&value)
+print(value)
+// 6
+// 6
