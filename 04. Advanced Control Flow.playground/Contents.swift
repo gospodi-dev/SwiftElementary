@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 
+/*
 // Part 1. Countable ranges (Счетные диапазоны)
 // счетный замкнутый диапазон (countable closed range)
 let closedRange = 0...5
@@ -269,10 +270,21 @@ default:
   print("Invalid age")
 }
 // Matt is an adult
+*/
 
 // Challenge 1: How many times
 var sum = 0
 for i in 0...5 {
     sum += i
 }
-// 6 times
+sum
+// sum = 15, 6 iterations (0, 1, 2, 3, 4, 5)
+
+// Challenge 2: Count the letter (посчитать букву)
+var aLotOfAs = ""
+while aLotOfAs.count < 10 {
+    aLotOfAs += "a"
+}
+aLotOfAs
+aLotOfAs.count
+// aLotOfAs contains 10 instances of "a"
