@@ -48,3 +48,7 @@ func printMultipleOf(_ multiplier: Int, _ value: Int = 1) {
 printMultipleOf(4)
 // 4 * 1 = 4
 
+// Part 3. Return values (Возвращаемые значения)
+func multiply(_ number: Int, by multiplier: Int) -> Int {
+  return number * multiplier
+}let result = multiply(4, by: 2)
