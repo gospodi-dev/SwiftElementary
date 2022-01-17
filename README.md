@@ -6,3 +6,4 @@ Examples and tasks for learning the basics of the Swift programming language
 Глава 2. Types & Operations (Типы и операции)
 Глава 3. Basic Control Flow (Базовый поток управления)
 Глава 4. Advanced Control Flow (Расширенный поток управления)
+Глава 5. Functions (Функции)
