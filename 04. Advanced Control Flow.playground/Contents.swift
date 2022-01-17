@@ -269,3 +269,10 @@ default:
   print("Invalid age")
 }
 // Matt is an adult
+
+// Challenge 1: How many times
+var sum = 0
+for i in 0...5 {
+    sum += i
+}
+// 6 times
