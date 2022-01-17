@@ -75,7 +75,7 @@ func multiplyAndDivide(_ number: Int, by factor: Int)
 let results = multiplyAndDivide(4, by: 2)
 let product = results.product
 let quotient = results.quotient
-*/
+
 
 // Part 4. Advanced parameter handling (Расширенная обработка параметров)
 func incrementAndPrint(_value: Int) {
@@ -95,3 +95,23 @@ incrementAndPrint(&value)
 print(value)
 // 6
 // 6
+ */
+// Part 5. Overloading (Перегрузка)
+func printMultipleOf(multiplier: Int, andValue: Int)
+func printMultipleOf(multiplier: Int, and value: Int)
+func printMultipleOf(_ multiplier: Int, and value: Int)
+func printMultipleOf(_ multiplier: Int, _ value: Int)
+// Вы также можете перегрузить имя функции на основе другого типа возвращаемого значения
+
+func getValue() -> Int {
+    31
+}
+
+func getValue() -> String {
+    "Matt Galloway"
+}
+// let value = getValue()
+
+// Чтобы исправить эту ситуацию, можно объявить тип, которым должно быть значение
+let valueInt: Int = getValue() // 31
+let valueString: String = getValue() // "Matt Galloway"
