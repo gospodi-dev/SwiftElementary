@@ -288,3 +288,33 @@ while aLotOfAs.count < 10 {
 aLotOfAs
 aLotOfAs.count
 // aLotOfAs contains 10 instances of "a"
+
+// Challenge 3: What will print
+let coordinates = (1, 5, 0)
+// "On the x/y plane"
+
+//let coordinates = (2, 2, 2)
+// "x = y = z"
+
+//let coordinates = (3, 0, 1)
+// "On the x/z plane"
+
+//let coordinates = (3, 2, 5)
+// "Nothing special"
+
+//let coordinates = (0, 2, 4)
+// "On the y/z plane"
+
+switch coordinates {
+case let (x, y, z) where x == y && y == z:
+  print("x = y = z")
+case (_, _, 0):
+  print("On the x/y plane")
+case (_, 0, _):
+  print("On the x/z plane")
+case (0, _, _):
+  print("On the y/z plane")
+default:
+  print("Nothing special")
+}
+
