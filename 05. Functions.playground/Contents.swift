@@ -1,6 +1,6 @@
 import Foundation
 import UIKit
-
+/*
 // Part 1. Function basics (Основы работы)
 
 func printMyName() {
@@ -16,18 +16,18 @@ func printMultipleOfFive(value: Int) {
 printMultipleOfFive(value: 10)
 // 10 * 5 = 50
 
-//func printMultipleOf(multiplier: Int, andValue: Int) {
-//    print("\(multiplier) * \(andValue) = \(multiplier * andValue)")
-//}
-//printMultipleOf(multiplier: 4, andValue: 2)
-//// 4 * 2 = 8
-//
-//func printMultipleOf(multiplier: Int, and value: Int) {
-//  print("\(multiplier) * \(value) = \(multiplier * value)")
-//}
-//printMultipleOf(multiplier: 4, and: 2)
-//// 4 * 2 = 8
-///
+func printMultipleOf(multiplier: Int, andValue: Int) {
+    print("\(multiplier) * \(andValue) = \(multiplier * andValue)")
+}
+printMultipleOf(multiplier: 4, andValue: 2)
+// 4 * 2 = 8
+
+func printMultipleOf(multiplier: Int, and value: Int) {
+  print("\(multiplier) * \(value) = \(multiplier * value)")
+}
+printMultipleOf(multiplier: 4, and: 2)
+// 4 * 2 = 8
+/
 // Если вы хотите вообще не иметь внешнего имени, то можно использовать знак подчеркивания "_"
 func printMultipleOf(_ multiplier: Int, and value: Int) {
   print("\(multiplier) * \(value) = \(multiplier * value)")
@@ -47,8 +47,31 @@ func printMultipleOf(_ multiplier: Int, _ value: Int = 1) {
 }
 printMultipleOf(4)
 // 4 * 1 = 4
-
+ */
 // Part 3. Return values (Возвращаемые значения)
 func multiply(_ number: Int, by multiplier: Int) -> Int {
   return number * multiplier
-}let result = multiply(4, by: 2)
+}
+let result = multiply(4, by: 2)
+// 8
+
+func multiplyAndDivide(_ number: Int, by factor: Int) -> (product: Int, quotient: Int) {
+    return (number * factor, number / factor)
+}
+let results = multiplyAndDivide(4, by: 2)
+let product = results.product // 8
+let quotient = results.quotient // 2
+
+
+func multiply(_ number: Int, by multiplier: Int) -> Int {
+  number * multiplier
+}
+let result = multiply(4, by: 2)
+
+func multiplyAndDivide(_ number: Int, by factor: Int)
+                   -> (product: Int, quotient: Int) {
+  (number * factor, number / factor)
+}
+let results = multiplyAndDivide(4, by: 2)
+let product = results.product
+let quotient = results.quotient
