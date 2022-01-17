@@ -95,7 +95,7 @@ incrementAndPrint(&value)
 print(value)
 // 6
 // 6
- */
+
 // Part 5. Overloading (Перегрузка)
 func printMultipleOf(multiplier: Int, andValue: Int)
 func printMultipleOf(multiplier: Int, and value: Int)
@@ -115,3 +115,32 @@ func getValue() -> String {
 // Чтобы исправить эту ситуацию, можно объявить тип, которым должно быть значение
 let valueInt: Int = getValue() // 31
 let valueString: String = getValue() // "Matt Galloway"
+*/
+
+// Functions. Mini-exercises
+// 1
+func printFullName(firstName: String, lastName: String) {
+    print(firstName + " " + lastName)
+}
+printFullName(firstName: "Serg", lastName: "Delone")
+// Serg Delone
+// 2
+func printFullName(_ firstName: String, _ lastName: String) {
+    print(firstName + " " + lastName)
+}
+printFullName(firstName: "Serg", lastName: "Delone")
+// Serg Delone
+// 3
+func calculateFullName(_ firstName: String, _ lastName: String) -> String {
+    firstName + " " + lastName
+}
+let fullName = calculateFullName("Serg", "Delone")
+// Serg Delone
+
+// 4
+func calculateFullNameWithLength(_ firstName: String, _ lastName: String) -> (name: String, length: Int) {
+  let fullName = firstName + " " + lastName
+  return (fullName, fullName.count)
+}
+let fullNameLength = calculateFullNameWithLength("Serg", "Delone").length
+// 13
