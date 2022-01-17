@@ -333,3 +333,28 @@ closedRange.isEmpty // false
 for i in 0...10 {
     print(10 - i)
 }
+
+// Challenge 6: Print a sequence
+// Print 0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0.
+var value = 0.0
+
+for _ in 0...10 {
+    print(value)
+    value += 0.1
+}
+//0.0
+//0.1
+//0.2
+//0.30000000000000004
+//0.4
+//0.5
+//0.6
+//0.7
+//0.7999999999999999
+//0.8999999999999999
+//0.9999999999999999
+
+// Alternate solution
+for counter in 0...10 {
+    print(Double(counter) * 0.1)
+}
