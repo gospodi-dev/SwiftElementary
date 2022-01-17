@@ -318,3 +318,12 @@ default:
   print("Nothing special")
 }
 
+// Challenge 4: Closed range size
+//  Диапазоны всегда должны увеличиваться. При закрытом диапазоне второе число всегда включается в диапазон.
+//  Ranges must always be increasing.  With a closed range the second number is always included in the range.
+
+let halfOpenRange = 100..<100 // empty
+let closedRange = 100...100 // закрытый диапазон содержит число 100
+
+halfOpenRange.isEmpty // true
+closedRange.isEmpty // false
