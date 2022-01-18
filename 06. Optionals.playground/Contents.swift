@@ -20,7 +20,7 @@ let anotherParsedInt = Int("dog") // nil
 var result: Int? = 30
 print(result) // Optional(30)
 print(result + 1)
-*/
+ */
 var authorName: String? = "Matt Galloway"
 var authorAge: Int? = 30
 // принудительное разворачивание (force unwrapping)
@@ -28,11 +28,41 @@ var unwrappedAuthorName = authorName!
 print("Author is \(unwrappedAuthorName)")
 // Author is Matt Galloway
 
-authorName = nil
-print("Author is \(authorName!)")
+//authorName = nil
+//print("Author is \(authorName!)")
 // устраняем ошибку времени выполнения (the runtime error)
 if authorName != nil {
   print("Author is \(authorName!)")
 } else {
   print("No author.")
+}
+
+
+// Part 3. Optional binding (Необязательное связывание)
+if let unwrappedAuthorName = authorName {
+  print("Author is \(unwrappedAuthorName)")
+} else {
+  print("No author.")
+}
+// Author is Matt Galloway
+
+if let authorName = authorName {
+  print("Author is \(authorName)")
+} else {
+  print("No author.")
+}
+
+if let authorName = authorName,
+   let authorAge = authorAge {
+  print("The author is \(authorName) who is \(authorAge) years old.")
+} else {
+  print("No author or no age.")
+}
+
+if let authorName = authorName,
+   let authorAge = authorAge,
+   authorAge >= 40 {
+  print("The author is \(authorName) who is \(authorAge) years old.")
+} else {
+  print("No author or no age or age less than 40.")
 }
