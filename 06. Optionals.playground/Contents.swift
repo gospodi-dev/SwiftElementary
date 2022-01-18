@@ -58,6 +58,7 @@ if let authorName = authorName,
 } else {
   print("No author or no age.")
 }
+// The author is Matt Galloway who is 30 years old.
 
 if let authorName = authorName,
    let authorAge = authorAge,
@@ -66,3 +67,15 @@ if let authorName = authorName,
 } else {
   print("No author or no age or age less than 40.")
 }
+// No author or no age or age less than 40.
+
+// UNWRAPPING. Mini-exercises
+let myFavoriteSong: String? = "Беги за солнцем" // or nil
+
+if let song = myFavoriteSong {
+  print(song)
+} else {
+  print("I don’t have a favorite song.")
+}
+// Беги за солнцем
+
