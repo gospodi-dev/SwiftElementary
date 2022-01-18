@@ -20,7 +20,7 @@ let anotherParsedInt = Int("dog") // nil
 var result: Int? = 30
 print(result) // Optional(30)
 print(result + 1)
- */
+ 
 var authorName: String? = "Matt Galloway"
 var authorAge: Int? = 30
 // принудительное разворачивание (force unwrapping)
@@ -124,3 +124,17 @@ func maybePrintSides(shape: String) {
     
     print("A \(shape) has \(sides) sides.")
 }
+*/
+// Part 5. Nil coalescing (Коалесценция нулей)
+
+var optionalInt: Int? = 10
+var mustHaveResult = optionalInt ?? 0
+// Предыдущий код эквивалентен следующему:
+var optionalInt: Int? = 10
+var mustHaveResult: Int
+if let unwrapped = optionalInt {
+  mustHaveResult = unwrapped
+} else {
+  mustHaveResult = 0
+}
+
