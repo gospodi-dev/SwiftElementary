@@ -176,7 +176,7 @@ func calculateAverage(of a: Double, and b: Double, and c: Double) -> Double {
     return average
 }
 calculateAverage(of: 1, and: 3, and: 5) // 3
- */
+
 // Functions. Challenges
 // Challenge 1: Looping with stride functions (зацикливание с функцией шага)
 for index in stride(from: 10, to: 22, by: 4) {
@@ -211,3 +211,37 @@ for index in stride(from: 10, through: 9, by: -0.1) {
 //9.2
 //9.1
 //9.0
+ */
+// Challenge 2: It’s prime time (время прайм-тайма)
+/*
+ Пишем функцию, чтобы определить, делится ли одно число на другое
+ */
+func isNumberDivisible(_ number: Int, by divisor: Int) -> Bool {
+    number % divisor == 0
+}
+func isPrime(_ number: Int) -> Bool {
+  if number < 0 {
+    return false
+  }
+  
+  /*
+   We handle these cases up front because we want to make sure the range 2...root (used below) is valid, which is the case only when root >= 2, so for numbers >= 4.
+   
+   Мы обрабатываем эти случаи заранее, потому что хотим убедиться, что диапазон 2...root (используемый ниже) является допустимым, что имеет место только при root >= 2, то есть для чисел >= 4.
+   */
+  if number <= 3 {
+    return true
+  }
+
+  let doubleNumber = Double(number)
+  let root = Int(doubleNumber.squareRoot())
+  for divisor in 2...root {
+    if isNumberDivisible(number, by: divisor) {
+      return false
+    }
+  }
+  return true
+}
+isPrime(6) // false
+isPrime(13) // true
+isPrime(8893) // true
