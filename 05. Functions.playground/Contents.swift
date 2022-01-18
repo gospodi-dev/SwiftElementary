@@ -115,7 +115,6 @@ func getValue() -> String {
 // Чтобы исправить эту ситуацию, можно объявить тип, которым должно быть значение
 let valueInt: Int = getValue() // 31
 let valueString: String = getValue() // "Matt Galloway"
-*/
 
 // Functions. Mini-exercises
 // 1
@@ -144,3 +143,22 @@ func calculateFullNameWithLength(_ firstName: String, _ lastName: String) -> (na
 }
 let fullNameLength = calculateFullNameWithLength("Serg", "Delone").length
 // 13
+*/
+// Part 6. Functions as variables (Функции как переменные)
+func add(_ a: Int, _ b: Int) -> Int {
+    a + b
+}
+var function = add
+function(4, 2) // 6
+
+func subtract(_ a: Int, _ b: Int) -> Int {
+    a - b
+}
+function = subtract
+function(4, 2) // 2
+
+func printResult(_ function: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+    let result = function(a, b)
+    print(result)
+}
+printResult(add, 4, 2) // 6
