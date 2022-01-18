@@ -162,3 +162,18 @@ func printResult(_ function: (Int, Int) -> Int, _ a: Int, _ b: Int) {
     print(result)
 }
 printResult(add, 4, 2) // 6
+
+// Part 7. Commenting your functions (Комментирование функций)
+/// Calculates the average of three values
+/// - Parameters:
+///   - a: The first value.
+///   - b: The second value.
+///   - c: The third value
+/// - Returns: The average of the three values.
+func calculateAverage(of a: Double, and b: Double, and c: Double) -> Double {
+    let total = a + b + c // 9
+    let average = total / 3 // 3
+    return average
+}
+calculateAverage(of: 1, and: 3, and: 5) // 3
+
