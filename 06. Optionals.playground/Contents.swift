@@ -79,3 +79,48 @@ if let song = myFavoriteSong {
 }
 // Беги за солнцем
 
+// Part 4. Introducing guard (Введение guard)
+func guardMyCastle(name: String?) {
+    guard let castleName = name else {
+        print("No castle!")
+        return
+    }
+    // At this point, `castleName` is a non-optional String (На данном этапе `castleName` является неопциональной строкой.)
+    print("Your castle called \(castleName) was guarded!")
+}
+
+func calculateNumberOfSides(shape: String) -> Int? {
+  switch shape {
+  case "Triangle":
+    return 3
+  case "Square":
+    return 4
+  case "Rectangle":
+    return 4
+  case "Pentagon":
+    return 5
+  case "Hexagon":
+    return 6
+  default:
+    return nil
+  }
+}
+
+func maybePrintSides(shape: String) {
+  let sides = calculateNumberOfSides(shape: shape)
+
+  if let sides = sides {
+    print("A \(shape) has \(sides) sides.")
+  } else {
+    print("I don’t know the number of sides for \(shape).")
+  }
+}
+// ту же логику можно записать с таким выражением защиты
+func maybePrintSides(shape: String) {
+  guard let sides = calculateNumberOfSides(shape: shape) else {
+    print("I don’t know the number of sides for \(shape).")
+    return
+  }
+    
+    print("A \(shape) has \(sides) sides.")
+}
