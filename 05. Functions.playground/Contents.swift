@@ -143,7 +143,7 @@ func calculateFullNameWithLength(_ firstName: String, _ lastName: String) -> (na
 }
 let fullNameLength = calculateFullNameWithLength("Serg", "Delone").length
 // 13
-*/
+
 // Part 6. Functions as variables (Функции как переменные)
 func add(_ a: Int, _ b: Int) -> Int {
     a + b
@@ -176,4 +176,38 @@ func calculateAverage(of a: Double, and b: Double, and c: Double) -> Double {
     return average
 }
 calculateAverage(of: 1, and: 3, and: 5) // 3
+ */
+// Functions. Challenges
+// Challenge 1: Looping with stride functions (зацикливание с функцией шага)
+for index in stride(from: 10, to: 22, by: 4) {
+    print(index)
+}
+//10
+//14
+//18
 
+for index in stride(from: 10, through: 22, by: 4) {
+    print(index)
+}
+//10
+//14
+//18
+//22
+// stride(from:to:by:) does NOT include the final number (like half-open range)
+// stride(from:through:by:) does include the final number (like closed range)
+// шаг(от:до:по:) НЕ включает конечное число (например, полуоткрытый диапазон)
+// шаг(от:через:по:) включает конечное число (например, закрытый диапазон)
+for index in stride(from: 10, through: 9, by: -0.1) {
+    print(index)
+}
+//10.0
+//9.9
+//9.8
+//9.7
+//9.6
+//9.5
+//9.4
+//9.3
+//9.2
+//9.1
+//9.0
