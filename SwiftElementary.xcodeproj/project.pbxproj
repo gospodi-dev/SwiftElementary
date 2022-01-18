@@ -12,6 +12,7 @@
 		CC3165DA2795547000E9B56B /* 05. Functions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "05. Functions.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CC4168F52791AE900041D65B /* 04. Advanced Control Flow.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "04. Advanced Control Flow.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCDAB3422785FEBD00965F2C /* 01. Expressions, Variables & Constants.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "01. Expressions, Variables & Constants.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CCEA0F402796CBE000253C98 /* 06. Optionals.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "06. Optionals.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -23,6 +24,7 @@
 				CC1EDA92278CAA6D00FE9F47 /* 03. Basic Control Flow.playground */,
 				CC4168F52791AE900041D65B /* 04. Advanced Control Flow.playground */,
 				CC3165DA2795547000E9B56B /* 05. Functions.playground */,
+				CCEA0F402796CBE000253C98 /* 06. Optionals.playground */,
 			);
 			sourceTree = "<group>";
 		};
