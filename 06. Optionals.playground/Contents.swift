@@ -124,7 +124,7 @@ func maybePrintSides(shape: String) {
     
     print("A \(shape) has \(sides) sides.")
 }
-*/
+
 // Part 5. Nil coalescing (Коалесценция нулей)
 
 var optionalInt: Int? = 10
@@ -137,4 +137,12 @@ if let unwrapped = optionalInt {
 } else {
   mustHaveResult = 0
 }
+
+*/
+
+// Challenge 1: You be the compiler (Вы будете составителем)
+var name: String? = "Ray"
+// var age: Int = nil // false, nil может использоваться только с опциональными типами
+let distance: Float = 26.7 // true
+var middleName: String? = nil // true
 
