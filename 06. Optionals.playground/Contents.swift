@@ -138,11 +138,35 @@ if let unwrapped = optionalInt {
   mustHaveResult = 0
 }
 
-*/
+
 
 // Challenge 1: You be the compiler (Вы будете составителем)
 var name: String? = "Ray"
 // var age: Int = nil // false, nil может использоваться только с опциональными типами
 let distance: Float = 26.7 // true
 var middleName: String? = nil // true
+
+ */
+// Challenge 2: Divide and conquer (разделяй и властвуй)
+func divideIfWhole(_ value: Int, by divisor: Int) -> Int? {
+  if value % divisor == 0 {
+    return value / divisor
+  } else {
+    return nil
+  }
+}
+
+if let answer = divideIfWhole(10, by: 2) {
+  print("Yep, it divides \(answer) times.")
+} else {
+  print("Not divisible :[.")
+}
+// Yep, it divides 5 times.
+
+if let answer = divideIfWhole(10, by: 3) {
+  print("Yep, it divides \(answer) times.")
+} else {
+  print("Not divisible :[.")
+}
+// Not divisible :[.
 
