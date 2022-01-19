@@ -170,3 +170,12 @@ if let answer = divideIfWhole(10, by: 3) {
 }
 // Not divisible :[.
 
+
+// Challenge 3: Refactor and reduce (рефакторинг и сокращение)
+let answer1 = divideIfWhole(10, by: 2) ?? 0
+print("It divides \(answer1) times.")
+// It divides 5 times.
+
+let answer2 = divideIfWhole(10, by: 3) ?? 0
+print("It divides \(answer2) times.")
+// It divides 0 times.
