@@ -146,7 +146,7 @@ var name: String? = "Ray"
 let distance: Float = 26.7 // true
 var middleName: String? = nil // true
 
- */
+
 // Challenge 2: Divide and conquer (разделяй и властвуй)
 func divideIfWhole(_ value: Int, by divisor: Int) -> Int? {
   if value % divisor == 0 {
@@ -179,3 +179,38 @@ print("It divides \(answer1) times.")
 let answer2 = divideIfWhole(10, by: 3) ?? 0
 print("It divides \(answer2) times.")
 // It divides 0 times.
+ */
+
+// Challenge 4: Nested optionals (вложенные опции)
+let number: Int??? = 10
+
+// 1
+print(number!!!) // 10
+
+// 2
+if let number = number {
+    if let number = number {
+        if let number = number {
+            print(number)
+        }
+    }
+}
+// 10
+
+// Better way of optionally binding without all the {}
+if let n1 = number,
+   let n2 = n1,
+   let n3 = n2 {
+    print(n3)
+}
+// 10
+
+// 3
+func printNumber(_ number: Int???) {
+  guard let n1 = number, let n2 = n1, let n3 = n2 else {
+    return
+  }
+  print(n3)
+}
+printNumber(number)
+// 10
