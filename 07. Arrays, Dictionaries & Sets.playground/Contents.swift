@@ -74,3 +74,27 @@ print(isEliminated(player: "Bob"))
 // > false
 
 players[1...3].contains("Bob") // true
+
+// Part 3. Modifying arrays (Модификация массивов)
+
+// Appending elements (Добавление элементов)
+players.append("Eli")
+players += ["Gina"]
+
+print(players)
+// ["Alice", "Bob", "Cindy", "Dan", "Eli", "Gina"]
+
+// Inserting elements (Вставка элементов)
+players.insert("Frank", at: 5)
+print(players)
+// ["Alice", "Bob", "Cindy", "Dan", "Eli", "Frank", "Gina"]
+
+// Removing elements (Удаление элементов)
+var removedPlayer = players.removeLast()
+print("\(removedPlayer) was removed")
+// > Gina was removed
+
+removedPlayer = players.remove(at: 2)
+print("\(removedPlayer) was removed")
+// > Cindy was removed
+
