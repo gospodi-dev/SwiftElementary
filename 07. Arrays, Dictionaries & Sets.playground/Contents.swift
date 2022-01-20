@@ -1,5 +1,5 @@
 import UIKit
-
+/*
 // Part 1. Arrays (Массивы). Creating arrays (Создание массивов)
 
 //Creating arrays (Создание массивов)
@@ -83,7 +83,7 @@ players += ["Gina"]
 
 print(players)
 // ["Alice", "Bob", "Cindy", "Dan", "Eli", "Gina"]
-
+ #fileLiteral(resourceName: "03. Basic Control Flow.playground")
 // Inserting elements (Вставка элементов)
 players.insert("Frank", at: 5)
 print(players)
@@ -97,4 +97,32 @@ print("\(removedPlayer) was removed")
 removedPlayer = players.remove(at: 2)
 print("\(removedPlayer) was removed")
 // > Cindy was removed
+*/
+// Mini-exercise (Мини-упражнение)
+var players = ["Alice", "Bob", "Dan", "Eli", "Frank"]
+print(players.firstIndex(of: "Dan")!)
+// > 2
 
+// Updating elements (Обновление элементов)
+print(players)
+// > ["Alice", "Bob", "Dan", "Eli", "Frank"]
+players[4] = "Franklin"
+print(players)
+// > ["Alice", "Bob", "Dan", "Eli", "Franklin"]
+players[0...1] = ["Donna", "Craig", "Brian", "Anna"]
+print(players)
+// > ["Donna", "Craig", "Brian", "Anna", "Dan", "Eli", "Franklin"]
+
+// Moving elements (Движущиеся элементы)
+let playerAnna = players.remove(at: 3)
+players.insert(playerAnna, at: 0)
+print(players)
+// ["Anna", "Donna", "Craig", "Brian", "Dan", "Eli", "Franklin"]
+
+players.swapAt(1, 3)
+print(players)
+// > ["Anna", "Brian", "Craig", "Donna", "Dan", "Eli", "Franklin"]
+
+players.sort()
+print(players)
+// > ["Anna", "Brian", "Craig", "Dan", "Donna", "Eli", "Franklin"]
