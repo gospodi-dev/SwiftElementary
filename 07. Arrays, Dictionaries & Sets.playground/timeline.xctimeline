@@ -2,5 +2,10 @@
 <Timeline
    version = "3.0">
    <TimelineItems>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/gospodimac/Desktop/Swift_EDU/book%20-%20Swift%20Apprentice/SwiftElementary/07.%20Arrays,%20Dictionaries%20&amp;%20Sets.playground#CharacterRangeLen=6&amp;CharacterRangeLoc=322&amp;EndingColumnNumber=11&amp;EndingLineNumber=9&amp;StartingColumnNumber=5&amp;StartingLineNumber=9&amp;Timestamp=664366383.9159091"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
    </TimelineItems>
 </Timeline>
