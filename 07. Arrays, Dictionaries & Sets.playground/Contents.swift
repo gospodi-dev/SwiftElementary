@@ -126,3 +126,37 @@ print(players)
 players.sort()
 print(players)
 // > ["Anna", "Brian", "Craig", "Dan", "Donna", "Eli", "Franklin"]
+
+// Part 4. Iterating through an array (Итерации по массиву)
+let scores = [2, 2, 8, 6, 1, 2, 1]
+for player in players {
+    print(player)
+}
+// > Anna
+// > Brian
+// > Craig
+// > Dan
+// > Donna
+// > Eli
+// > Franklin
+
+for (index, player) in players.enumerated() {
+    print("\(index + 1). \(player)")
+}
+// > 1. Anna
+// > 2. Brian
+// > 3. Craig
+// > 4. Dan
+// > 5. Donna
+// > 6. Eli
+// > 7. Franklin
+
+func sumOfElements(in array: [Int]) -> Int {
+    var sum = 0
+    for number in array {
+        sum += number
+    }
+    return sum
+}
+print(sumOfElements(in: scores))
+// 22
