@@ -97,7 +97,7 @@ print("\(removedPlayer) was removed")
 removedPlayer = players.remove(at: 2)
 print("\(removedPlayer) was removed")
 // > Cindy was removed
-*/
+ */
 // Mini-exercise (Мини-упражнение)
 var players = ["Alice", "Bob", "Dan", "Eli", "Frank"]
 print(players.firstIndex(of: "Dan")!)
@@ -128,7 +128,7 @@ print(players)
 // > ["Anna", "Brian", "Craig", "Dan", "Donna", "Eli", "Franklin"]
 
 // Part 4. Iterating through an array (Итерации по массиву)
-let scores = [2, 2, 8, 6, 1, 2, 1]
+// let scores = [2, 2, 8, 6, 1, 2, 1]
 for player in players {
     print(player)
 }
@@ -151,12 +151,27 @@ for (index, player) in players.enumerated() {
 // > 6. Eli
 // > 7. Franklin
 
-func sumOfElements(in array: [Int]) -> Int {
-    var sum = 0
-    for number in array {
-        sum += number
-    }
-    return sum
+//func sumOfElements(in array: [Int]) -> Int {
+//    var sum = 0
+//    for number in array {
+//        sum += number
+//    }
+//    return sum
+//}
+//print(sumOfElements(in: scores))
+//// 22
+ 
+// Mini-exercise
+players = ["Anna", "Brian", "Craig", "Dan", "Donna", "Eli", "Franklin"]
+let scores = [2, 2, 8, 6, 1, 2, 1]
+
+for (index, player) in players.enumerated() {
+  print("\(index + 1). \(player) - \(scores[index])")
 }
-print(sumOfElements(in: scores))
-// 22
+// > 1. Anna - 2
+// > 2. Brian - 2
+// > 3. Craig - 8
+// > 4. Dan - 6
+// > 5. Donna - 1
+// > 6. Eli - 2
+// > 7. Franklin - 1
