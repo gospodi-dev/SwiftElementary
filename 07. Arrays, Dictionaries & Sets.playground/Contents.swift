@@ -1,17 +1,13 @@
-import UIKit
-/*
-// Part 1. Arrays (Массивы). Creating arrays (Создание массивов)
-
-//Creating arrays (Создание массивов)
+/*:## Arrays (Массивы)*/
+/*:### Part 1. Creating arrays (Создание массивов)*/
 let evenNumbers = [2, 4, 6, 8]
 // Вы можете создать пустой массив с помощью литерала пустого массива []
 let subscribers: [String] = []
 let allZeros = Array(repeating: 0, count: 5) // [0, 0, 0, 0, 0]
 let vowels = ["A", "E", "I", "O", "U"]
 
-// Part 2. Accessing elements (Доступ к элементам)
-
-// Using properties and methods (Использование свойств и методов)
+/*: ### Part 2. Accessing elements (Доступ к элементам)*/
+//: Using properties and methods (Использование свойств и методов)
 var players = ["Alice", "Bob", "Cindy", "Dan"]
 print(players.isEmpty)
 // > false
@@ -47,7 +43,7 @@ if let currentPlayer = currentPlayer {
 }
 // > Dan will start
 
-// Using subscripting (Использование индекса)
+//: Using subscripting (Использование индекса)
 
 var firstPlayer = players[0]
 print("First player is \(firstPlayer)")
@@ -75,21 +71,21 @@ print(isEliminated(player: "Bob"))
 
 players[1...3].contains("Bob") // true
 
-// Part 3. Modifying arrays (Модификация массивов)
+/*: ### Part 3. Modifying arrays (Модификация массивов)*/
 
-// Appending elements (Добавление элементов)
+//: Appending elements (Добавление элементов)
 players.append("Eli")
 players += ["Gina"]
 
 print(players)
 // ["Alice", "Bob", "Cindy", "Dan", "Eli", "Gina"]
  #fileLiteral(resourceName: "03. Basic Control Flow.playground")
-// Inserting elements (Вставка элементов)
+//: Inserting elements (Вставка элементов)
 players.insert("Frank", at: 5)
 print(players)
 // ["Alice", "Bob", "Cindy", "Dan", "Eli", "Frank", "Gina"]
 
-// Removing elements (Удаление элементов)
+//: Removing elements (Удаление элементов)
 var removedPlayer = players.removeLast()
 print("\(removedPlayer) was removed")
 // > Gina was removed
@@ -97,13 +93,13 @@ print("\(removedPlayer) was removed")
 removedPlayer = players.remove(at: 2)
 print("\(removedPlayer) was removed")
 // > Cindy was removed
- */
-// Mini-exercise (Мини-упражнение)
+
+//: Mini-exercise (Мини-упражнение)
 var players = ["Alice", "Bob", "Dan", "Eli", "Frank"]
 print(players.firstIndex(of: "Dan")!)
 // > 2
 
-// Updating elements (Обновление элементов)
+//: Updating elements (Обновление элементов)
 print(players)
 // > ["Alice", "Bob", "Dan", "Eli", "Frank"]
 players[4] = "Franklin"
@@ -113,7 +109,7 @@ players[0...1] = ["Donna", "Craig", "Brian", "Anna"]
 print(players)
 // > ["Donna", "Craig", "Brian", "Anna", "Dan", "Eli", "Franklin"]
 
-// Moving elements (Движущиеся элементы)
+//: Moving elements (Движущиеся элементы)
 let playerAnna = players.remove(at: 3)
 players.insert(playerAnna, at: 0)
 print(players)
@@ -127,7 +123,7 @@ players.sort()
 print(players)
 // > ["Anna", "Brian", "Craig", "Dan", "Donna", "Eli", "Franklin"]
 
-// Part 4. Iterating through an array (Итерации по массиву)
+/*: ### Part 4. Iterating through an array (Итерации по массиву)*/
 // let scores = [2, 2, 8, 6, 1, 2, 1]
 for player in players {
     print(player)
@@ -161,7 +157,7 @@ for (index, player) in players.enumerated() {
 //print(sumOfElements(in: scores))
 //// 22
  
-// Mini-exercise
+//: Mini-exercise
 players = ["Anna", "Brian", "Craig", "Dan", "Donna", "Eli", "Franklin"]
 let scores = [2, 2, 8, 6, 1, 2, 1]
 
@@ -175,3 +171,14 @@ for (index, player) in players.enumerated() {
 // > 5. Donna - 1
 // > 6. Eli - 2
 // > 7. Franklin - 1
+
+//: Running time for array operations (Время выполнения операций с массивом)
+
+/*: ### Part 5. Dictionaries (Словари)
+ '''
+Словарь - это неупорядоченный набор пар, каждая из которых состоит из **ключа** и **значения**
+ '''
+ */
+
+
+

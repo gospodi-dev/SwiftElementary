@@ -1,6 +1,7 @@
-import UIKit
-/*
-// Part 1. Introducing nil and optionals (Представляем nil и опциональные возможности)
+/*:
+ ## Optionals
+ ### Part 1. Introducing nil and optionals (Представляем nil и опциональные возможности)
+ */
 var name = "Matt Galloway"
 var age = 30
 var occupation = "Software Developer & Author"
@@ -8,15 +9,14 @@ var occupation = "Software Developer & Author"
 var errorCode: Int?
 errorCode = 100
 errorCode = nil
-
-// OPTIONALS INTRODUCTION. Mini-exercises
-// 1
+//: OPTIONALS INTRODUCTION. Mini-exercises
+//: 1
 let myFavoriteSong: String? = "Беги за солнцем" // or nil
-// 2
+//: 2
 let parsedInt = Int("10") // возвращает необязательное значение, поскольку строка может не быть целым числом, в этом случае результатом будет nil
 let anotherParsedInt = Int("dog") // nil
 
-// Part 2. Unwrapping optionals (Развертывание опций)
+/*: ### Part 2. Unwrapping optionals (Развертывание опций)*/
 var result: Int? = 30
 print(result) // Optional(30)
 print(result + 1)
@@ -36,9 +36,7 @@ if authorName != nil {
 } else {
   print("No author.")
 }
-
-
-// Part 3. Optional binding (Необязательное связывание)
+/*: ### Part 3. Optional binding (Необязательное связывание)*/
 if let unwrappedAuthorName = authorName {
   print("Author is \(unwrappedAuthorName)")
 } else {
@@ -68,8 +66,7 @@ if let authorName = authorName,
   print("No author or no age or age less than 40.")
 }
 // No author or no age or age less than 40.
-
-// UNWRAPPING. Mini-exercises
+//: UNWRAPPING. Mini-exercises
 let myFavoriteSong: String? = "Беги за солнцем" // or nil
 
 if let song = myFavoriteSong {
@@ -79,7 +76,7 @@ if let song = myFavoriteSong {
 }
 // Беги за солнцем
 
-// Part 4. Introducing guard (Введение guard)
+/*:### Part 4. Introducing guard (Введение guard)*/
 func guardMyCastle(name: String?) {
     guard let castleName = name else {
         print("No castle!")
@@ -124,9 +121,7 @@ func maybePrintSides(shape: String) {
     
     print("A \(shape) has \(sides) sides.")
 }
-
-// Part 5. Nil coalescing (Коалесценция нулей)
-
+/*:### Part 5. Nil coalescing (Коалесценция нулей)*/
 var optionalInt: Int? = 10
 var mustHaveResult = optionalInt ?? 0
 // Предыдущий код эквивалентен следующему:
@@ -137,17 +132,14 @@ if let unwrapped = optionalInt {
 } else {
   mustHaveResult = 0
 }
-
-
-
-// Challenge 1: You be the compiler (Вы будете составителем)
+//: Challenge 1: You be the compiler (Вы будете составителем)
 var name: String? = "Ray"
 // var age: Int = nil // false, nil может использоваться только с опциональными типами
 let distance: Float = 26.7 // true
 var middleName: String? = nil // true
 
 
-// Challenge 2: Divide and conquer (разделяй и властвуй)
+//: Challenge 2: Divide and conquer (разделяй и властвуй)
 func divideIfWhole(_ value: Int, by divisor: Int) -> Int? {
   if value % divisor == 0 {
     return value / divisor
@@ -171,7 +163,7 @@ if let answer = divideIfWhole(10, by: 3) {
 // Not divisible :[.
 
 
-// Challenge 3: Refactor and reduce (рефакторинг и сокращение)
+//: Challenge 3: Refactor and reduce (рефакторинг и сокращение)
 let answer1 = divideIfWhole(10, by: 2) ?? 0
 print("It divides \(answer1) times.")
 // It divides 5 times.
@@ -181,13 +173,11 @@ print("It divides \(answer2) times.")
 // It divides 0 times.
  */
 
-// Challenge 4: Nested optionals (вложенные опции)
+//: Challenge 4: Nested optionals (вложенные опции)
 let number: Int??? = 10
-
-// 1
+//: 1
 print(number!!!) // 10
-
-// 2
+//: 2
 if let number = number {
     if let number = number {
         if let number = number {
@@ -204,8 +194,7 @@ if let n1 = number,
     print(n3)
 }
 // 10
-
-// 3
+//: 3
 func printNumber(_ number: Int???) {
   guard let n1 = number, let n2 = n1, let n3 = n2 else {
     return
