@@ -208,3 +208,18 @@ var bobData = [
 ]
 bobData.updateValue("CA", forKey: "state")
 bobData["city"] = "San Francisco"
+//: Mini-exercise. Мини-упражнение
+// Напишите функцию, которая печатает город и штат данного игрока.
+var bob = ["name": "Bob",
+           "profession": "Card Player",
+           "country": "Russia",
+           "state": "RU",
+           "city": "Saint-Petersburg"]
+
+func printLocation(ofPlayer player: [String: String]) {
+  if let state = player["state"], let city = player["city"] {
+    print("Player lives in \(city), \(state)")
+  }
+}
+
+printLocation(ofPlayer: bob)
