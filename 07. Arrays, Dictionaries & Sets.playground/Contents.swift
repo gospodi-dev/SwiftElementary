@@ -178,4 +178,16 @@ for (index, player) in players.enumerated() {
  '''
 Словарь - это неупорядоченный набор пар, каждая из которых состоит из **ключа** и **значения**
  ''' */
-
+/*: ### Part 1. Creating dictionaries (Создание словарей)*/
+var namesAndScores = ["Anna": 2, "Brian": 2, "Craig": 8, "Donna": 6]
+print(namesAndScores)
+// > ["Anna": 2, "Brian": 2, "Craig": 8, "Donna": 6]
+// Литерал пустого словаря:
+namesAndScores = [:]
+print(namesAndScores)
+// > [:]
+// Можно создать новый пустой словарь, где ключи - строки, а значения - целые числа
+var pairs: [String: Int] = [:]
+print(pairs)
+// > [:]
+pairs.reserveCapacity(20)
