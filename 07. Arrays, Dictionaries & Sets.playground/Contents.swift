@@ -223,3 +223,23 @@ func printLocation(ofPlayer player: [String: String]) {
 }
 
 printLocation(ofPlayer: bob)
+//: Updating values (Обновление значений)
+bobData.updateValue("Bobby", forKey: "name") // Bob
+bobData["profession"] = "Mailman"
+//: Removing pairs (Удаление пар)
+bobData.removeValue(forKey: "state")
+bobData["city"] = nil
+/*: ### Part 4. Iterating through dictionaries (Итерация по словарям)*/
+for (player, score) in namesAndScores {
+  print("\(player) - \(score)")
+}
+// > Anna - 2
+// > Brian - 2
+// > Craig - 8
+// > Donna - 6
+// Также можно перебирать только ключи
+for player in namesAndScores.keys {
+  print("\(player), ", terminator: "") // no newline
+}
+print("") // print one final newline
+// > Craig, Donna, Brian, Anna,
