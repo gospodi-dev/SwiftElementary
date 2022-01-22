@@ -199,3 +199,12 @@ print(namesAndScores["Anna"]!) // возвращаемый тип являетс
 //: Using properties and methods (Использование свойств и методов)
 namesAndScores.isEmpty // false
 namesAndScores.count // 4
+/*: ### Part 3. Modifying dictionaries (Изменение словарей)*/
+//: Adding pairs (Добавление пар)
+var bobData = [
+  "name": "Bob",
+  "profession": "Card Player",
+  "country": "USA"
+]
+bobData.updateValue("CA", forKey: "state")
+bobData["city"] = "San Francisco"
