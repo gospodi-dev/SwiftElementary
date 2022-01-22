@@ -1,5 +1,6 @@
 /*:## Arrays (Массивы)*/
 /*:### Part 1. Creating arrays (Создание массивов)*/
+/*
 let evenNumbers = [2, 4, 6, 8]
 // Вы можете создать пустой массив с помощью литерала пустого массива []
 let subscribers: [String] = []
@@ -79,7 +80,6 @@ players += ["Gina"]
 
 print(players)
 // ["Alice", "Bob", "Cindy", "Dan", "Eli", "Gina"]
- #fileLiteral(resourceName: "03. Basic Control Flow.playground")
 //: Inserting elements (Вставка элементов)
 players.insert("Frank", at: 5)
 print(players)
@@ -156,7 +156,7 @@ for (index, player) in players.enumerated() {
 //}
 //print(sumOfElements(in: scores))
 //// 22
- 
+
 //: Mini-exercise
 players = ["Anna", "Brian", "Craig", "Dan", "Donna", "Eli", "Franklin"]
 let scores = [2, 2, 8, 6, 1, 2, 1]
@@ -173,12 +173,9 @@ for (index, player) in players.enumerated() {
 // > 7. Franklin - 1
 
 //: Running time for array operations (Время выполнения операций с массивом)
-
-/*: ### Part 5. Dictionaries (Словари)
+*/
+/*: ## Dictionaries (Словари)
  '''
 Словарь - это неупорядоченный набор пар, каждая из которых состоит из **ключа** и **значения**
- '''
- */
-
-
+ ''' */
 
