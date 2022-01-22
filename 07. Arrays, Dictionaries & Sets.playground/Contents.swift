@@ -191,3 +191,11 @@ var pairs: [String: Int] = [:]
 print(pairs)
 // > [:]
 pairs.reserveCapacity(20)
+/*: ### Part 2. Accessing values (Доступ к значениям)*/
+//: Using subscripting (Использование подзаписи)
+namesAndScores = ["Anna": 2, "Brian": 2, "Craig": 8, "Donna": 6]
+print(namesAndScores["Anna"]!) // возвращаемый тип является необязательным (an optional)
+// > 2
+//: Using properties and methods (Использование свойств и методов)
+namesAndScores.isEmpty // false
+namesAndScores.count // 4
