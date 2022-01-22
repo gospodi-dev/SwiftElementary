@@ -243,3 +243,4 @@ for player in namesAndScores.keys {
 }
 print("") // print one final newline
 // > Craig, Donna, Brian, Anna,
+/*: ### Part 5. Running time for dictionary operations (Время выполнения словарных операций)*/
