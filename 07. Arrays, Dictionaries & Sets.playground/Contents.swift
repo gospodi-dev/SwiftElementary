@@ -244,3 +244,28 @@ for player in namesAndScores.keys {
 print("") // print one final newline
 // > Craig, Donna, Brian, Anna,
 /*: ### Part 5. Running time for dictionary operations (Время выполнения словарных операций)*/
+
+
+/*: ## Sets (Множества)
+ '''
+ Множество - это неупорядоченная коллекция уникальных значений одного типа. Это может быть очень полезно, когда вы хотите, чтобы элемент не появлялся в коллекции более одного раза и когда порядок элементов не важен.
+ '''
+*/
+//: Creating sets (Создание множеств)
+let setOne: Set<Int> = [1]
+//: Set literals (Литералы множества)
+let someArray = [1, 2, 3, 1]
+var explicitSet: Set<Int> = [1, 2, 3, 1]
+var someSet = Set([1, 2, 3, 1])
+print(someSet)
+// > [2, 3, 1] но порядок не определен
+//: Accessing elements (Доступ к элементам)
+print(someSet.contains(1))
+// > true
+print(someSet.contains(4))
+// > false
+//: Adding and removing elements (Добавление и удаление элементов)
+someSet.insert(5)
+let removedElement = someSet.remove(1)
+print(removedElement!)
+// > 1
