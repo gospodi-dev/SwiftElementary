@@ -382,3 +382,25 @@ func merging(_ dict1: [String: String], with dict2: [String: String]) -> [String
     }
     return newDictionary
 }
+
+/*: ### Challenge 10: Count the characters (Задание 10: Подсчитайте символы) */
+func occurrencesOfCharacters(in text: String) -> [Character: Int] {
+  var occurrences: [Character: Int] = [:]
+  for character in text {
+    if let count = occurrences[character] {
+      occurrences[character] = count + 1
+    } else {
+      occurrences[character] = 1
+    }
+  }
+  return occurrences
+}
+// Другой способ
+func occurrencesOfCharactersBonus(in text: String) -> [Character: Int] {
+  var occurrences: [Character: Int] = [:]
+  for character in text {
+    occurrences[character, default: 0] += 1
+  }
+  return occurrences
+}
+
