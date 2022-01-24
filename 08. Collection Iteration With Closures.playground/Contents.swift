@@ -64,3 +64,30 @@ let voidClosure: () -> Void = {
 }
 voidClosure()
 // > I'm is awesome!
+/*: ### Capturing from the enclosing scope (Захват из охватывающей области) */
+var counter = 0
+let incrementCounter = {
+  counter += 1
+}
+incrementCounter()
+incrementCounter()
+incrementCounter()
+incrementCounter()
+incrementCounter()
+
+func countingClosure() -> () -> Int {
+  var counter = 0
+  let incrementCounter: () -> Int = {
+    counter += 1
+    return counter
+  }
+  return incrementCounter
+}
+
+let counter1 = countingClosure()
+let counter2 = countingClosure()
+counter1() // 1
+counter2() // 1
+counter1() // 2
+counter1() // 3
+counter2() // 2
