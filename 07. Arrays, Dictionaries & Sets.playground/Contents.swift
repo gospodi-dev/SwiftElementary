@@ -416,3 +416,7 @@ func isInvertible(_ dictionary: [String: Int]) -> Bool {
   return true
 }
 
+/*: ### Challenge 12: Removing keys and setting values to nil (Задача 12: Удаление ключей и установка значений на ноль) */
+var nameTitleLookup: [String: String?] = ["Mary": "Engineer", "Patrick": "Intern", "Ray": "Hacker"]
+nameTitleLookup.updateValue(nil, forKey: "Patrick")
+nameTitleLookup["Ray"] = nil  // or nameTitleLookup.removeValue(forKey: "Ray")
