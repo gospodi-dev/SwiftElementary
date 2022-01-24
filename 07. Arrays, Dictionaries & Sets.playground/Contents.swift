@@ -373,3 +373,12 @@ func printLongStateNames(in dictionary: [String: String]) {
     }
   }
 }
+
+/*: ### Challenge 9: Merge dictionaries (Задача 9: объединить словари) */
+func merging(_ dict1: [String: String], with dict2: [String: String]) -> [String: String] {
+    var newDictionary = dict1
+    for (key, value) in dict2 {
+        newDictionary[key] = value
+    }
+    return newDictionary
+}
