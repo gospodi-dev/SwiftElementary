@@ -186,3 +186,40 @@ let lastTwo = prices.suffix(2) // [2.3, 8.19]
 
 prices.removeAll() { $0 > 2 } // prices is now [1.5]
 prices.removeAll() // prices is now an empty array (prices теперь является пустым массивом)
+
+/*: ### Lazy collections (Ленивые коллекции) */
+// вычислить первые десять простых чисел
+func isPrime(_ number: Int) -> Bool {
+  if number == 1 { return false } // false
+  if number == 2 || number == 3 { return true } // true
+
+  for i in 2...Int(Double(number).squareRoot()) {
+    if number % i == 0 { return false }
+  }
+
+  return true
+}
+
+//var primes: [Int] = []
+//var i = 1
+//while primes.count < 10 {
+//  if isPrime(i) {
+//    primes.append(i)
+//  }
+//  i += 1
+//}
+//primes.forEach { print($0) }
+
+let primes = (1...).lazy // PrefixSequence<LazyFilterSequence<PartialRangeFrom<Int>>>
+  .filter { isPrime($0) }
+  .prefix(10)
+primes.forEach { print($0) }
+//3
+//5
+//7
+//11
+//13
+//17
+//19
+//23
+//29
