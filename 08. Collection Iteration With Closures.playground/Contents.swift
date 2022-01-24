@@ -91,3 +91,14 @@ counter2() // 1
 counter1() // 2
 counter1() // 3
 counter2() // 2
+
+/*: ### Custom sorting with closures (Пользовательская сортировка с закрытием) */
+let names = ["ZZZZZZ", "BB", "A", "CCCC", "EEEEE"]
+names.sorted()
+// ["A", "BB", "CCCC", "EEEEE", "ZZZZZZ"]
+names.sorted {
+  $0.count > $1.count
+}
+print(names)
+// ["ZZZZZZ", "BB", "A", "CCCC", "EEEEE"]
+
