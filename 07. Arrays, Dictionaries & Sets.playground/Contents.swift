@@ -173,7 +173,7 @@ for (index, player) in players.enumerated() {
 // > 7. Franklin - 1
 
 //: Running time for array operations (Время выполнения операций с массивом)
-*/
+
 /*: ## Dictionaries (Словари)
  '''
 Словарь - это неупорядоченный набор пар, каждая из которых состоит из **ключа** и **значения**
@@ -269,3 +269,29 @@ someSet.insert(5)
 let removedElement = someSet.remove(1)
 print(removedElement!)
 // > 1
+*/
+/*: ## Challenges */
+/*: ### Challenge 1: Which is valid (Вызов 1: Что является действительным) */
+let array1 = [Int]() // Valid
+//let array2 = [] // Invalid: the type cannot be inferred (Неверно: тип не может быть определен)
+let array3: [String] = [] // Valid
+
+let array4 = [1, 2, 3] // [1, 2, 3]
+print(array4[0]) // 1 - Valid
+// print(array4[5]) // Fatal error: Index out of range (Фатальная ошибка: Индекс вне диапазона)
+array4[1...2] // [2, 3] - Valid
+// array4[0] = 4 // error: cannot assign through subscript: 'array4' is a 'let' constant array4[0] = 4
+// array4.append(4) // error: cannot use mutating member on immutable value: 'array4' is a 'let' constant
+
+var array5 = [1, 2, 3] // [1, 2, 3]
+
+array5[0] = array5[1] // 2
+print(array5) // [2, 2, 3]
+array5[0...1] = [4, 5] // [4, 5]
+print(array5) // [4, 5, 3]
+// array5[0] = "Six" // error: cannot assign value of type 'String' to subscript of type 'Int' array5[0] = "Six" (ошибка: невозможно присвоить значение типа 'String' подскрипту типа 'Int')
+// array5 += 6 // error: cannot convert value of type 'Int' to expected argument type 'Array<Int>' (ошибка: невозможно преобразовать значение типа 'Int' в ожидаемый тип аргумента 'Array<Int>'). Invalid: the += operator requires an array on the right-hand side, not a single element (Неверно: оператор += требует массив в правой части, а не один элемент)
+for item in array5 { print(item)}
+//4
+//5
+//3
