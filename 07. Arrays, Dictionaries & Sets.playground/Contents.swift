@@ -303,3 +303,13 @@ func removingOnce(_ item: Int, from array: [Int]) -> [Int] {
   }
   return result
 }
+/*: ### Challenge 3: Remove the numbers (Задача 3: Удалите цифры) */
+func removing(_ item: Int, from array: [Int]) -> [Int] {
+    var newArray: [Int] = []
+    for candidateItem in array {
+        if candidateItem != item {
+            newArray.append(candidateItem)
+        }
+    }
+    return newArray
+}
