@@ -364,3 +364,12 @@ dict5["WA"] = "Washington" // "Washington"
 print(dict5) // ["CA": "California", "WA": "Washington", "NY": "New York"]
 dict5["CA"] = nil // nil
 print(dict5) // ["WA": "Washington", "NY": "New York"]
+
+/*: ### Challenge 8: Long names (Задача 8: Длинные имена) */
+func printLongStateNames(in dictionary: [String: String]) {
+  for (_, value) in dictionary {
+    if value.count > 8 {
+      print(value)
+    }
+  }
+}
