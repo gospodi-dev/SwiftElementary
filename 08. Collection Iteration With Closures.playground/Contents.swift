@@ -58,3 +58,9 @@ sequenced {
 }
 // Hello, world.
 /* Если вы вдруг забудете, как вызвать функцию с помощью замыкания, Xcode поможет вам. Введите имя метода (или заполните его кодом) и дважды нажмите клавишу возврата (press the return key twice). Функция завершения кода заполнит за вас синтаксис замыкания.*/
+/*: ### Closures with no return value (Замыкания без возвращаемого значения) */
+let voidClosure: () -> Void = {
+  print("I'm is awesome!")
+}
+voidClosure()
+// > I'm is awesome!
