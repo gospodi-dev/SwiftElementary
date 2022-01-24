@@ -92,7 +92,7 @@ counter1() // 2
 counter1() // 3
 counter2() // 2
 
-/*: ### Custom sorting with closures (Пользовательская сортировка с закрытием) */
+/*: ### Custom sorting with closures (Пользовательская сортировка с замыканием) */
 let names = ["ZZZZZZ", "BB", "A", "CCCC", "EEEEE"]
 names.sorted()
 // ["A", "BB", "CCCC", "EEEEE", "ZZZZZZ"]
@@ -102,3 +102,87 @@ names.sorted {
 print(names)
 // ["ZZZZZZ", "BB", "A", "CCCC", "EEEEE"]
 
+/*: ### Iterating over collections with closures (Перебор коллекций с замыканиями) */
+//: Перебираем элементы в коллекции
+let values = [1, 2, 3, 4, 5, 6]
+values.forEach {
+    print("\($0): \($0*$0)")
+}
+// > 1: 1
+// > 2: 4
+// > 3: 9
+// > 4: 16
+// > 5: 25
+// > 6: 36
+
+var prices = [1.5, 10, 4.99, 2.30, 8.19]
+
+let largePrices = prices.filter {
+  $0 > 5
+}
+// func filter(_ isIncluded: (Element) -> Bool) -> [Element]
+print(largePrices)
+// [10.0, 8.19]
+let largePrice = prices.first {
+  $0 > 5
+}
+print(largePrices)
+
+let salePrices = prices.map {
+  $0 * 0.9
+}
+print(salePrices)
+// [1.35, 9.0, 4.4910000000000005, 2.07, 7.3709999999999996]
+
+let userInput = ["0", "11", "haha", "42"]
+
+let numbers1 = userInput.map {
+  Int($0)
+}
+print(numbers1)
+// [Optional(0), Optional(11), nil, Optional(42)]
+let numbers2 = userInput.compactMap {
+  Int($0)
+}
+print(numbers2)
+// [0, 11, 42]
+
+let userInputNested = [["0", "1"], ["a", "b", "c"], ["🐕"]]
+let allUserInput = userInputNested.flatMap {
+  $0
+}
+print(allUserInput)
+// ["0", "1", "a", "b", "c", "🐕"]
+
+let sum = prices.reduce(0) {
+  $0 + $1
+}
+print(sum)
+// > 26.980000000000004
+// Эти функции также можно использовать со словарями
+let stock = [1.5: 5, 10: 2, 4.99: 20, 2.30: 5, 8.19: 30]
+let stockSum = stock.reduce(0) {
+  $0 + $1.key * Double($1.value)
+}
+print(stockSum)
+// > 384.5
+
+let farmAnimals = ["🐎": 5, "🐄": 10, "🐑": 50, "🐶": 1]
+let allAnimals = farmAnimals.reduce(into: []) {
+  (result, this: (key: String, value: Int)) in
+  for _ in 0 ..< this.value {
+    result.append(this.key)
+  }
+}
+// Если нужно измельчить массив
+let removeFirst = prices.dropFirst() // [10, 4.99, 2.3, 8.19]
+let removeFirstTwo = prices.dropFirst(2) // [4.99, 2.3, 8.19]
+
+let removeLast = prices.dropLast() // [1.5, 10, 4.99, 2.3]
+let removeLastTwo = prices.dropLast(2) // [1.5, 10, 4.99, 2.3]
+
+let firstTwo = prices.prefix(2) // [1.5, 10]
+let lastTwo = prices.suffix(2) // [2.3, 8.19]
+
+prices.removeAll() { $0 > 2 } // prices is now [1.5]
+prices.removeAll() // prices is now an empty array (prices теперь является пустым массивом)
