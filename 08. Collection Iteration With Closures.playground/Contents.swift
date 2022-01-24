@@ -46,3 +46,15 @@ operateOnNumbers(4, 2) {
   $0 + $1
 }
 // 6
+/*: ### Multiple trailing closures syntax. Синтаксис множественных завершающих замыканий */
+func sequenced(first: ()->Void, second: ()->Void) {
+  first()
+  second()
+}
+sequenced {
+  print("Hello, ", terminator: "")
+} second: {
+  print("world.")
+}
+// Hello, world.
+/* Если вы вдруг забудете, как вызвать функцию с помощью замыкания, Xcode поможет вам. Введите имя метода (или заполните его кодом) и дважды нажмите клавишу возврата (press the return key twice). Функция завершения кода заполнит за вас синтаксис замыкания.*/
