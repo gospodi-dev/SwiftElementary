@@ -321,3 +321,10 @@ func reversed(_ array: [Int]) -> [Int] {
     }
     return newArray
 }
+/*: ### Challenge 5: Return the middle (Задача 5: Верните середину) */
+func middle(_ array: [Int]) -> Int? {
+    guard !array.isEmpty else {
+        return nil
+    }
+    return array[(array.count-1)/2]
+}
