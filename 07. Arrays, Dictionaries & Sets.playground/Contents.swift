@@ -346,3 +346,21 @@ func minMax(of numbers: [Int]) -> (min: Int, max: Int)? {
     }
     return (min, max)
 }
+/*: ### Challenge 7: Which is valid (Задача 7: Что является действительным) */
+// let dict1: [Int, Int] = [:] // Invalid: type should be [Int: Int] not [Int, Int]
+// let dict2 = [:] // error: empty collection literal requires an explicit type (пустой литерал коллекции требует явного типа). Invalid: type cannot be inferred (Неверно: тип не может быть определен)
+let dict3: [Int: Int] = [:] // Valid
+
+let dict4 = ["One": 1, "Two": 2, "Three": 3]
+// dict4[1] // error: no exact matches in call to subscript. Invalid: key should be String, not Int (ошибка: нет точных совпадений в обращении к субскрипту. Неверно: ключ должен быть String, а не Int)
+dict4["One"] // 1
+// dict4["Zero"] = 0 // error: cannot assign through subscript: 'dict4' is a 'let' constant. Invalid: dict4 is a constant
+// dict4[0] = "Zero" // error: no exact matches in call to subscript. Invalid: key should be a String and value should be an Int - and dict4 is a constant (ошибка: нет точных совпадений в вызове subscript. Неверно: ключ должен быть String, а значение должно быть Int - и dict4 является константой)
+
+var dict5 = ["NY": "New York", "CA": "California"]
+dict5["NY"] // "New York"
+print(dict5) // ["NY": "New York", "CA": "California"]
+dict5["WA"] = "Washington" // "Washington"
+print(dict5) // ["CA": "California", "WA": "Washington", "NY": "New York"]
+dict5["CA"] = nil // nil
+print(dict5) // ["WA": "Washington", "NY": "New York"]
