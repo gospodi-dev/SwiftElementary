@@ -313,3 +313,11 @@ func removing(_ item: Int, from array: [Int]) -> [Int] {
     }
     return newArray
 }
+/*: ### Challenge 4: Reverse an array (Задача 4: Перевернуть массив) */
+func reversed(_ array: [Int]) -> [Int] {
+    var newArray: [Int] = []
+    for item in array {
+        newArray.insert(item, at: 0)
+    }
+    return newArray
+}
