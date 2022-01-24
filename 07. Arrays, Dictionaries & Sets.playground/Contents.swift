@@ -271,7 +271,7 @@ print(removedElement!)
 // > 1
 */
 /*: ## Challenges */
-/*: ### Challenge 1: Which is valid (Вызов 1: Что является действительным) */
+/*: ### Challenge 1: Which is valid (Задача 1: Что является действительным) */
 let array1 = [Int]() // Valid
 //let array2 = [] // Invalid: the type cannot be inferred (Неверно: тип не может быть определен)
 let array3: [String] = [] // Valid
@@ -295,3 +295,11 @@ for item in array5 { print(item)}
 //4
 //5
 //3
+/*: ### Challenge 2: Remove the first number (Задача 2: Удалите первую цифру) */
+func removingOnce(_ item: Int, from array: [Int]) -> [Int] {
+  var result = array
+  if let index = array.firstIndex(of: item) {
+    result.remove(at: index)
+  }
+  return result
+}
