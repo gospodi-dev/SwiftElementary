@@ -404,3 +404,15 @@ func occurrencesOfCharactersBonus(in text: String) -> [Character: Int] {
   return occurrences
 }
 
+/*: ### Challenge 11: Unique values (Задача 11: уникальные ценности)*/
+func isInvertible(_ dictionary: [String: Int]) -> Bool {
+  var seenValues: Set<Int> = []
+  for value in dictionary.values {
+    if seenValues.contains(value) {
+      return false  // duplicate value detected
+    }
+    seenValues.insert(value)
+  }
+  return true
+}
+
