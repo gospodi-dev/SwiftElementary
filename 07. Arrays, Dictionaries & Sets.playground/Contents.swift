@@ -328,3 +328,21 @@ func middle(_ array: [Int]) -> Int? {
     }
     return array[(array.count-1)/2]
 }
+/*: ### Challenge 6: Find the minimum and maximum (Задача 6: Найдите минимум и максимум) */
+func minMax(of numbers: [Int]) -> (min: Int, max: Int)? {
+    if numbers.isEmpty {
+        return nil
+    }
+    
+    var min = numbers[0]
+    var max = numbers[0]
+    for number in numbers {
+        if number < min {
+            min = number
+        }
+        if number > max {
+            max = number
+        }
+    }
+    return (min, max)
+}
