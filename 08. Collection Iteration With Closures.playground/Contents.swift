@@ -234,3 +234,11 @@ let allNames = names.reduce("") {
 }
 print(allNames)
 // > IvanEganVickyAlisaBarbara
+//: Задача: 2
+let filteredNames = names.filter {
+  $0.count > 4
+}.reduce("") {
+  $0 + $1
+}
+print(filteredNames)
+// > VickyAlisaBarbara
