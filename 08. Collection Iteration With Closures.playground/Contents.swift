@@ -242,3 +242,10 @@ let filteredNames = names.filter {
 }
 print(filteredNames)
 // > VickyAlisaBarbara
+//: Задача: 3
+let namesAndAges = ["Ivan": 34, "Egan": 22, "Vicky": 10, "Alisa": 56, "Barbara": 78]
+let children = namesAndAges.filter {
+    $0.value < 18
+}
+print(children)
+// > ["Vicky": 10]
