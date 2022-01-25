@@ -278,3 +278,44 @@ repeatTask(times: 10) {
 //Swift Apprentice - отличная книга!
 //Swift Apprentice - отличная книга!
 //Swift Apprentice - отличная книга!
+
+//: Challenge 2: Closure sums (Суммы закрытия)
+func mathSum(length: Int, series: (Int) -> Int) -> Int {
+  var result = 0
+  for i in 1...length {
+    result += series(i)
+  }
+  return result
+}
+
+//// Дополнительная награда, если ваше решение было следующим!
+//func mathSum(length: Int, series: (Int) -> Int) -> Int {
+//  return (1...length).map { series($0) }.reduce(0, +)
+//}
+
+// Sum of first 10 square numbers (Сумма первых 10 квадратов чисел)
+mathSum(length: 10) { number in
+  number * number
+}
+
+// Alternate solution using shorthand syntax (Альтернативное решение с использованием сокращенного синтаксиса)
+mathSum(length: 10) {
+  $0 * $0
+}
+
+func fibonacci(_ number: Int) -> Int {
+  if number <= 0 {
+    return 0
+  }
+
+  if number == 1 || number == 2 {
+    return 1
+  } // 143
+
+  return fibonacci(number - 1) + fibonacci(number - 2)
+} // 133
+
+// Sum of first 10 fibonacci numbers. (Сумма первых 10 чисел Фибоначчи.)
+// Note that you can't use a closure here as `fibonacci` is a recursive function and thus needs a name to be able to recursively call itself. (Обратите внимание, что здесь нельзя использовать закрытие, поскольку `fibonacci` - это рекурсивная функция, и поэтому ей нужно имя, чтобы иметь возможность рекурсивно вызывать саму себя.)
+mathSum(length: 10, series: fibonacci)
+// > 143
