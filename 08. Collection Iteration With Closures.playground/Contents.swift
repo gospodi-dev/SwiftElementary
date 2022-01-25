@@ -258,3 +258,23 @@ let adults = namesAndAges.filter {
 print(adults)
 // > ["Ivan", "Alisa", "Barbara", "Egan"]
 /*: ### Challenges */
+//: Challenge 1: Repeating yourself (Повторение самого себя)
+func repeatTask(times: Int, task: () -> Void) {
+    for _ in 0..<times {
+        task()
+    }
+}
+
+repeatTask(times: 10) {
+    print("Swift Apprentice - отличная книга!")
+}
+//Swift Apprentice - отличная книга!
+//Swift Apprentice - отличная книга!
+//Swift Apprentice - отличная книга!
+//Swift Apprentice - отличная книга!
+//Swift Apprentice - отличная книга!
+//Swift Apprentice - отличная книга!
+//Swift Apprentice - отличная книга!
+//Swift Apprentice - отличная книга!
+//Swift Apprentice - отличная книга!
+//Swift Apprentice - отличная книга!
