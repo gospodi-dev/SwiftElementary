@@ -249,3 +249,12 @@ let children = namesAndAges.filter {
 }
 print(children)
 // > ["Vicky": 10]
+//: Задача: 4
+let adults = namesAndAges.filter {
+    $0.value >= 18
+}.map {
+    $0.key
+}
+print(adults)
+// > ["Ivan", "Alisa", "Barbara", "Egan"]
+/*: ### Challenges */
