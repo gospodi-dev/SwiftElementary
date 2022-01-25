@@ -1,3 +1,4 @@
+/*
 /*: ## Closures (Замыкания) */
 /*: ### Closure basics (Основы замыкания) */
 // var multiplyClosure: (Int, Int) -> Int
@@ -223,3 +224,13 @@ primes.forEach { print($0) }
 //19
 //23
 //29
+ */
+
+/*: ### Mini-exercises (Мини-упражнения) */
+//: Задача: 1
+let names = ["Ivan", "Egan", "Vicky", "Alisa", "Barbara"]
+let allNames = names.reduce("") {
+    $0 + $1
+}
+print(allNames)
+// > IvanEganVickyAlisaBarbara
