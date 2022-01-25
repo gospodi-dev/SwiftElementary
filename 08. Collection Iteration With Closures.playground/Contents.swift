@@ -319,3 +319,30 @@ func fibonacci(_ number: Int) -> Int {
 // Note that you can't use a closure here as `fibonacci` is a recursive function and thus needs a name to be able to recursively call itself. (Обратите внимание, что здесь нельзя использовать закрытие, поскольку `fibonacci` - это рекурсивная функция, и поэтому ей нужно имя, чтобы иметь возможность рекурсивно вызывать саму себя.)
 mathSum(length: 10, series: fibonacci)
 // > 143
+
+//: Challenge 3: Functional ratings (Функциональные рейтинги)
+let appRatings = [
+  "Calendar Pro": [1, 5, 5, 4, 2, 1, 5, 4],
+  "The Messenger": [5, 4, 2, 5, 4, 1, 1, 2],
+  "Socialise": [2, 1, 2, 2, 1, 2, 4, 2]
+]
+
+/*:
+First, create a dictionary called `averageRatings` which will contain a mapping of app names to average ratings. Then, use `forEach` to iterate through the `appRatings` dictionary, use `reduce` to calculate the average rating and store this rating in the `averageRatings` dictionary.
+
+Finally, use `filter` and `map` chained together to get a list of the app names whose average rating is greater than 3.
+*/
+
+var averageRatings: [String: Double] = [:]
+appRatings.forEach {
+ let total = $0.value.reduce(0, +) // + is a function too!
+ averageRatings[$0.key] = Double(total) / Double($0.value.count)
+}
+averageRatings
+
+let goodApps = averageRatings.filter {
+ $0.value > 3
+}.map {
+ $0.key
+}
+// > "Calendar Pro"

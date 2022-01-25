@@ -3,17 +3,32 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/gospodimac/Desktop/Swift_EDU/book%20-%20Swift%20Apprentice/SwiftElementary/08.%20Collection%20Iteration%20With%20Closures.playground#CharacterRangeLen=10&amp;CharacterRangeLoc=4072&amp;EndingColumnNumber=15&amp;EndingLineNumber=171&amp;StartingColumnNumber=5&amp;StartingLineNumber=171&amp;Timestamp=664825733.220559"
+         documentLocation = "file:///Users/gospodimac/Desktop/Swift_EDU/book%20-%20Swift%20Apprentice/SwiftElementary/08.%20Collection%20Iteration%20With%20Closures.playground#CharacterRangeLen=10&amp;CharacterRangeLoc=4072&amp;EndingColumnNumber=15&amp;EndingLineNumber=171&amp;StartingColumnNumber=5&amp;StartingLineNumber=171&amp;Timestamp=664826152.496868"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/gospodimac/Desktop/Swift_EDU/book%20-%20Swift%20Apprentice/SwiftElementary/08.%20Collection%20Iteration%20With%20Closures.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=4956&amp;EndingColumnNumber=46&amp;EndingLineNumber=194&amp;StartingColumnNumber=42&amp;StartingLineNumber=194&amp;Timestamp=664825733.220627"
+         documentLocation = "file:///Users/gospodimac/Desktop/Swift_EDU/book%20-%20Swift%20Apprentice/SwiftElementary/08.%20Collection%20Iteration%20With%20Closures.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=4956&amp;EndingColumnNumber=46&amp;EndingLineNumber=194&amp;StartingColumnNumber=42&amp;StartingLineNumber=194&amp;Timestamp=664826152.4969341"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/gospodimac/Desktop/Swift_EDU/book%20-%20Swift%20Apprentice/SwiftElementary/08.%20Collection%20Iteration%20With%20Closures.playground#CharacterRangeLen=5&amp;CharacterRangeLoc=5054&amp;EndingColumnNumber=38&amp;EndingLineNumber=197&amp;StartingColumnNumber=33&amp;StartingLineNumber=197&amp;Timestamp=664825733.220668"
+         documentLocation = "file:///Users/gospodimac/Desktop/Swift_EDU/book%20-%20Swift%20Apprentice/SwiftElementary/08.%20Collection%20Iteration%20With%20Closures.playground#CharacterRangeLen=5&amp;CharacterRangeLoc=5054&amp;EndingColumnNumber=38&amp;EndingLineNumber=197&amp;StartingColumnNumber=33&amp;StartingLineNumber=197&amp;Timestamp=664826152.496973"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/gospodimac/Desktop/Swift_EDU/book%20-%20Swift%20Apprentice/SwiftElementary/08.%20Collection%20Iteration%20With%20Closures.playground#CharacterRangeLen=10&amp;CharacterRangeLoc=8718&amp;EndingColumnNumber=11&amp;EndingLineNumber=336&amp;StartingColumnNumber=1&amp;StartingLineNumber=336&amp;Timestamp=664826152.4970109"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/gospodimac/Desktop/Swift_EDU/book%20-%20Swift%20Apprentice/SwiftElementary/08.%20Collection%20Iteration%20With%20Closures.playground#CharacterRangeLen=14&amp;CharacterRangeLoc=8865&amp;EndingColumnNumber=0&amp;EndingLineNumber=341&amp;StartingColumnNumber=1&amp;StartingLineNumber=340&amp;Timestamp=664826152.4970469"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/gospodimac/Desktop/Swift_EDU/book%20-%20Swift%20Apprentice/SwiftElementary/08.%20Collection%20Iteration%20With%20Closures.playground#CharacterRangeLen=6&amp;CharacterRangeLoc=8943&amp;EndingColumnNumber=0&amp;EndingLineNumber=346&amp;StartingColumnNumber=2&amp;StartingLineNumber=345&amp;Timestamp=664826152.497085"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
