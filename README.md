@@ -1,5 +1,6 @@
 # SwiftElementary
 Examples and tasks for learning the basics of the Swift programming language
+![Image](/image1.png)
 
 ## Сourse Сontent
 - Главы 1. Expressions, Variables & Constants (Выражения, переменные и константы)
