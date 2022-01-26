@@ -54,3 +54,6 @@ fourthChar.unicodeScalars.forEach { codePoint in
 }
 // 101
 // 769
+
+/*: ### Part 4. Indexing strings (Индексирование строк) */
+let equal = cafeNormal == cafeCombining // true
