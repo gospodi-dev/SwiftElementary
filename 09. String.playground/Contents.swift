@@ -57,3 +57,12 @@ fourthChar.unicodeScalars.forEach { codePoint in
 
 /*: ### Part 4. Indexing strings (Индексирование строк) */
 let equal = cafeNormal == cafeCombining // true
+
+/*: ### Part 5. Strings as bi-directional collections (Строки как двунаправленные коллекции) */
+let name = "Matt"
+let backwardsName = name.reversed() // ReversedCollection<String>
+
+let secondCharIndex = backwardsName.index(backwardsName.startIndex,
+                                          offsetBy: 1) // ReversedCollection<String>.Index
+let secondChar = backwardsName[secondCharIndex] // "t"
+let backwardsNameString = String(backwardsName) // "ttaM"
