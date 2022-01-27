@@ -1,4 +1,4 @@
-
+/*
 /*: ## 09. String (Строки) */
 /*: ### Part 1. Strings as collections (Строки как коллекции)*/
 let string = "Matt"
@@ -91,8 +91,14 @@ let multiRaw = #"""
 |_____/ \_/\_/ |_|_|  \__|
 """#
 print(multiRaw)
+*/
+/*: ### Part 7. Substrings (Подстроки) */
+let fullName = "Matt Galloway" // "Matt Galloway"
+let spaceIndex = fullName.firstIndex(of: " ")! // String.Index
+// let firstName = fullName[fullName.startIndex..<spaceIndex] // "Matt"
 
+let firstName = fullName[..<spaceIndex] // "Matt"
+let lastName = fullName[fullName.index(after: spaceIndex)...]
+// "Galloway"
 
-
-
-
+let lastNameString = String(lastName)
