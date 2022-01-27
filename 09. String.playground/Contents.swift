@@ -1,3 +1,4 @@
+
 /*: ## 09. String (Строки) */
 /*: ### Part 1. Strings as collections (Строки как коллекции)*/
 let string = "Matt"
@@ -90,3 +91,8 @@ let multiRaw = #"""
 |_____/ \_/\_/ |_|_|  \__|
 """#
 print(multiRaw)
+
+
+
+
+

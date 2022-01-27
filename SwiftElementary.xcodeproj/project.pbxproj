@@ -14,6 +14,7 @@
 		CC67BEB6279872630006AB12 /* 07. Arrays, Dictionaries & Sets.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "07. Arrays, Dictionaries & Sets.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CC76AFFD27A1457E000D9259 /* 09. String.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "09. String.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CC8695F2279EBFA000C21E9A /* 08. Collection Iteration With Closures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "08. Collection Iteration With Closures.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CCD043A427A2FBCC004D82B9 /* Test (Bonus).playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Test (Bonus).playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCDAB3422785FEBD00965F2C /* 01. Expressions, Variables & Constants.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "01. Expressions, Variables & Constants.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCEA0F402796CBE000253C98 /* 06. Optionals.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "06. Optionals.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
@@ -31,6 +32,7 @@
 				CC67BEB6279872630006AB12 /* 07. Arrays, Dictionaries & Sets.playground */,
 				CC8695F2279EBFA000C21E9A /* 08. Collection Iteration With Closures.playground */,
 				CC76AFFD27A1457E000D9259 /* 09. String.playground */,
+				CCD043A427A2FBCC004D82B9 /* Test (Bonus).playground */,
 			);
 			sourceTree = "<group>";
 		};
