@@ -118,7 +118,7 @@ hexDigit.isHexDigit // true
 
 let thaiNine: Character = "๙"
 thaiNine.wholeNumberValue // 9
- */
+
 /*: ### Part 9. Encoding (Кодировка) */
 //: UTF-8
 let char = "\\u{00bd}"
@@ -168,3 +168,19 @@ for i in characters.utf16 {
 // 55357 : 1101100000111101
 // 56899 : 1101111001000011
 
+/*: ### Part 10. Converting indexes between encoding views (Преобразование индексов между представлениями кодировки) */
+let arrowIndex = characters.firstIndex(of: "\\u{21e8}")!
+characters[arrowIndex] // ⇨
+
+if let unicodeScalarsIndex = arrowIndex.samePosition(in: characters.unicodeScalars) {
+  characters.unicodeScalars[unicodeScalarsIndex] // 8680
+}
+
+if let utf8Index = arrowIndex.samePosition(in: characters.utf8) {
+  characters.utf8[utf8Index] // 226
+}
+
+if let utf16Index = arrowIndex.samePosition(in: characters.utf16) {
+  characters.utf16[utf16Index] // 8680
+}
+ */
