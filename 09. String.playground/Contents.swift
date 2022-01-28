@@ -305,3 +305,27 @@ func splitting(_ string: String, delimiter: Character) -> [String] {
 let pieces = splitting("Dog,Cat,Badger,Snake,Lion", delimiter: ",")
 print(pieces)
 // > ["Dog", "Cat", "Badger", "Snake", "Lion"]
+
+/*: ### Challenge 5: Word reverser (Перевертыш слов) */
+func reversedByWord(sentence: String) -> String {
+  var reversedWords = ""
+  var lastWordIndex = sentence.startIndex
+
+  for i in sentence.indices {
+    if sentence[i] == " " {
+      let substring = sentence[lastWordIndex..<i]
+      reversedWords += substring.reversed() + " "
+      lastWordIndex = sentence.index(after: i)
+    }
+  }
+
+  // Add the final word
+  let substring = sentence[lastWordIndex..<sentence.endIndex]
+  reversedWords += substring.reversed()
+
+  return reversedWords
+}
+
+let reversed = reversedByWord(sentence: "The quick brown fox jumps over the lazy dog")
+print(reversed)
+// > ehT kciuq nworb xof spmuj revo eht yzal god
