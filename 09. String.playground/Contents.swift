@@ -263,4 +263,22 @@ func numberOfWords(in sentence: String) -> Int {
 
 let wordCount = numberOfWords(in: "The quick brown fox jumps over the lazy dog")
 print(wordCount)
-// 9
+// > 9
+
+/*: ### Challenge 3: Name formatter (Форматирование имени) */
+func sanitized(name: String) -> String? {
+  guard let indexOfComma = name.firstIndex(of: ",") else {
+    return nil
+  }
+
+  let lastNameSubstring = name[..<indexOfComma]
+  let firstNameSubstring = name[indexOfComma...].dropFirst(2)
+
+  return firstNameSubstring + " " + lastNameSubstring
+}
+
+if let sanitizedName = sanitized(name: "Galloway, Matt") {
+  print(sanitizedName)
+}
+// > Matt Galloway
+
