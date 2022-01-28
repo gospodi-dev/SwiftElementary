@@ -91,7 +91,7 @@ let multiRaw = #"""
 |_____/ \_/\_/ |_|_|  \__|
 """#
 print(multiRaw)
-*/
+
 /*: ### Part 7. Substrings (Подстроки) */
 let fullName = "Matt Galloway" // "Matt Galloway"
 let spaceIndex = fullName.firstIndex(of: " ")! // String.Index
@@ -102,3 +102,19 @@ let lastName = fullName[fullName.index(after: spaceIndex)...]
 // "Galloway"
 
 let lastNameString = String(lastName)
+*/
+/*: ### Part 8. Character properties (Свойства символов) */
+// принадлежит ли символ к набору символов ASCII
+let singleCharacter: Character = "x"
+singleCharacter.isASCII // true
+
+// пробельный символ (whitespace)
+let space: Character = " "
+space.isWhitespace // true
+
+// проверка - является ли символ шестнадцатеричной цифрой
+let hexDigit: Character = "d"
+hexDigit.isHexDigit // true
+
+let thaiNine: Character = "๙"
+thaiNine.wholeNumberValue // 9
