@@ -102,7 +102,7 @@ let lastName = fullName[fullName.index(after: spaceIndex)...]
 // "Galloway"
 
 let lastNameString = String(lastName)
-*/
+
 /*: ### Part 8. Character properties (Свойства символов) */
 // принадлежит ли символ к набору символов ASCII
 let singleCharacter: Character = "x"
@@ -118,3 +118,53 @@ hexDigit.isHexDigit // true
 
 let thaiNine: Character = "๙"
 thaiNine.wholeNumberValue // 9
+ */
+/*: ### Part 9. Encoding (Кодировка) */
+//: UTF-8
+let char = "\\u{00bd}"
+for i in char.utf8 {
+    print(i)
+}
+// 92
+// 117
+// 123
+// 48
+// 48
+// 98
+// 100
+// 125
+
+// +½⇨🙃
+let characters = "+\\u{00bd}\\u{21e8}\\u{1f643}"
+for i in characters.utf8 {
+  print("\\(i) : \\(String(i, radix: 2))")
+}
+// \(i) : \(String(i, radix: 2))
+// 43 : 101011
+//
+// 194 : 11000010
+// 189 : 10111101
+//
+// 226 : 11100010
+// 135 : 10000111
+// 168 : 10101000
+//
+// 240 : 11110000
+// 159 : 10011111
+// 153 : 10011001
+// 131 : 10000011
+
+//: UTF-16
+for i in characters.utf16 {
+  print("\\(i) : \\(String(i, radix: 2))")
+}
+// \(i) : \(String(i, radix: 2))
+// 43 : 101011
+//
+// 189 : 10111101
+//
+// 8680 : 10000111101000
+//
+// 55357 : 1101100000111101
+// 56899 : 1101111001000011
+
