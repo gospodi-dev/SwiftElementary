@@ -237,3 +237,30 @@ printCharacterCount(for: "The quick brown fox jumps over the lazy dog")
 //f : ## 1
 //l : ## 1
 
+/*: ### Challenge 2: Word count (Подсчёт слов) */
+func numberOfWords(in sentence: String) -> Int {
+  var count = 0
+  var inWord = false
+
+  for character in sentence {
+    if character == " " {
+      if inWord {
+        count += 1
+      }
+      inWord = false
+    } else {
+      inWord = true
+    }
+  }
+
+  // We need to add 1 to count the final word if there was at least 1 character (Нужно добавить 1 для подсчета последнего слова, если в нем был хотя бы 1 символ)
+  if inWord {
+    count += 1
+  }
+
+  return count
+}
+
+let wordCount = numberOfWords(in: "The quick brown fox jumps over the lazy dog")
+print(wordCount)
+// 9
