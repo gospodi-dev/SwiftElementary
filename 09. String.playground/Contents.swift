@@ -184,3 +184,56 @@ if let utf16Index = arrowIndex.samePosition(in: characters.utf16) {
   characters.utf16[utf16Index] // 8680
 }
  */
+/*: ## Challenges */
+/*: ### Challenge 1: Character count (Количество символов) */
+func printCharacterCount(for string: String) {
+  guard string.count > 0 else { return }
+
+  var counts: [Character: Int] = [:]
+
+  for i in string {
+    counts[i, default: 0] += 1
+  }
+
+  let sortedKeys = counts.keys.sorted { counts[$0]! > counts[$1]! }
+
+  let max = counts[sortedKeys.first!]!
+
+  for key in sortedKeys {
+    let value = counts[key]!
+    let widthOfHashes = (value * 20) / max
+    let hashes = String(repeating: "#", count: widthOfHashes)
+    print("\(key) : \(hashes) \(value)")
+  }
+}
+
+printCharacterCount(for: "The quick brown fox jumps over the lazy dog")
+//: #################### 8
+//o : ########## 4
+//e : ####### 3
+//h : ##### 2
+//u : ##### 2
+//r : ##### 2
+//q : ## 1
+//a : ## 1
+//k : ## 1
+//x : ## 1
+//v : ## 1
+//g : ## 1
+//n : ## 1
+//m : ## 1
+//j : ## 1
+//t : ## 1
+//s : ## 1
+//T : ## 1
+//z : ## 1
+//y : ## 1
+//b : ## 1
+//p : ## 1
+//i : ## 1
+//w : ## 1
+//c : ## 1
+//d : ## 1
+//f : ## 1
+//l : ## 1
+
