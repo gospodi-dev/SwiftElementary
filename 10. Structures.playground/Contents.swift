@@ -158,4 +158,25 @@ let area4 = DeliveryArea(center: Location(x: 7, y: 7), radius: 2.5)
 area3.overlaps(with: area4) // true
 
 
+/*: ### Part 05. Structures as values (Структуры как значения) */
+var a = 5
+var b = a
 
+a // 5
+b // 5
+
+a = 10
+
+a // 10
+b // 5
+
+var area1 = DeliveryArea(center: Location(x: 3, y: 3), radius: 2.5)
+var area2 = area1
+
+area1.radius // 2.5
+area2.radius // 2.5
+
+area1.radius = 4
+
+area1.radius // 4.0
+area2.radius // 2.5
