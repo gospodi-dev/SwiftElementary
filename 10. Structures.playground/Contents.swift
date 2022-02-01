@@ -120,3 +120,42 @@ isInDeliveryRange(customerLocation2) // true
 let area = DeliveryArea(center: Location(x: 8, y: 8), radius: 2.5)
 let customerLocation = Location(x: 7, y: 7)
 area.contains(customerLocation) // true
+
+/*: ### Mini-exercise 3. (Refactoring DeliveryArea) */
+//: 1
+
+struct Location {
+  let x: Int
+  let y: Int
+}
+
+func distance(from source: Location, to target: Location) -> Double {
+  let distanceX = Double(source.x - target.x)
+  let distanceY = Double(source.y - target.y)
+  return sqrt(distanceX * distanceX + distanceY * distanceY)
+}
+
+//: 2, 3
+struct DeliveryArea {
+  let center: Location
+  var radius: Double
+  
+  func contains(_ location: Location) -> Bool {
+    distance(from: center, to: location) < radius
+  }
+  
+  func overlaps(with area: DeliveryArea) -> Bool {
+    distance(from: center, to: area.center) <= (radius + area.radius)
+  }
+}
+
+let area1 = DeliveryArea(center: Location(x: 3, y: 3), radius: 2.5)
+let area2 = DeliveryArea(center: Location(x: 8, y: 8), radius: 2.5)
+area1.overlaps(with: area2) // false
+
+let area3 = DeliveryArea(center: Location(x: 4, y: 4), radius: 2.5)
+let area4 = DeliveryArea(center: Location(x: 7, y: 7), radius: 2.5)
+area3.overlaps(with: area4) // true
+
+
+
