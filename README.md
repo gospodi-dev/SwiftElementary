@@ -12,5 +12,6 @@ Examples and tasks for learning the basics of the Swift programming language
 - Глава 7. Arrays, Dictionaries & Sets (Массивы, словари и наборы)
 - Глава 8. Collection Iteration With Closures (Итерация коллекции с помощью замыканий)
 - Глава 9. String (Строки)
+- Глава 10.Structures (Структуры)
 
 >Code and Tasks is the learning material for the book [Swift Apprentice](https://www.raywenderlich.com/books/swift-apprentice)
