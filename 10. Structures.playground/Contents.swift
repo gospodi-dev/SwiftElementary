@@ -46,7 +46,7 @@ func isInDeliveryRange(location: (x: Int, y: Int)) -> Bool {
 
 isInDeliveryRange(location: (x: 5, y: 5)) // false
 
-/*: ### Part 02. ## Your first structure (Ваша первая структура) */
+/*: ### Part 02. Your first structure (Ваша первая структура) */
 //: переведите местоположение из кортежей в тип структуры
 struct Location {
     let x: Int
@@ -62,7 +62,8 @@ struct DeliveryArea {
 
 var storeArea = DeliveryArea(center: storeLocation, radius: 2.5)
 
-/*: ### Mini-exercise (Ordering Pizza) */
+/*
+/*: ### Mini-exercise 1. (Ordering Pizza) */
 struct Pizza {
     let size: Int //
     let toppings: [String]
@@ -70,5 +71,15 @@ struct Pizza {
 }
 
 let pizza = Pizza(size: 24, toppings: ["Pepperoni", "Mushrooms", "Anchovies"], style: "Derevenskay")
+*/
+
+/*: ### Part 03. Accessing members (Доступ к членам структуры) */
+//: доступа к членам используется точечный синтаксис (dot syntax)
+storeArea.radius // 2.5
+storeArea.center.x // 3
+storeArea.radius = 3.5
+
+//let fixedArea = DeliveryArea(center: storeLocation, radius: 4) // Error: Cannot assign to property (Невозможно присвоить свойству)
+//fixedArea.radius = 3.5
 
 
