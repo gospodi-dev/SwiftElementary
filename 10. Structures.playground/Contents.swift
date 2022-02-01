@@ -19,7 +19,7 @@ func isInDeliveryRange(location: (x: Int, y: Int)) -> Bool {
 }
 
 isInDeliveryRange(location: (x: 5, y: 5)) // false
-*/
+
 
 let otherRestaurantLocation = (8, 8)
 let otherRestaurantRange = 2.5
@@ -210,3 +210,71 @@ struct DeliveryArea: CustomStringConvertible {
 
 print(area1) // Area with center: (x: 3, y: 3), radius: 4.0
 print(area2) // Area with center: (x: 3, y: 3), radius: 2.5
+*/
+
+/*: ## Challenges. Structures */
+//: Challenge 1: Fruit tree farm (Ферма фруктовых деревьев)
+// All kinds of fruit will share these attributes. Все виды фруктов обладают следующими признаками
+struct Fruit {
+    let kind: String // вид - e.g. Apple, Pear, Orange
+    let weight: Int // measured in grams (измеряется в граммах)
+}
+
+// Load up the truck full of fruits with random weights (Загрузите грузовик фруктами с произвольным весом)
+let truck: [Fruit] = [
+    Fruit(kind: "Apple", weight: Int.random(in: 70...100)),
+    Fruit(kind: "Pear", weight: Int.random(in: 70...100)),
+    Fruit(kind: "Apple", weight: Int.random(in: 70...100)),
+    Fruit(kind: "Orange", weight: Int.random(in: 70...100)),
+    Fruit(kind: "Pear", weight: Int.random(in: 70...100)),
+    Fruit(kind: "Apple", weight: Int.random(in: 70...100))
+]
+
+// Allocate the inventory containers (Распределите контейнеры для инвентаря)
+var pears = [Fruit]()
+var apples = [Fruit]()
+var oranges = [Fruit]()
+
+var totalProcessedWeight = 0
+
+// The sorting algorithm accepts a truck full of fruits.
+// It processes each fruit independently to
+// check what kind of fruit it is and
+// place each one into the correct inventory container
+
+// Алгоритм сортировки принимает грузовик, полный фруктов.
+// Он обрабатывает каждый фрукт независимо, чтобы
+// проверить, что это за фрукт, и
+// помещает каждый из них в нужный контейнер
+
+func receive(_ truck: [Fruit]) {
+  for fruit in truck {
+    switch fruit.kind {
+    case "Pear":
+      pears.append(fruit)
+    case "Apple":
+      apples.append(fruit)
+    case "Orange":
+      oranges.append(fruit)
+    default:
+      fatalError("Fruit type not supported")
+    }
+    
+    totalProcessedWeight += fruit.weight
+  }
+}
+
+receive(truck)
+
+print("Общий вес:", totalProcessedWeight, "grams", "\n---")
+print("Количество груш:\t\t", pears.count)
+print("Количество яблок:\t\t", apples.count)
+print("Количество апельсинов:\t", oranges.count, "\n")
+
+/*
+Общий вес: 476 grams
+---
+Количество груш:           2
+Количество яблок:          3
+Количество апельсинов:     1
+*/
