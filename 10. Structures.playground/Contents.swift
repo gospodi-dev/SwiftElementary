@@ -82,4 +82,4 @@ storeArea.radius = 3.5
 //let fixedArea = DeliveryArea(center: storeLocation, radius: 4) // Error: Cannot assign to property (Невозможно присвоить свойству)
 //fixedArea.radius = 3.5
 
-
+/*: ### Mini-exercise 2. (Refactoring isInDeliveryRange) */
