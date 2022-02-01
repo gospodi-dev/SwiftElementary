@@ -278,3 +278,61 @@ print("Количество апельсинов:\t", oranges.count, "\n")
 Количество яблок:          3
 Количество апельсинов:     1
 */
+
+//: Challenge 2: A T-shirt model (Модель футболки)
+typealias Size = String
+let small: Size = "Small"
+let medium: Size = "Medium"
+let large: Size = "Large"
+let xLarge: Size = "XLarge"
+
+typealias Material = String
+let cotton: Material = "Cotton"
+let polyester: Material = "Polyester"
+let wool: Material = "Wool"
+
+typealias Color = String
+
+/*:
+ - Использование чисел с плавающей точкой хорошо для демонстраций, но есть тонкие, но важные причины, по которым вы не должны использовать Floats или Doubles для валюты в производстве. О причинах читайте в этом ответе на [Stack Overflow](http://stackoverflow.com/questions/3730019/why-not-use-double-or-float-to-represent-currency).
+ */
+
+struct TShirt {
+  let size: Size
+  let color: Color
+  let material: Material
+
+  func cost() -> Double {
+
+    let basePrice = 10.0
+
+    let sizeMultiplier: Double
+    switch size {
+    case small, medium:
+      sizeMultiplier = 1.0
+    case large, xLarge:
+      sizeMultiplier = 1.1
+    default:
+      // Special order!
+      sizeMultiplier = 1.2
+    }
+
+    let materialMultipler: Double
+    switch material {
+    case cotton:
+      materialMultipler = 1.0
+    case polyester:
+      materialMultipler = 1.1
+    case wool:
+      materialMultipler = 1.5
+    default:
+      // Special order!
+      materialMultipler = 2.0
+    }
+
+    return basePrice * sizeMultiplier * materialMultipler
+  }
+}
+
+TShirt(size: medium, color: "Green", material: cotton).cost() // $10.00
+TShirt(size: xLarge, color: "Gray", material: wool).cost() // $16.50
