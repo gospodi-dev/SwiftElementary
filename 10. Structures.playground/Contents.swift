@@ -180,3 +180,33 @@ area1.radius = 4
 
 area1.radius // 4.0
 area2.radius // 2.5
+
+
+/*: ### Part 06. Conforming to a protocol (Соответствие протоколу) */
+public protocol CustomStringConvertible {
+  /// A textual representation of this instance. (Текстовое представление данного экземпляра.)
+  var description: String { get }
+}
+
+struct DeliveryArea: CustomStringConvertible {
+  let center: Location
+  var radius: Double
+  var description: String {
+    """
+    Area with center: (x: \(center.x), y: \(center.y)),
+    radius: \(radius)
+    """
+  }
+
+  func contains(_ location: Location) -> Bool {
+    distance(from: center, to: location) < radius
+  }
+
+  func overlaps(with area: DeliveryArea) -> Bool {
+    distance(from: center, to: area.center) <=
+    (radius + area.radius)
+  }
+}
+
+print(area1) // Area with center: (x: 3, y: 3), radius: 4.0
+print(area2) // Area with center: (x: 3, y: 3), radius: 2.5
