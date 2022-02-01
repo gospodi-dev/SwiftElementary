@@ -62,4 +62,13 @@ struct DeliveryArea {
 
 var storeArea = DeliveryArea(center: storeLocation, radius: 2.5)
 
+/*: ### Mini-exercise (Ordering Pizza) */
+struct Pizza {
+    let size: Int //
+    let toppings: [String]
+    let style: String
+}
+
+let pizza = Pizza(size: 24, toppings: ["Pepperoni", "Mushrooms", "Anchovies"], style: "Derevenskay")
+
 
