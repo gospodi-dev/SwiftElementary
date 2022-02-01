@@ -46,3 +46,20 @@ func isInDeliveryRange(location: (x: Int, y: Int)) -> Bool {
 
 isInDeliveryRange(location: (x: 5, y: 5)) // false
 
+/*: ### Part 02. ## Your first structure (Ваша первая структура) */
+//: переведите местоположение из кортежей в тип структуры
+struct Location {
+    let x: Int
+    let y: Int
+}
+
+let storeLocation = Location(x: 3, y: 3)
+
+struct DeliveryArea {
+  let center: Location
+  var radius: Double
+}
+
+var storeArea = DeliveryArea(center: storeLocation, radius: 2.5)
+
+
