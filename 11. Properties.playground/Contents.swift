@@ -22,7 +22,7 @@ struct Contact {
 
 person.emailAddress = "grace@gmail.com"
 // Error: cannot assign to a constant. error: type of expression is ambiguous without more context (Ошибка: невозможно присвоить константу. ошибка: тип выражения неоднозначен без дополнительного контекста)
-*/
+
 
 /*: ### Part 02. Default values (Значения по умолчанию) */
 struct Contact {
@@ -60,3 +60,19 @@ tv.diagonal // 110
 
 tv.width = tv.height
 tv.diagonal // 76
+*/
+
+/*: ### Properties Mini-exercise, TV */
+struct TV {
+  var height: Double
+  var width: Double
+  
+  var diagonal: Int {
+    let result = (height * height + width * width).squareRoot().rounded()
+    return Int(result)
+  }
+}
+
+let tv = TV(height: 15.7, width: 28)
+tv.diagonal // 32
+
