@@ -207,7 +207,7 @@ bulb.isOn = true // Light bulb is ON with 30 amps
 
 //Current is too high, turning off to prevent burn out.
 //Current is too high, falling back to previous setting.
- */
+
 /*: ### Part 07. Lazy properties (Ленивые свойства) */
 struct Circle {
   lazy var pi = {
@@ -228,3 +228,15 @@ var circle = Circle(radius: 5) // got a circle, pi has not been run (получ�
 
 circle.circumference // 31.42
 // also, pi now has a value
+ */
+/*: ### Properties Mini-exercise, Circle */
+
+struct Circle {
+  var radius = 0.0
+  var circumference: Double {
+    .pi * radius * 2
+  }
+}
+
+var circle = Circle(radius: 5)
+let circumference = circle.circumference // 31.42
