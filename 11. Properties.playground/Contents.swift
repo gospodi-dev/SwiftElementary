@@ -142,7 +142,7 @@ struct Level {
     }
   }
 }
- */
+
 //: Limiting a variable (Ограничение переменной)
 struct LightBulb {
   static let maxCurrent = 40
@@ -167,4 +167,44 @@ light.current // 40
 
 //Current is too high,
 //falling back to previous setting.
+ */
+/*: ### Properties Mini-exercise, Lightbulb */
+
+struct LightBulb {
+  static let maxCurrent = 40
+  var isOn = false
+  var current = LightBulb.maxCurrent {
+    willSet { // can observe the newValue, but can't change it (может наблюдать новое значение, но не может его изменить)
+      if newValue > Self.maxCurrent {
+        print("Current is too high, turning off to prevent burn out.(Ток слишком большой, отключение для предотвращения перегорания.)")
+        isOn = false
+      }
+    }
+    didSet {
+      if current > Self.maxCurrent {
+        print("Current is too high, falling back to previous setting.(Ток слишком большой, возврат к предыдущей настройке.)")
+        current = oldValue
+      }
+    }
+  }
+}
+
+// Installing a new bulb (Установка новой лампы)
+var bulb = LightBulb() // Light bulb is off
+
+// Flipping the switch (Переключение)
+bulb.isOn = true // Light bulb is ON with 40 amps
+
+// Using the dimmer (Использование светорегулятора)
+bulb.current = 30 // Light bulb is ON with 30 amps
+
+// Using the dimmer to a high value (Использование диммера на большое значение)
+bulb.current = 50 // Light bulb is OFF
+
+// Flipping the switch
+bulb.isOn = true // Light bulb is ON with 30 amps
+
+
+//Current is too high, turning off to prevent burn out.
+//Current is too high, falling back to previous setting.
 
