@@ -60,7 +60,7 @@ tv.diagonal // 110
 
 tv.width = tv.height
 tv.diagonal // 76
-*/
+
 
 /*: ### Properties Mini-exercise, TV */
 struct TV {
@@ -75,4 +75,29 @@ struct TV {
 
 let tv = TV(height: 15.7, width: 28)
 tv.diagonal // 32
+ */
 
+/*: ### Part 04. Computed properties (Вычисляемые свойства) */
+var diagonal: Int {
+  // 1
+  get {
+    // 2
+    let result = (height * height +
+      width * width).squareRoot().rounded()
+    return Int(result)
+  }
+  set {
+    // 3
+    let ratioWidth = 16.0
+    let ratioHeight = 9.0
+    // 4
+    let ratioDiagonal = (ratioWidth * ratioWidth +
+      ratioHeight * ratioHeight).squareRoot()
+    height = Double(newValue) * ratioHeight / ratioDiagonal
+    width = height * ratioWidth / ratioHeight
+  }
+}
+
+tv.diagonal = 70
+tv.height // 34.32...
+tv.width // 61.01...
