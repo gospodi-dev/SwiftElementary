@@ -114,7 +114,7 @@ let level1 = Level(id: 1, boss: "Chameleon", unlocked: true)
 let level2 = Level(id: 2, boss: "Squid", unlocked: false)
 let level3 = Level(id: 3, boss: "Chupacabra", unlocked: false)
 let level4 = Level(id: 4, boss: "Yeti", unlocked: false)
-*/
+
 
 struct Level {
   static var highestLevel = 1
@@ -128,3 +128,43 @@ let highestLevel = level3.highestLevel
 */
 
 Level.highestLevel // 1
+
+/*: ### Part 06. Property observers (Наблюдатели свойств) */
+struct Level {
+  static var highestLevel = 1
+  let id: Int
+  var boss: String
+  var unlocked: Bool {
+    didSet {
+      if unlocked && id > Self.highestLevel {
+        Self.highestLevel = id
+      }
+    }
+  }
+}
+ */
+//: Limiting a variable (Ограничение переменной)
+struct LightBulb {
+  static let maxCurrent = 40
+  var current = 0 {
+    didSet {
+      if current > LightBulb.maxCurrent {
+        print("""
+              Current is too high,
+              falling back to previous setting.
+              """)
+        current = oldValue
+      }
+    }
+  }
+}
+
+var light = LightBulb()
+light.current = 50
+light.current // 0
+light.current = 40
+light.current // 40
+
+//Current is too high,
+//falling back to previous setting.
+
