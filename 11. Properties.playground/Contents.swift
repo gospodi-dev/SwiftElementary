@@ -240,3 +240,19 @@ struct Circle {
 
 var circle = Circle(radius: 5)
 let circumference = circle.circumference // 31.42
+
+
+/*: ## Properties Challenge 1 */
+
+struct IceCream {
+  var name = "Vanilla"
+  lazy var ingredients: [String] = {
+    ["sugar", "milk", "yolks", "cream", "vanilla"]
+  }()
+}
+
+var iceCream = IceCream()
+// ingredients not yet initialized
+iceCream.ingredients.append("strawberries")
+// ingredients initialized before appending ["sugar", "milk", "yolks", "cream", "vanilla", "strawberries"]
+iceCream.name = "Strawberry"
