@@ -77,7 +77,7 @@ let tv = TV(height: 15.7, width: 28)
 tv.diagonal // 32
 
 
-/*: ### Part 04. Computed properties (Вычисляемые свойства) */
+/*: ### Part 04. Getter and setter (Геттер и сеттер) */
 var diagonal: Int {
   // 1
   get {
@@ -167,7 +167,7 @@ light.current // 40
 
 //Current is too high,
 //falling back to previous setting.
- */
+
 /*: ### Properties Mini-exercise, Lightbulb */
 
 struct LightBulb {
@@ -207,4 +207,24 @@ bulb.isOn = true // Light bulb is ON with 30 amps
 
 //Current is too high, turning off to prevent burn out.
 //Current is too high, falling back to previous setting.
+ */
+/*: ### Part 07. Lazy properties (Ленивые свойства) */
+struct Circle {
+  lazy var pi = {
+    ((4.0 * atan(1.0 / 5.0)) - atan(1.0 / 239.0)) * 4.0
+  }()
+  var radius = 0.0
+  var circumference: Double {
+    mutating get {
+      pi * radius * 2
+    }
+  }
+  init(radius: Double) {
+    self.radius = radius
+  }
+}
 
+var circle = Circle(radius: 5) // got a circle, pi has not been run (получил круг, пи не был запущен)
+
+circle.circumference // 31.42
+// also, pi now has a value
