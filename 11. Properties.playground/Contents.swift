@@ -75,7 +75,7 @@ struct TV {
 
 let tv = TV(height: 15.7, width: 28)
 tv.diagonal // 32
- */
+
 
 /*: ### Part 04. Computed properties (Вычисляемые свойства) */
 var diagonal: Int {
@@ -101,3 +101,30 @@ var diagonal: Int {
 tv.diagonal = 70
 tv.height // 34.32...
 tv.width // 61.01...
+ */
+/*: ### Part 05. Type properties (Свойства типов) */
+/*
+struct Level {
+  let id: Int
+  var boss: String
+  var unlocked: Bool
+}
+
+let level1 = Level(id: 1, boss: "Chameleon", unlocked: true)
+let level2 = Level(id: 2, boss: "Squid", unlocked: false)
+let level3 = Level(id: 3, boss: "Chupacabra", unlocked: false)
+let level4 = Level(id: 4, boss: "Yeti", unlocked: false)
+*/
+
+struct Level {
+  static var highestLevel = 1
+  let id: Int
+  var boss: String
+  var unlocked: Bool
+}
+/*
+// Error: you can’t access a type property on an instance (вы не можете получить доступ к свойству типа на экземпляре)
+let highestLevel = level3.highestLevel
+*/
+
+Level.highestLevel // 1
