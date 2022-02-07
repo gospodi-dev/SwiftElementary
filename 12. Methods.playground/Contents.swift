@@ -160,7 +160,7 @@ mutating func advance() {
   day += 1
 }
 // ошибка: 'mutating' действует только на методы
- */
+
 //: Type methods (Методы типов)
 
 struct Math {
@@ -172,5 +172,18 @@ struct Math {
 }
 // 3
 Math.factorial(of: 6) // 720
+ */
 
+/*: ### Methods Mini-exercise, Nth Triangle */
 
+struct Math {
+  static func factorial(of number: Int) -> Int {
+    (1...number).reduce(1, *)
+  }
+  static func triangleNumber(n: Int) -> Int {
+    (1...n).reduce(0, +)
+  }
+}
+
+Math.factorial(of: 5) // 120
+Math.triangleNumber(n: 6) // 21
