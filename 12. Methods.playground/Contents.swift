@@ -123,7 +123,7 @@ struct SimpleDate {
 let valentinesDay = SimpleDate(month: "February", day: 14)
 valentinesDay.month // February
 valentinesDay.day // 14
-*/
+
 //: Default values and initializers (Значения по умолчанию и инициализаторы)
 
 struct SimpleDate {
@@ -154,3 +154,23 @@ octoberFirst.day // 1
 let januaryTwentySecond = SimpleDate(day: 22)
 januaryTwentySecond.month // January
 januaryTwentySecond.day // 22
+
+/*: ## Part 04. Introducing mutating methods (Внедрение мутирующих методов) */
+mutating func advance() {
+  day += 1
+}
+// ошибка: 'mutating' действует только на методы
+ */
+//: Type methods (Методы типов)
+
+struct Math {
+  // 1
+  static func factorial(of number: Int) -> Int {
+    // 2
+    (1...number).reduce(1, *)
+  }
+}
+// 3
+Math.factorial(of: 6) // 720
+
+
