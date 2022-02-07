@@ -14,5 +14,6 @@ Examples and tasks for learning the basics of the Swift programming language
 - Глава 9. String (Строки)
 - Глава 10. Structures (Структуры)
 - Глава 11. Properties (Свойства)
+- Глава 12. Methods (Методы)
 
 >Code and Tasks is the learning material for the book [Swift Apprentice](https://www.raywenderlich.com/books/swift-apprentice)
