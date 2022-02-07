@@ -187,3 +187,59 @@ struct Math {
 
 Math.factorial(of: 5) // 120
 Math.triangleNumber(n: 6) // 21
+
+/*: ## Part 05. Adding to an existing structure with extensions (Дополнение существующей структуры с помощью расширений) */
+
+extension Math {
+  static func primeFactors(of value: Int) -> [Int] {
+    // 1
+    var remainingValue = value
+    // 2
+    var testFactor = 2
+    var primes: [Int] = []
+    // 3
+    while testFactor * testFactor <= remainingValue {
+      if remainingValue % testFactor == 0 {
+        primes.append(testFactor)
+        remainingValue /= testFactor
+      }
+      else {
+        testFactor += 1
+      }
+    }
+    if remainingValue > 1 {
+      primes.append(remainingValue)
+    }
+    return primes
+  }
+}
+
+Math.primeFactors(of: 81) // [3, 3, 3, 3]
+
+//: Keeping the compiler-generated initializer using extensions (Сохранение инициализатора, сгенерированного компилятором, с помощью расширений)
+
+struct SimpleDate {
+  var month = "January"
+  var day = 1
+  
+  func monthsUntilWinterBreak() -> Int {
+    months.firstIndex(of: "December")! -
+    months.firstIndex(of: month)!
+  }
+  
+  mutating func advance() {
+    day += 1
+  }
+}
+
+extension SimpleDate {
+  init(month: Int, day: Int) {
+    self.month = months[month-1]
+    self.day = day
+  }
+}
+
+let halloween = SimpleDate(month: 10, day: 31)
+halloween.month // October
+halloween.day // 31
+
