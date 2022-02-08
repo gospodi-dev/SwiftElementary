@@ -224,3 +224,20 @@ student.recordGrade(history)
 student.recordGrade(math)
 
 student.gpa // 3.571428571428572
+
+/*: ## Part 05. Understanding state and side effects (Понимание состояния и побочных эффектов) */
+
+var credits = 0.0
+
+func recordGrade(_ grade: Grade) {
+  grades.append(grade)
+  credits += grade.credits
+}
+
+jane.credits // 7
+
+// The teacher made a mistake; math has 5 credits
+math = Grade(letter: "A", points: 20.0, credits: 5.0)
+jane.recordGrade(math)
+
+jane.credits // 12, not 8!
