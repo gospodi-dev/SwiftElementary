@@ -58,7 +58,7 @@ var homeOwner = john
 john.firstName = "John" // John wants to use his short name!
 john.firstName // "John"
 homeOwner.firstName // "John"
-*/
+
 /*: ### Classes. Mini-exercise 1*/
 
 class Person {
@@ -123,3 +123,22 @@ if let indexOfJohn = imposters.firstIndex(where:
 }
 
 john.fullName // John Bananapeel
+ */
+
+/*: ### Classes. Mini-exercise 2*/
+
+func memberOf(person: Person, group: [Person]) -> Bool {
+  group.contains(where: { $0 === person })
+}
+
+let johnny = Person(firstName: "Johnny", lastName: "Appleseed")
+let jane = Person(firstName: "Jane", lastName: "Appleseed")
+let anonymous1 = Person(firstName: "Bob", lastName: "Anonymous")
+let anonymous2 = Person(firstName: "Bill", lastName: "Anonymous")
+let anonymous3 = Person(firstName: "Biff", lastName: "Anonymous")
+
+let group1 = [johnny, jane, anonymous1, anonymous2, anonymous3]
+let group2 = [johnny, john, anonymous1, anonymous2, anonymous3]
+
+memberOf(person: john, group: group1)
+memberOf(person: john, group: group2)
