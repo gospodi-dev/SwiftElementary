@@ -178,7 +178,7 @@ jane.recordGrade(math) //
 
 var jane = Student(firstName: "Jane", lastName: "Appleseed")
 jane = Student(firstName: "John", lastName: "Appleseed")
- */
+
 /*: ### Classes. Mini-exercise 3*/
 //Добавьте вычисляемое свойство к Student, которое возвращает средний балл студента или GPA. Средний балл определяется как количество набранных баллов, деленное на количество взятых кредитов. В приведенном выше примере Джейн заработала (9 + 16 = 25) баллов, взяв (3 + 4 = 7) кредитов, что составляет ее средний балл (25 / 7 = 3,57).
 //
@@ -248,3 +248,57 @@ extension Student {
     "\(firstName) \(lastName)"
   }
 }
+ */
+/*: ## Challenges */
+/*: ### Challenge 1: Movie lists (Списки фильмов) */
+class User {
+  var lists: [String: List] = [:]
+
+  func addList(_ list: List) {
+    lists[list.name] = list
+  }
+
+  func list(forName name: String) -> List? {
+    lists[name]
+  }
+}
+
+class List {
+  let name: String
+  var movies: [String] = []
+
+  init(name: String) {
+    self.name = name
+  }
+
+  func print() {
+    Swift.print("Movie List: \(name)") // Prefix Swift is required to disambiguate
+    for movie in movies {
+      Swift.print(movie)
+    }
+    Swift.print("\n")
+  }
+}
+
+// Give John and Jane an "Action" list
+let jane = User()
+let john = User()
+var actionList = List(name: "Action")
+
+jane.addList(actionList)
+john.addList(actionList)
+
+// Add Jane's favorites
+jane.lists["Action"]?.movies.append("Rambo")
+jane.lists["Action"]?.movies.append("Terminator")
+
+// Add John's favorites
+john.lists["Action"]?.movies.append("Die Hard")
+
+// See John's list:
+john.lists["Action"]?.print()
+
+// See Jane's list:
+jane.lists["Action"]?.print()
+
+// Решение: С помощью структур и семантики копирования, когда Джон и Джейн получают список Action через `addList(_:)`, каждый из них получает свою копию, а не общий список. Таким образом, когда один добавляет фильм - другой не видит этого!
