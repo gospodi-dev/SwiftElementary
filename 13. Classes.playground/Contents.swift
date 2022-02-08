@@ -123,7 +123,7 @@ if let indexOfJohn = imposters.firstIndex(where:
 }
 
 john.fullName // John Bananapeel
- */
+
 
 /*: ### Classes. Mini-exercise 2*/
 
@@ -142,3 +142,40 @@ let group2 = [johnny, john, anonymous1, anonymous2, anonymous3]
 
 memberOf(person: john, group: group1)
 memberOf(person: john, group: group2)
+
+ */
+
+/*: ## Part 04. Methods and mutability (Методы и изменяемость) */
+struct Grade {
+  let letter: String
+  let points: Double
+  let credits: Double
+}
+
+class Student {
+  var firstName: String
+  var lastName: String
+  var grades: [Grade] = []
+
+  init(firstName: String, lastName: String) {
+    self.firstName = firstName
+    self.lastName = lastName
+  }
+
+  func recordGrade(_ grade: Grade) {
+    grades.append(grade)
+  }
+}
+
+let jane = Student(firstName: "Jane", lastName: "Appleseed")
+let history = Grade(letter: "B", points: 9.0, credits: 3.0)
+var math = Grade(letter: "A", points: 16.0, credits: 4.0)
+
+jane.recordGrade(history) //
+jane.recordGrade(math) //
+
+//: Mutability and constants
+
+var jane = Student(firstName: "Jane", lastName: "Appleseed")
+jane = Student(firstName: "John", lastName: "Appleseed")
+
