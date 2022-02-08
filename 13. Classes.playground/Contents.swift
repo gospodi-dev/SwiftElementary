@@ -241,3 +241,10 @@ math = Grade(letter: "A", points: 20.0, credits: 5.0)
 jane.recordGrade(math)
 
 jane.credits // 12, not 8!
+
+/*: ## Part 06. Extending a class using an extension (Расширение класса с помощью расширения) */
+extension Student {
+  var fullName: String {
+    "\(firstName) \(lastName)"
+  }
+}
