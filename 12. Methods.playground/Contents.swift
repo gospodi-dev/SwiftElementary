@@ -335,3 +335,17 @@ Math.isOdd(33) // true
 Math.isEven(20) // true
 Math.isEven(21) // false
 
+/*: ### Challenge 4: Odd and Even Int (Четные и нечетные Int) */
+extension Int {
+  var isEven: Bool {
+    self % 2 == 0
+  }
+  var isOdd: Bool {
+    (self + 1) % 2 == 0
+  }
+}
+
+2.isEven // true
+3.isEven // false
+2.isOdd  // false
+3.isOdd  // true
