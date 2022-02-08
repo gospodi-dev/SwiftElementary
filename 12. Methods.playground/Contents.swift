@@ -242,7 +242,7 @@ extension SimpleDate {
 let halloween = SimpleDate(month: 10, day: 31)
 halloween.month // October
 halloween.day // 31
- */
+
 /*: ## Method Challenges */
 /*: ### Challenge 1: Grow a Circle (Вырастить круг) */
 //:Given the Circle structure:
@@ -317,3 +317,21 @@ var date = SimpleDate(month: "December", day: 31)
 date.advance()
 date.month // January
 date.day // 1
+ */
+/*: ### Challenge 3: Odd and Even Math (Математика четных и нечетных чисел) */
+struct Math {}
+
+extension Math {
+  static func isEven(_ value: Int) -> Bool {
+    value % 2 == 0
+  }
+  static func isOdd(_ value: Int) -> Bool {
+    (value + 1) % 2 == 0
+  }
+}
+
+Math.isOdd(30) // false
+Math.isOdd(33) // true
+Math.isEven(20) // true
+Math.isEven(21) // false
+
