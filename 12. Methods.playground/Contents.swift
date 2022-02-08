@@ -243,3 +243,31 @@ let halloween = SimpleDate(month: 10, day: 31)
 halloween.month // October
 halloween.day // 31
 
+/*: ## Method Challenges */
+/*: ### Challenge 1: Grow a Circle (Вырастить круг) */
+//:Given the Circle structure:
+struct Circle {
+  
+  var radius = 0.0
+
+  var area: Double {
+    get {
+      .pi * radius * radius
+    }
+    set {
+      radius = (newValue / .pi).squareRoot()
+    }
+  }
+
+  mutating func grow(byFactor factor: Double) {
+    area *= factor
+  }
+  
+}
+
+var circle = Circle(radius: 5)
+circle.area // 78.54
+circle.grow(byFactor: 3)
+circle.area // 235.62
+
+/*: ### Challenge 2: A more advanced `advance()` (Более продвинутый advance()) */
