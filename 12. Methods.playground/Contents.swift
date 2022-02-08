@@ -172,7 +172,7 @@ struct Math {
 }
 // 3
 Math.factorial(of: 6) // 720
- */
+
 
 /*: ### Methods Mini-exercise, Nth Triangle */
 
@@ -242,7 +242,7 @@ extension SimpleDate {
 let halloween = SimpleDate(month: 10, day: 31)
 halloween.month // October
 halloween.day // 31
-
+ */
 /*: ## Method Challenges */
 /*: ### Challenge 1: Grow a Circle (Вырастить круг) */
 //:Given the Circle structure:
@@ -271,3 +271,49 @@ circle.grow(byFactor: 3)
 circle.area // 235.62
 
 /*: ### Challenge 2: A more advanced `advance()` (Более продвинутый advance()) */
+
+let months = ["January", "February", "March",
+              "April", "May", "June",
+              "July", "August", "September",
+              "October", "November", "December"]
+
+struct SimpleDate {
+  var month: String
+  var day: Int
+  
+  var totalDaysInCurrentMonth: Int {
+    switch month {
+    case "January", "March", "May", "July", "August", "October", "December":
+      return 31
+    case "April", "June", "September", "November":
+      return 30
+    case "February": // Note: leap years aren't taken into account here (Високосные годы здесь не учитываются.).
+      return 28
+    default:
+      return 0
+    }
+  }
+  
+  mutating func advance() {
+    // Check for the end of the month (Проверка на конец месяца)
+    if day == totalDaysInCurrentMonth {
+      // Check for the end of the year
+      if month == "December" {
+        month = "January"
+      } else {
+        // Increment the month
+        month = months[months.firstIndex(of: month)!.advanced(by: 1)]
+      }
+      // Start over at the first day of the month (Начните с первого дня месяца)
+      day = 1
+    } else {
+      // It is not the end of the month, just increment the day (Это не конец месяца, а всего лишь приращение дня.)
+      day += 1
+    }
+  }
+}
+
+var date = SimpleDate(month: "December", day: 31)
+date.advance()
+date.month // January
+date.day // 1
