@@ -1,6 +1,6 @@
 /*: # Глава 13. Classes (Классы) */
 /*: ## Part 01. Creating classes (Создание классов) */
-
+/*
 class Person {
   var firstName: String
   var lastName: String
@@ -58,3 +58,27 @@ var homeOwner = john
 john.firstName = "John" // John wants to use his short name!
 john.firstName // "John"
 homeOwner.firstName // "John"
+*/
+/*: ### Classes. Mini-exercise 1*/
+
+class Person {
+  var firstName: String
+  var lastName: String
+
+  init(firstName: String, lastName: String) {
+    self.firstName = firstName
+    self.lastName = lastName
+  }
+
+  var fullName: String {
+    "\(firstName) \(lastName)"
+  }
+}
+
+let john = Person(firstName: "Johnny", lastName: "Appleseed")
+var homeOwner = john
+
+homeOwner.lastName = "Googleseed"
+
+print(john.fullName) // Johnny Googleseed
+print(homeOwner.fullName) // Johnny Googleseed
