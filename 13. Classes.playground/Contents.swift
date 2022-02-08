@@ -143,7 +143,7 @@ let group2 = [johnny, john, anonymous1, anonymous2, anonymous3]
 memberOf(person: john, group: group1)
 memberOf(person: john, group: group2)
 
- */
+
 
 /*: ## Part 04. Methods and mutability (Методы и изменяемость) */
 struct Grade {
@@ -178,4 +178,49 @@ jane.recordGrade(math) //
 
 var jane = Student(firstName: "Jane", lastName: "Appleseed")
 jane = Student(firstName: "John", lastName: "Appleseed")
+ */
+/*: ### Classes. Mini-exercise 3*/
+//Добавьте вычисляемое свойство к Student, которое возвращает средний балл студента или GPA. Средний балл определяется как количество набранных баллов, деленное на количество взятых кредитов. В приведенном выше примере Джейн заработала (9 + 16 = 25) баллов, взяв (3 + 4 = 7) кредитов, что составляет ее средний балл (25 / 7 = 3,57).
+//
+//Примечание: баллы в большинстве американских университетов варьируются от 4 баллов за кредит за пятерку до 1 балла за двойку (при этом за двойку начисляется 0 баллов). Для этого упражнения вы, конечно, можете использовать любую шкалу, какую захотите!
 
+struct Grade {
+  let letter: String
+  let points: Double
+  let credits: Double
+}
+
+class Student {
+  var firstName: String
+  var lastName: String
+  var grades: [Grade] = []
+
+  init(firstName: String, lastName: String) {
+    self.firstName = firstName
+    self.lastName = lastName
+  }
+
+  func recordGrade(_ grade: Grade) {
+    grades.append(grade)
+  }
+
+  var gpa: Double {
+    var totalPoints = 0.0
+    var totalCredits = 0.0
+    for grade in grades {
+      totalCredits += grade.credits
+      totalPoints += grade.points
+    }
+
+    return totalPoints / totalCredits // 3.571428571428572
+  }
+}
+
+let student = Student(firstName: "Jane", lastName: "Appleseed")
+let history = Grade(letter: "B", points: 9.0, credits: 3.0)
+let math = Grade(letter: "A", points: 16.0, credits: 4.0)
+
+student.recordGrade(history)
+student.recordGrade(math)
+
+student.gpa // 3.571428571428572
