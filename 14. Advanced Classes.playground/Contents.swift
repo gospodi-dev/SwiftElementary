@@ -190,5 +190,21 @@ class StudentAthlete: Student {
   // original code
 }
 
+/*: ## Part 06. Two-phase initialization (Двухфазная инициализация) */
 
+class StudentAthlete: Student {
+  var sports: [String]
 
+  init(firstName: String, lastName: String, sports: [String]) {
+    // 1
+    self.sports = sports
+    // 2
+    let passGrade = Grade(letter: "P", points: 0.0,
+                          credits: 0.0)
+    // 3
+    super.init(firstName: firstName, lastName: lastName)
+    // 4
+    recordGrade(passGrade)
+  }
+  // original code
+}
