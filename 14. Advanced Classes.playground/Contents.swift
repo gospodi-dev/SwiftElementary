@@ -1,11 +1,11 @@
 /*: # Глава 14. Advanced Classes (Продвинутые классы) */
 /*: ## Part 01. Introducing inheritance (Знакомство с наследованием) */
 
-struct Grade {
-    var letter: Character
-    var points: Double
-    var credits: Double
-}
+//struct Grade {
+//    var letter: Character
+//    var points: Double
+//    var credits: Double
+//}
 
 //class Person {
 //    var firstName: String
@@ -274,7 +274,7 @@ class Student {
 }
 
 
- */
+
 /*: ## Part 08. When and why to subclass (Когда и зачем создавать подклассы) */
 class Student: Person {
   var grades: [Grade]
@@ -358,3 +358,40 @@ class Person {
   }
 }
 
+ */
+
+
+/*: ### Mini-exercises (Мини-упражнения) */
+
+// Модифицируйте класс `Student`, чтобы иметь возможность записывать имя студента в список выпускников. Добавьте имя студента в список при деаллокации объекта.
+
+struct Grade {
+  var letter: Character
+  var points: Double
+  var credits: Double
+}
+
+class Student {
+  let firstName: String
+  let lastName: String
+  var grades: [Grade] = []
+  
+  required init(firstName: String, lastName: String) {
+    self.firstName = firstName
+    self.lastName = lastName
+  }
+  
+  convenience init(transfer: Student) {
+    self.init(firstName: transfer.firstName, lastName: transfer.lastName)
+  }
+  
+  func recordGrade(_ grade: Grade) {
+    grades.append(grade)
+  }
+  
+  static var graduates: [String] = []
+  
+  deinit {
+    Student.graduates.append("\(lastName), \(firstName)")
+  }
+}
