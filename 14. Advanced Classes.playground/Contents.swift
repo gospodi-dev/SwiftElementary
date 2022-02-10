@@ -66,4 +66,16 @@ class OboePlayer: BandMember {
   }
 }
 
+/*: ## Part 02. Polymorphism (Полиморфизм) */
+// полиморфизм - это способность языка программирования по-разному относиться к объекту в зависимости от контекста
 
+func phonebookName(_ person: Person) -> String {
+  "\(person.lastName), \(person.firstName)"
+}
+
+let person = Person(firstName: "Johnny", lastName: "Appleseed")
+let oboePlayer = OboePlayer(firstName: "Jane",
+                            lastName: "Appleseed")
+
+phonebookName(person) // Appleseed, Johnny
+phonebookName(oboePlayer) // Appleseed, Jane
