@@ -79,3 +79,38 @@ let oboePlayer = OboePlayer(firstName: "Jane",
 
 phonebookName(person) // Appleseed, Johnny
 phonebookName(oboePlayer) // Appleseed, Jane
+
+/*: ## Part 03. Runtime hierarchy checks (Проверка иерархии во время выполнения) */
+
+var hallMonitor = Student(firstName: "Jill",
+                          lastName: "Bananapeel")
+hallMonitor = oboePlayer
+
+//oboePlayer as Student
+//(oboePlayer as Student).minimumPracticeTime // ERROR: No longer a band member!
+
+hallMonitor as? BandMember
+(hallMonitor as? BandMember)?.minimumPracticeTime // 4 (optional)
+
+hallMonitor as! BandMember // Careful! Failure would lead to a runtime crash.
+(hallMonitor as! BandMember).minimumPracticeTime // 4 (force unwrapped)
+
+//if let hallMonitor = hallMonitor as? BandMember {
+//  print("This hall monitor is a band member and practices
+//         at least \(hallMonitor.minimumPracticeTime)
+//         hours per week.")
+//}
+
+
+func afterClassActivity(for student: Student) -> String {
+  "Goes home!"
+}
+
+func afterClassActivity(for student: BandMember) -> String {
+  "Goes to practice!"
+}
+
+
+afterClassActivity(for: oboePlayer) // Goes to practice!
+afterClassActivity(for: oboePlayer as Student) // Goes home!
+
