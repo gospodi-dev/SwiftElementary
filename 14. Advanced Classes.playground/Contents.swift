@@ -322,3 +322,39 @@ class TextButton: Button {
   }
 }
 
+/*: ## Part 09. ## Understanding the class lifecycle (Понимание жизненного цикла класса) */
+
+var someone = Person(firstName: "Johnny", lastName: "Appleseed")
+// Person object has a reference count of 1 (someone variable) - Объект Person имеет количество ссылок, равное 1 (переменная someone)
+
+var anotherSomeone: Person? = someone
+// Reference count 2 (someone, anotherSomeone) - Количество ссылок 2
+
+var lotsOfPeople = [someone, someone, anotherSomeone, someone]
+// Reference count 6 (someone, anotherSomeone, 4 references in lotsOfPeople)
+
+anotherSomeone = nil
+// Reference count 5 (someone, 4 references in lotsOfPeople)
+
+lotsOfPeople = []
+// Reference count 1 (someone)
+
+
+someone = Person(firstName: "Johnny", lastName: "Appleseed")
+// Reference count 0 for the original Person object!
+// Variable someone now references a new object
+
+// Количество ссылок 0 для исходного объекта Person!
+// Переменная someone теперь ссылается на новый объект
+
+
+//: ### Deinitialization (Деинициализация)
+
+class Person {
+  // original code
+  deinit {
+    print("\(firstName) \(lastName) is being removed
+          from memory!")
+  }
+}
+
