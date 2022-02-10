@@ -7,15 +7,15 @@ struct Grade {
     var credits: Double
 }
 
-class Person {
-    var firstName: String
-    var lastName: String
-    
-    init(firstName: String, lastName: String) {
-        self.firstName = firstName
-        self.lastName = lastName
-    }
-}
+//class Person {
+//    var firstName: String
+//    var lastName: String
+//
+//    init(firstName: String, lastName: String) {
+//        self.firstName = firstName
+//        self.lastName = lastName
+//    }
+//}
 /*
  // 1
  //class Student {
@@ -209,7 +209,7 @@ class Person {
  }
  // original code
  }
- */
+
 /*: ## Part 07. Required and convenience initializers (Необходимые и удобные инициализаторы) */
 
 // 1
@@ -274,4 +274,23 @@ class Student {
 }
 
 
+ */
+/*: ## Part 08. When and why to subclass (Когда и зачем создавать подклассы) */
+class Student: Person {
+  var grades: [Grade]
+  var sports: [Sport]
+  // original code
+}
 
+class Team {
+  var players: [StudentAthlete] = []
+
+  var isEligible: Bool {
+    for player in players {
+      if !player.isEligible {
+        return false
+      }
+    }
+    return true
+  }
+}
