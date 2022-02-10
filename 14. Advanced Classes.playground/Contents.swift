@@ -114,3 +114,49 @@ func afterClassActivity(for student: BandMember) -> String {
 afterClassActivity(for: oboePlayer) // Goes to practice!
 afterClassActivity(for: oboePlayer as Student) // Goes home!
 
+/*: ## Part 04. Inheritance, methods and overrides (Наследование, методы и переопределения) */
+
+class StudentAthlete: Student {
+  var failedClasses: [Grade] = []
+
+  override func recordGrade(_ grade: Grade) {
+    super.recordGrade(grade)
+
+    if grade.letter == "F" {
+      failedClasses.append(grade)
+    }
+  }
+
+  var isEligible: Bool {
+    failedClasses.count < 3
+  }
+}
+
+//: Introducing super (Представляем супер)
+
+//override func recordGrade(_ grade: Grade) {
+//  var newFailedClasses: [Grade] = []
+//  for grade in grades {
+//    if grade.letter == "F" {
+//      newFailedClasses.append(grade)
+//    }
+//  }
+//  failedClasses = newFailedClasses
+//
+//  super.recordGrade(grade)
+//}
+
+//: Preventing inheritance (Предотвращение наследования)
+// 1
+final class FinalStudent: Person {}
+class FinalStudentAthlete: FinalStudent {} // Build error!
+
+// 2
+class AnotherStudent: Person {
+  final func recordGrade(_ grade: Grade) {}
+}
+
+class AnotherStudentAthlete: AnotherStudent {
+  override func recordGrade(_ grade: Grade) {} // Build error!
+}
+
