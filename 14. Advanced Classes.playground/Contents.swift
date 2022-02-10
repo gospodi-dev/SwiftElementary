@@ -395,3 +395,32 @@ class Student {
     Student.graduates.append("\(lastName), \(firstName)")
   }
 }
+
+/*: ## Part 10. ## Retain cycles and weak references (Циклы сохранения и слабые ссылки) */
+
+class Student: Person {
+  var partner: Student?
+  // original code
+  deinit {
+    print("\(firstName) is being deallocated!")
+  }
+}
+
+var alice: Student? = Student(firstName: "Alice",
+                              lastName: "Appleseed")
+var bob: Student? = Student(firstName: "Bob",
+                            lastName: "Appleseed")
+
+alice?.partner = bob
+bob?.partner = alice
+
+
+alice = nil
+bob = nil
+
+//: the reference weak
+class Student: Person {
+  weak var partner: Student?
+  // original code
+}
+
