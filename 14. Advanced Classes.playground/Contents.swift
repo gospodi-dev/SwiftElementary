@@ -160,3 +160,35 @@ class AnotherStudentAthlete: AnotherStudent {
   override func recordGrade(_ grade: Grade) {} // Build error!
 }
 
+/*: ## Part 05. Inheritance and class initialization (Наследование и инициализация классов) */
+// 1
+//class StudentAthlete: Student {
+//  var sports: [String]
+//  // original code
+//}
+
+// 2
+//class StudentAthlete: Student {
+//  var sports: [String]
+//
+//  init(sports: [String]) {
+//    self.sports = sports
+//    // Build error - super.init isn’t called before
+//    // returning from initializer
+//  }
+//  // original code
+//}
+
+// 3
+class StudentAthlete: Student {
+  var sports: [String]
+
+  init(firstName: String, lastName: String, sports: [String]) {
+    self.sports = sports
+    super.init(firstName: firstName, lastName: lastName)
+  }
+  // original code
+}
+
+
+
