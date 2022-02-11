@@ -1,6 +1,6 @@
 /*: # Глава 14. Advanced Classes (Продвинутые классы) */
 /*: ## Part 01. Introducing inheritance (Знакомство с наследованием) */
-
+/*
 //struct Grade {
 //    var letter: Character
 //    var points: Double
@@ -16,7 +16,7 @@
 //        self.lastName = lastName
 //    }
 //}
-/*
+
  // 1
  //class Student {
  //  var firstName: String
@@ -358,9 +358,6 @@ class Person {
   }
 }
 
- */
-
-
 /*: ### Mini-exercises (Мини-упражнения) */
 
 // Модифицируйте класс `Student`, чтобы иметь возможность записывать имя студента в список выпускников. Добавьте имя студента в список при деаллокации объекта.
@@ -422,5 +419,46 @@ bob = nil
 class Student: Person {
   weak var partner: Student?
   // original code
+}
+*/
+/*: ### Challenges */
+
+//: Challenge 1: Initialization order (Порядок инициализации)
+
+//: Challenge 2: Deinitialization order (Порядок деинициализации)
+
+class A {
+  init() {
+    print("I'm A!(1)")
+  }
+  deinit {
+    print("Destroy A")
+  }
+}
+
+class B: A {
+  deinit {
+    print("Destroy B")
+  }
+  override init() {
+    print("I'm B!(1)")
+    super.init()
+    print("I'm B!(2)")
+  }
+}
+
+class C: B {
+  deinit {
+    print("Destroy C")
+  }
+  override init() {
+    print("I'm C!(1)")
+    super.init()
+    print("I'm C!(2)")
+  }
+}
+
+do {
+  let _ = C()
 }
 
