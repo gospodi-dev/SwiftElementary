@@ -462,3 +462,20 @@ do {
   let _ = C()
 }
 
+//I'm C!(1)
+//I'm B!(1)
+//I'm A!(1)
+//I'm B!(2)
+//I'm C!(2)
+//Destroy C
+//Destroy B
+//Destroy A
+
+
+//: Challenge 3: Type casting (Приведение типов)
+
+do {
+  let c = C()
+  let _ = c as A
+  // The `as` keyword can be used because `C` is a subtype of `A`. (Ключевое слово `as` можно использовать, потому что `C` является подтипом `A`.)
+}
