@@ -19,6 +19,7 @@
 		CCC5CD6E27A94D9B0037F8E0 /* 10. Structures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "10. Structures.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCC9502D27AC508A00D96FE9 /* 11. Properties.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "11. Properties.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCCD949327B5418D004F0E27 /* 14. Advanced Classes.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "14. Advanced Classes.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CCCE26EC27B6862B001F251B /* 15. Enumerations.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "15. Enumerations.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCD043A427A2FBCC004D82B9 /* Test (Bonus).playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Test (Bonus).playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCDAB3422785FEBD00965F2C /* 01. Expressions, Variables & Constants.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "01. Expressions, Variables & Constants.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCEA0F402796CBE000253C98 /* 06. Optionals.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "06. Optionals.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -42,6 +43,7 @@
 				CC30CFC327B14D1400E0B4DD /* 12. Methods.playground */,
 				CC704B5127B28B4400A2C0D0 /* 13. Classes.playground */,
 				CCCD949327B5418D004F0E27 /* 14. Advanced Classes.playground */,
+				CCCE26EC27B6862B001F251B /* 15. Enumerations.playground */,
 				CCD043A427A2FBCC004D82B9 /* Test (Bonus).playground */,
 			);
 			sourceTree = "<group>";
