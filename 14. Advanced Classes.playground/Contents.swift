@@ -479,3 +479,52 @@ do {
   let _ = c as A
   // The `as` keyword can be used because `C` is a subtype of `A`. (Ключевое слово `as` можно использовать, потому что `C` является подтипом `A`.)
 }
+
+//: Challenge 4: To subclass or not (Подкласс или нет)
+class Person {
+  var firstName: String
+  var lastName: String
+
+  init(firstName: String, lastName: String) {
+    self.firstName = firstName
+    self.lastName = lastName
+  }
+}
+
+struct Grade {
+  let letter: String
+  let points: Double
+}
+
+class Student: Person {
+  var grades: [Grade] = []
+}
+
+class StudentAthlete: Student {
+  var sports: [String] = []
+}
+
+class StudentBaseballPlayer: StudentAthlete {
+  var battingAverage = 0.0
+  var number: Int
+  var position: String
+
+  init(firstName: String, lastName: String, number: Int, position: String) {
+    self.number = number
+    self.position = position
+    super.init(firstName: firstName, lastName: lastName)
+  }
+}
+
+/*
+ Benefits (Преимущества):
+
+ - Automatically get properties all student atheletes will have - grades and names (Автоматическое получение свойств, которые будут иметь все студенты-спортсмены - оценки и имена)
+ - Type relationship with superclasses. StudentBaseballPlayer _is_ a Student (Типовые отношения с суперклассами. StudentBaseballPlayer _is_ a Student)
+
+ Drawbacks(Недостатки):
+
+ - An initializer that is beginning to get bloated (Инициализатор, который начинает раздуваться.)
+ - `sports` is a bit awkward to a baseball player object (`sports` немного неудобен для объекта бейсболиста.)
+ - Deep class hierarchy would make similar classes difficult. For instance, an almost identical class would need to be made for a `SoftballPlayer` who joined a league after graduating. They would no longer be a `Student`, only a `Person`! ( - Глубокая иерархия классов затрудняет создание похожих классов. Например, для `SoftballPlayer`, который присоединился к лиге после окончания школы, нужно будет создать почти идентичный класс. Он больше не будет `Student`, только `Person`!)
+*/
