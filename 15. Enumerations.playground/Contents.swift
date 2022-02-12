@@ -263,3 +263,23 @@ for pet in Pet.allCases {
 //fish
 //hamster
 
+/*: ## Part 07. Enumerations without any cases (Перечисления без случаев) */
+
+//struct Math {
+//  static func factorial(of number: Int) -> Int {
+//    (1...number).reduce(1, *)
+//  }
+//}
+//let factorial = Math.factorial(of: 6) // 720
+
+
+
+enum Math {
+  static func factorial(of number: Int) -> Int {
+    (1...number).reduce(1, *)
+  }
+}
+let factorial = Math.factorial(of: 6) // 720
+
+//let math = Math() // error: 'Math' cannot be constructed because it has no accessible initializers
+
