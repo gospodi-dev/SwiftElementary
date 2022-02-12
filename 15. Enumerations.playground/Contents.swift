@@ -238,3 +238,12 @@ enum TrafficLight {
 }
 let trafficLight = TrafficLight.red
 
+/*: ### Enumerations Mini-exercise, Light Switch */
+
+enum Light {
+    case on
+    case off
+}
+
+var light = Light.off
+light = .on
