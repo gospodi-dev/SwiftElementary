@@ -87,3 +87,22 @@ semester(for: month)
 month = .september
 semester(for: month)
 // "Autumn"
+
+/*: ### Enumerations Mini-exercise, Semester Computed Property */
+enum Month {
+  case january, february, march, april, may, june, july, august, september, october, november, december
+  
+  var semester: String {
+    switch self {
+    case .august, .september, .october, .november, .december:
+      return "Autumn"
+    case .january, .february, .march, .april, .may:
+      return "Spring"
+    case .june, .july:
+      return "Summer"
+    }
+  }
+}
+
+var month = Month.september
+let semester = month.semester // "Autumn"
