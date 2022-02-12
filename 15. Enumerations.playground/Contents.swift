@@ -247,3 +247,19 @@ enum Light {
 
 var light = Light.off
 light = .on
+
+/*: ## Part 06. Iterating through all cases (Итерация по всем случаям) */
+enum Pet: CaseIterable {
+  case cat, dog, bird, turtle, fish, hamster
+}
+
+for pet in Pet.allCases {
+  print(pet)
+}
+//cat
+//dog
+//bird
+//turtle
+//fish
+//hamster
+
