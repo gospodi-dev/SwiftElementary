@@ -147,3 +147,32 @@ enum Month: Int {
 
 let fifthMonth = Month(rawValue: 5)!
 let monthsLeft = fifthMonth.monthsUntilWinterBreak // 7
+
+/*: ## Part 04. String raw values (Строковые необработанные значения) */
+
+// 1
+enum Icon: String {
+  case music
+  case sports
+  case weather
+
+  var filename: String {
+    // 2
+    "\(rawValue).png"
+  }
+}
+let icon = Icon.weather
+icon.filename // weather.png
+
+//: Unordered raw values (Неупорядоченные необработанные значения)
+
+enum Coin: Int {
+  case penny = 1
+  case nickel = 5
+  case dime = 10
+  case quarter = 25
+}
+
+let coin = Coin.quarter
+coin.rawValue // 25
+
