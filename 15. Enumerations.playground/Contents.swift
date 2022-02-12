@@ -35,6 +35,7 @@
 //}
 
 // or
+/*
 enum Month {
   case january, february, march, april, may, june, july, august,
   september, october, november, december
@@ -106,3 +107,31 @@ enum Month {
 
 var month = Month.september
 let semester = month.semester // "Autumn"
+*/
+/*: ## Part 03. Raw values (Необработанные значения) */
+
+//enum Month: Int {
+//  case january = 1, february = 2, march = 3, april = 4, may = 5,
+//  june = 6, july = 7, august = 8, september = 9,
+//  october = 10, november = 11, december = 12
+//}
+
+// OR
+
+enum Month: Int {
+  case january = 1, february, march, april, may, june, july,
+  august, september, october, november, december
+}
+
+//: Accessing the raw value (Доступ к необработанному значению)
+
+func monthsUntilWinterBreak(from month: Month) -> Int {
+  Month.december.rawValue - month.rawValue
+}
+monthsUntilWinterBreak(from: .april) // 8
+
+//: Initializing with the raw value (Инициализация с помощью необработанного значения)
+
+let fifthMonth = Month(rawValue: 5)! // may
+monthsUntilWinterBreak(from: fifthMonth) // 7
+
