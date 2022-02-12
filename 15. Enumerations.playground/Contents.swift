@@ -296,3 +296,20 @@ enum Math {
 
 let nestEgg = 25000 * pow(Math.e, 0.07 * 20)
 // $101,380.95
+
+/*: ## Part 08. Optionals */
+var age: Int?
+age = 17
+age = nil
+
+switch age {
+case .none:
+  print("No value")
+case .some(let value):
+  print("Got a value: \(value)")
+}
+// No value
+
+let optionalNil: Int? = .none
+optionalNil == nil    // true
+optionalNil == .none  // true
