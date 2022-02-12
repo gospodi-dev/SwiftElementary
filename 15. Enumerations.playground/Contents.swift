@@ -107,7 +107,7 @@ enum Month {
 
 var month = Month.september
 let semester = month.semester // "Autumn"
-*/
+
 /*: ## Part 03. Raw values (Необработанные значения) */
 
 //enum Month: Int {
@@ -134,4 +134,16 @@ monthsUntilWinterBreak(from: .april) // 8
 
 let fifthMonth = Month(rawValue: 5)! // may
 monthsUntilWinterBreak(from: fifthMonth) // 7
+ */
+/*: ### Enumerations Mini-exercise, Months Until Winter Break Computed Property */
 
+enum Month: Int {
+  case january = 1, february, march, april, may, june, july, august, september, october, november, december
+  
+  var monthsUntilWinterBreak: Int {
+    Month.december.rawValue - rawValue
+  }
+}
+
+let fifthMonth = Month(rawValue: 5)!
+let monthsLeft = fifthMonth.monthsUntilWinterBreak // 7
