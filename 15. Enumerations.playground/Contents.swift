@@ -185,3 +185,56 @@ enum Coin: Int {
   case quarter = 25
 }
 let coinPurse: [Coin] = [.penny, .quarter, .nickel, .dime, .penny, .dime, .quarter]
+
+/*: ## Part 05. Associated values (Ассоциированные значения) */
+
+var balance = 100
+
+//func withdraw(amount: Int) {
+//  balance -= amount
+//}
+
+enum WithdrawalResult {
+  case success(newBalance: Int)
+  case error(message: String)
+}
+
+func withdraw(amount: Int) -> WithdrawalResult {
+  if amount <= balance {
+    balance -= amount
+    return .success(newBalance: balance)
+  } else {
+    return .error(message: "Not enough money!")
+  }
+}
+
+let result = withdraw(amount: 99)
+
+switch result {
+case .success(let newBalance):
+  print("Your new balance is: \(newBalance)")
+case .error(let message):
+  print(message)
+}
+// Your new balance is: 1
+
+
+enum HTTPMethod {
+  case get
+  case post(body: String)
+}
+
+let request = HTTPMethod.post(body: "Hi there")
+guard case .post(let body) = request else {
+  fatalError("No message was posted")
+}
+print(body)
+// Hi there
+
+//: Enumeration as a state machine (Перечисление как машина состояний)
+
+enum TrafficLight {
+  case red, yellow, green
+}
+let trafficLight = TrafficLight.red
+
