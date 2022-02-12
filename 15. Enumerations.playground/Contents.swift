@@ -165,6 +165,18 @@ let icon = Icon.weather
 icon.filename // weather.png
 
 //: Unordered raw values (Неупорядоченные необработанные значения)
+//
+//enum Coin: Int {
+//  case penny = 1
+//  case nickel = 5
+//  case dime = 10
+//  case quarter = 25
+//}
+//
+//let coin = Coin.quarter
+//coin.rawValue // 25
+
+/*: ### Enumerations Mini-exercise, Coin Purse */
 
 enum Coin: Int {
   case penny = 1
@@ -172,7 +184,4 @@ enum Coin: Int {
   case dime = 10
   case quarter = 25
 }
-
-let coin = Coin.quarter
-coin.rawValue // 25
-
+let coinPurse: [Coin] = [.penny, .quarter, .nickel, .dime, .penny, .dime, .quarter]
