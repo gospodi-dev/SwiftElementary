@@ -134,7 +134,7 @@ monthsUntilWinterBreak(from: .april) // 8
 
 let fifthMonth = Month(rawValue: 5)! // may
 monthsUntilWinterBreak(from: fifthMonth) // 7
- */
+
 /*: ### Enumerations Mini-exercise, Months Until Winter Break Computed Property */
 
 enum Month: Int {
@@ -282,4 +282,17 @@ enum Math {
 let factorial = Math.factorial(of: 6) // 720
 
 //let math = Math() // error: 'Math' cannot be constructed because it has no accessible initializers
+ */
+/*: ### Enumerations Mini-exercise, e Math Namespace*/
+import Foundation
 
+enum Math {
+  static let e = 2.7183
+  
+  static func factorial(of number: Int) -> Int {
+    (1...number).reduce(1, *)
+  }
+}
+
+let nestEgg = 25000 * pow(Math.e, 0.07 * 20)
+// $101,380.95
