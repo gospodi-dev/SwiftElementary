@@ -354,3 +354,32 @@ enum Month: Int {
 
 let month = Month.november
 let monthsLeft = month.monthsUntilSummer // 7
+
+/*: ## Challenge 3: Pattern matching enumeration values (Шаблонное сопоставление значений перечислений) */
+
+enum Direction {
+  case north
+  case south
+  case east
+  case west
+}
+
+let movements: [Direction] = [.north, .north, .west, .south, .west, .south, .south, .east, .east, .south, .east]
+
+var location = (x: 0, y: 0)
+
+for movement in movements {
+  switch movement {
+  case .north:
+    location.y += 1
+  case .south:
+    location.y -= 1
+  case .east:
+    location.x += 1
+  case .west:
+    location.x -= 1
+  }
+}
+
+let currentX = location.x // 1
+let currentY = location.y // -2
