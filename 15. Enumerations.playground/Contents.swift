@@ -313,3 +313,29 @@ case .some(let value):
 let optionalNil: Int? = .none
 optionalNil == nil    // true
 optionalNil == .none  // true
+
+/*: ## Challenge 1: Adding raw values (Добавление необработанных значений) */
+enum Coin: Int {
+  case penny = 1
+  case nickel = 5
+  case dime = 10
+  case quarter = 25
+}
+
+let coinPurse: [Coin] = [.penny, .quarter, .nickel, .dime, .penny, .dime, .quarter]
+
+func value(for purse: [Coin]) -> Int {
+  var balance = 0
+  for coin in purse {
+    balance += coin.rawValue
+  }
+  return balance
+}
+
+value(for: coinPurse) // 77 cents
+
+// An advanced way to do the same thing would be to use higher order function `reduce(_:combine:)`: (Продвинутый способ сделать то же самое - использовать функцию высшего порядка)
+
+let quickPurseValue = coinPurse.reduce(0) { $0 + $1.rawValue }
+quickPurseValue // 77 cents
+
