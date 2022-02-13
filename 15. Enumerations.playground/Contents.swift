@@ -339,3 +339,18 @@ value(for: coinPurse) // 77 cents
 let quickPurseValue = coinPurse.reduce(0) { $0 + $1.rawValue }
 quickPurseValue // 77 cents
 
+/*: ## Challenge 2: Computing with raw values (Вычисления с необработанными значениями) */
+enum Month: Int {
+  case january = 1, february, march, april, may, june, july, august, september, october, november, december
+  
+  var monthsUntilSummer: Int {
+    var monthsLeft = Month.june.rawValue - self.rawValue
+    if monthsLeft < 0 {
+      monthsLeft += 12
+    }
+    return monthsLeft
+  }
+}
+
+let month = Month.november
+let monthsLeft = month.monthsUntilSummer // 7
