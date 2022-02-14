@@ -278,3 +278,78 @@ copy.name // Structy
 //  var name: String { get set }
 //}
 
+/*: ## Part 12. Protocols in the Standard Library (Протоколы в стандартной библиотеке) */
+//: Equatable (Равносильные)
+
+let a = 5
+let b = 5
+
+a == b // true
+
+let swiftA = "Swift"
+let swiftB = "Swift"
+
+swiftA == swiftB // true
+
+class Record {
+    var wins: Int
+    var losses: Int
+    
+    init(wins: Int, losses: Int ) {
+        self.wins = wins
+        self.losses = losses
+    }
+}
+
+let recordA = Record(wins: 10, losses: 5)
+let recordB = Record(wins: 10, losses: 5)
+
+// recordA == recordB // error: binary operator '==' cannot be applied to two 'Record' operands (ошибка: бинарный оператор '==' не может быть применен к двум операндам 'Record')
+
+protocol Equatable {
+  static func ==(lhs: Self, rhs: Self) -> Bool
+}
+
+extension Record: Equatable {
+  static func ==(lhs: Record, rhs: Record) -> Bool {
+    lhs.wins == rhs.wins &&
+    lhs.losses == rhs.losses
+  }
+}
+
+recordA == recordB // true
+
+//: Comparable (Сравнимый)
+
+//protocol Comparable: Equatable {
+//  static func <(lhs: Self, rhs: Self) -> Bool
+//  static func <=(lhs: Self, rhs: Self) -> Bool
+//  static func >=(lhs: Self, rhs: Self) -> Bool
+//  static func >(lhs: Self, rhs: Self) -> Bool
+//}
+//
+extension Record: Comparable {
+  static func <(lhs: Record, rhs: Record) -> Bool {
+    if lhs.wins == rhs.wins {
+      return lhs.losses > rhs.losses
+    }
+    return lhs.wins < rhs.wins
+  }
+}
+
+//: “Free” functions ("Свободные" функции)
+let teamA = Record(wins: 14, losses: 11)
+let teamB = Record(wins: 23, losses: 8)
+let teamC = Record(wins: 23, losses: 9)
+var leagueRecords = [teamA, teamB, teamC]
+
+leagueRecords.sort()
+// {wins 14, losses 11}
+// {wins 23, losses 9}
+// {wins 23, losses 8}
+
+
+leagueRecords.max() // {wins 23, losses 8}
+leagueRecords.min() // {wins 14, losses 11}
+leagueRecords.starts(with: [teamA, teamC]) // true
+leagueRecords.contains(teamA) // true
