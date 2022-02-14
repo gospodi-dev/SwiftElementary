@@ -353,3 +353,61 @@ leagueRecords.max() // {wins 23, losses 8}
 leagueRecords.min() // {wins 14, losses 11}
 leagueRecords.starts(with: [teamA, teamC]) // true
 leagueRecords.contains(teamA) // true
+
+/*: ## Part 13. Other useful protocols (Другие полезные протоколы) */
+//: Hashable
+
+class Student {
+  let email: String
+  let firstName: String
+  let lastName: String
+
+  init(email: String, firstName: String, lastName: String) {
+    self.email = email
+    self.firstName = firstName
+    self.lastName = lastName
+  }
+}
+
+extension Student: Hashable {
+  static func ==(lhs: Student, rhs: Student) -> Bool {
+    lhs.email == rhs.email &&
+    lhs.firstName == rhs.firstName &&
+    lhs.lastName == rhs.lastName
+  }
+
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(email)
+    hasher.combine(firstName)
+    hasher.combine(lastName)
+  }
+}
+
+let john = Student(email: "johnny.appleseed@apple.com",
+                   firstName: "Johnny",
+                   lastName: "Appleseed")
+let lockerMap = [john: "14B"]
+// [{email "johnny.appleseed@apple.com", firstName "Johnny", lastName "Appleseed"}: "14B"]
+
+//: Identifiable (Идентифицируемый)
+extension Student: Identifiable {
+  var id: String {
+    email
+  }
+}
+
+//:CustomStringConvertible
+print(john)
+// Student
+
+protocol CustomStringConvertible {
+  var description: String { get }
+}
+
+extension Student: CustomStringConvertible {
+  var description: String {
+    "\(firstName) \(lastName)"
+  }
+}
+print(john)
+// Johnny Appleseed
