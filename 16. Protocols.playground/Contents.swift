@@ -129,20 +129,20 @@ print(shapes.map { $0.area })
 
 
 /*: ## Part 06. Implementing protocols (Реализация протоколов) */
-//class Bike: Vehicle {
-//  var peddling = false
-//  var brakesApplied = false
-//
-//  func accelerate() {
-//    peddling = true
-//    brakesApplied = false
-//  }
-//
-//  func stop() {
-//    peddling = false
-//    brakesApplied = true
-//  }
-//}
+class Bike: Vehicle {
+  var peddling = false
+  var brakesApplied = false
+
+  func accelerate() {
+    peddling = true
+    brakesApplied = false
+  }
+
+  func stop() {
+    peddling = false
+    brakesApplied = true
+  }
+}
 
 /*: ## Part 07. Implementing properties (Реализация свойств) */
 class Bike: WheeledVehicle {
@@ -190,4 +190,25 @@ class LightThing: WeightCalculatable {
 // Ошибка построения!
 // Протокол 'WeightCalculatable' может быть использован только как общее ограничение, потому что он не может быть использован как общий тип ограничение, потому что у него есть Self или связанные требования к типу.
 // let weightedThing: WeightCalculatable = LightThing()
+
+/*: ## Part 09. Implementing multiple protocols (Реализация нескольких протоколов) */
+
+protocol Wheeled {
+  var numberOfWheels: Int { get }
+  var wheelSize: Double { get set }
+}
+
+class Bike: Vehicle, Wheeled {
+  // Implement both Vehicle and Wheeled
+}
+
+//: Protocol composition (Состав протокола)
+func roundAndRound(transportation: Vehicle & Wheeled) {
+    transportation.stop()
+    print("The brakes are being applied to
+          \(transportation.numberOfWheels) wheels.")
+}
+
+roundAndRound(transportation: Bike())
+// The brakes are being applied to 2 wheels.
 
