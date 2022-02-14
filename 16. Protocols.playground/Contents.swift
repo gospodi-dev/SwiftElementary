@@ -1,6 +1,6 @@
 /*: # Глава 16. Protocols (Протоколы) */
 /*: ## Part 01. Protocol syntax (Синтаксис протокола) */
-
+/*
 protocol Vehicle {
     func accelerate()
     func stop()
@@ -211,4 +211,35 @@ func roundAndRound(transportation: Vehicle & Wheeled) {
 
 roundAndRound(transportation: Bike())
 // The brakes are being applied to 2 wheels.
+*/
+/*: ## Part 10. Extensions & protocol conformance (Расширения и соответствие протоколам) */
+protocol Reflective {
+    var typeName: String {
+        get
+    }
+}
 
+extension String: Reflective {
+    var typeName: String {
+        "I'm a String"
+    }
+}
+
+let title = "Swift Apprentice!"
+title.typeName // "I'm a String"
+
+class AnotherBike: Wheeled {
+  var peddling = false
+  let numberOfWheels = 2
+  var wheelSize = 16.0
+}
+
+extension AnotherBike: Vehicle {
+  func accelerate() {
+    peddling = true
+  }
+  
+  func stop() {
+    peddling = false
+  }
+}
