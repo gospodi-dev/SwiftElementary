@@ -1,3 +1,4 @@
+import Foundation
 /*: # Глава 16. Protocols (Протоколы) */
 /*: ## Part 01. Protocol syntax (Синтаксис протокола) */
 /*
@@ -411,3 +412,124 @@ extension Student: CustomStringConvertible {
 }
 print(john)
 // Johnny Appleseed
+
+/*: ## Challenge. Pet shop tasks */
+//: 1. Создайте классы или структуры для каждого животного и примите соответствующие протоколы. Не стесняйтесь просто использовать оператор print() для реализации методов.
+
+protocol Feedable {
+  func feed()
+}
+
+protocol Cleanable {
+  func clean()
+}
+
+protocol Cageable: Cleanable {
+  func cage()
+}
+
+protocol Tankable: Cleanable {
+  func tank()
+}
+
+protocol Walkable {
+  func walk()
+}
+
+class Dog: Feedable, Walkable {
+  func feed() {
+    print("Woof...thanks!")
+  }
+
+  func walk() {
+    print("Walk the dog")
+  }
+}
+
+class Cat: Feedable, Cleanable {
+  func feed() {
+    print("Yummy meow")
+  }
+
+  func clean() {
+    print("Litter box cleaned")
+  }
+}
+
+class Fish: Feedable, Tankable {
+  func feed() {
+    print("Fish goes blub")
+  }
+
+  func tank() {
+    print("Fish has been tanked")
+  }
+
+  func clean() {
+    print("Fish tank has been cleaned")
+  }
+}
+
+class Bird: Feedable, Cageable {
+  func feed() {
+    print("Tweet!")
+  }
+
+  func cage() {
+    print("Cage the bird")
+  }
+
+  func clean() {
+    print("Clean the cage")
+  }
+}
+
+//: 2. Создайте однородные массивы для животных, которых нужно кормить, держать в клетке, чистить, выгуливать и содержать в аквариуме. Добавьте соответствующих животных в эти массивы. Массивы должны быть объявлены с использованием протокола в качестве типа элемента, например var caged: [Cageable].
+
+let dog = Dog()
+let cat = Cat()
+let fish = Fish()
+let bird = Bird()
+
+let walkingDuties: [Walkable] = [dog]
+let feedingDuties: [Feedable] = [dog, cat, fish, bird]
+let tankingDuties: [Tankable] = [fish]
+let cagingDuties: [Cageable] = [bird]
+let cleaningDuties: [Cleanable] = [cat, fish, bird]
+
+// Система типов Swift не позволяет вам добавить что-то, что.
+// не может быть пройдено в однородный список `Walkable`!
+// let invalidWalkingDuties: [Walkable] = [dog, fish].
+
+// 3. Напишите цикл, который будет выполнять соответствующие задачи (например, кормить, сажать в клетку, выгуливать) на каждом элементе каждого массива.
+
+for walkable in walkingDuties {
+  walkable.walk()
+}
+
+for feedable in feedingDuties {
+  feedable.feed()
+}
+
+for tankable in tankingDuties {
+  tankable.tank()
+}
+
+for cageable in cagingDuties {
+  cageable.cage()
+}
+
+for cleanable in cleaningDuties {
+  cleanable.clean()
+}
+
+//Walk the dog
+//Woof...thanks!
+//Yummy meow
+//Fish goes blub
+//Tweet!
+//Fish has been tanked
+//Cage the bird
+//Litter box cleaned
+//Fish tank has been cleaned
+//Clean the cage
