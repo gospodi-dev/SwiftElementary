@@ -44,4 +44,9 @@ protocol OptionalDirectionVehicle {
   func turn(_ direction: Direction)
 }
 
+/*: ## Part 03. Properties in protocols (Свойства в протоколах) */
 
+protocol VehicleProperties {
+    var weight: Int {get}
+    var name: String {get set}
+}
