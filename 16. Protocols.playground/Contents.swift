@@ -144,4 +144,22 @@ class Bike: Vehicle {
   }
 }
 
+/*: ## Part 07. ### Implementing properties (Реализация свойств) */
+class Bike: WheeledVehicle {
 
+  let numberOfWheels = 2
+  var wheelSize = 16.0
+
+  var peddling = false
+  var brakesApplied = false
+
+  func accelerate() {
+    peddling = true
+    brakesApplied = false
+  }
+
+  func stop() {
+    peddling = false
+    brakesApplied = true
+  }
+}
