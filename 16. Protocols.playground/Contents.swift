@@ -129,22 +129,22 @@ print(shapes.map { $0.area })
 
 
 /*: ## Part 06. Implementing protocols (Реализация протоколов) */
-class Bike: Vehicle {
-  var peddling = false
-  var brakesApplied = false
+//class Bike: Vehicle {
+//  var peddling = false
+//  var brakesApplied = false
+//
+//  func accelerate() {
+//    peddling = true
+//    brakesApplied = false
+//  }
+//
+//  func stop() {
+//    peddling = false
+//    brakesApplied = true
+//  }
+//}
 
-  func accelerate() {
-    peddling = true
-    brakesApplied = false
-  }
-
-  func stop() {
-    peddling = false
-    brakesApplied = true
-  }
-}
-
-/*: ## Part 07. ### Implementing properties (Реализация свойств) */
+/*: ## Part 07. Implementing properties (Реализация свойств) */
 class Bike: WheeledVehicle {
 
   let numberOfWheels = 2
@@ -163,3 +163,31 @@ class Bike: WheeledVehicle {
     brakesApplied = true
   }
 }
+
+/*: ## Part 08. Associated types in protocols (Ассоциированные типы в протоколах) */
+protocol WeightCalculatable {
+  associatedtype WeightType
+  var weight: WeightType { get }
+}
+
+class HeavyThing: WeightCalculatable {
+  // This heavy thing only needs integer accuracy
+  typealias WeightType = Int
+
+  var weight: Int { 100 }
+}
+
+class LightThing: WeightCalculatable {
+  // This light thing needs decimal places
+  typealias WeightType = Double
+
+  var weight: Double { 0.0025 }
+}
+
+// Build error!
+// protocol 'WeightCalculatable' can only be used as a generic
+// constraint because it has Self or associated type requirements.
+// Ошибка построения!
+// Протокол 'WeightCalculatable' может быть использован только как общее ограничение, потому что он не может быть использован как общий тип ограничение, потому что у него есть Self или связанные требования к типу.
+// let weightedThing: WeightCalculatable = LightThing()
+
