@@ -126,3 +126,22 @@ let circle = Circle(radius: 2)
 let shapes: [Area] = [square, triangle, circle]
 print(shapes.map { $0.area })
 // [16.0, 7.5, 12.566370614359172]
+
+
+/*: ## Part 06. Implementing protocols (Реализация протоколов) */
+class Bike: Vehicle {
+  var peddling = false
+  var brakesApplied = false
+
+  func accelerate() {
+    peddling = true
+    brakesApplied = false
+  }
+
+  func stop() {
+    peddling = false
+    brakesApplied = true
+  }
+}
+
+
