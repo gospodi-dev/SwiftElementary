@@ -50,3 +50,29 @@ protocol VehicleProperties {
     var weight: Int {get}
     var name: String {get set}
 }
+
+/*: ## Part 04. Initializers in protocols (Инициализаторы в протоколах) */
+protocol Account {
+    var value: Double {
+        get set
+    }
+    init(initialAmount: Double)
+    init?(transferAccount: Account)
+}
+
+class BitcoinAccount: Account {
+  var value: Double
+  required init(initialAmount: Double) {
+    value = initialAmount
+  }
+  required init?(transferAccount: Account) {
+    guard transferAccount.value > 0.0 else {
+      return nil
+    }
+    value = transferAccount.value
+  }
+}
+
+var accountType: Account.Type = BitcoinAccount.self
+let account = accountType.init(initialAmount: 30.00)
+let transferAccount = accountType.init(transferAccount: account)!
