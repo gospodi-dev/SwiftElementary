@@ -211,7 +211,7 @@ func roundAndRound(transportation: Vehicle & Wheeled) {
 
 roundAndRound(transportation: Bike())
 // The brakes are being applied to 2 wheels.
-*/
+
 /*: ## Part 10. Extensions & protocol conformance (Расширения и соответствие протоколам) */
 protocol Reflective {
     var typeName: String {
@@ -243,3 +243,38 @@ extension AnotherBike: Vehicle {
     peddling = false
   }
 }
+ */
+/*: ## Part 11. Requiring reference semantics (Требование ссылочной семантики) */
+protocol Named {
+    var name: String { get set }
+}
+
+class ClassyName: Named {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+
+struct StructyName: Named {
+    var name: String
+}
+
+var named: Named = ClassyName(name: "Classy")
+var copy = named
+
+named.name = "Still Classy"
+named.name // "Still Classy"
+copy.name // "Still Classy"
+
+named = StructyName(name: "Structy")
+copy = named
+
+named.name = "Still Structy?"
+named.name // Still Structy?
+copy.name // Structy
+
+//protocol Named: AnyObject {
+//  var name: String { get set }
+//}
+
