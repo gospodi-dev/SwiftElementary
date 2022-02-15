@@ -197,3 +197,66 @@ func swapped<T, U>(_ x: T, _ y: U) -> (U, T) {
 }
 
 swapped(33, "Jay")  // returns ("Jay", 33)
+
+
+/*: ## Challenge 1: Build a collection */
+
+class Cat {
+  var name: String
+  
+  init(name: String) {
+    self.name = name
+  }
+}
+
+class Dog {
+  var name: String
+  
+  init(name: String) {
+    self.name = name
+  }
+}
+
+// solution:
+
+class Keeper<Animal> {
+  
+  var name: String
+  
+  // этот частный массив отслеживает животных, за которыми ухаживает этот сторож
+  // Примечание: он использует тот же тип Animal, что и параметр типа, используемый для определения хранителя
+  private var animals: [Animal] = []
+  
+  init(name: String) {
+    self.name = name
+  }
+  
+  // adds a new animal to the keeper's list of animals
+  func lookAfter(_ animal: Animal) -> Void {
+    animals.append(animal)
+  }
+  
+  // count the animals under the keeper's care
+  var count: Int {
+    animals.count
+  }
+  
+  // removes the last animal from the keeper's list of animals
+  // It is an error to try to remove the last animal when there are no animals
+  func removeLast() -> Animal {
+    animals.removeLast()
+  }
+  
+  // returns the animal at `index`
+  func animal(at index: Int) -> Animal {
+    animals[index]
+  }
+}
+
+/*
+ Дополнительный комментарий:
+ 
+ Как видно, приведенное выше решение не требует ничего большего, чем просто обернуть базовый примитив массива, раскрыв несколько его методов и свойств.
+ 
+ Если бы вы хотели, чтобы ваш хранитель мог обращаться к животным по имени, вы могли бы искать в массиве по имени животного или использовать словарь вместо массива, отображая имена животных на их значения.
+ */
