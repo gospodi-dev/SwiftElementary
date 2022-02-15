@@ -19,5 +19,6 @@ Examples and tasks for learning the basics of the Swift programming language
 - Глава 14. Advanced Classes (Продвинутые классы)
 - Глава 15. Enumerations (Перечисления)
 - Глава 16. Protocols (Протоколы)
+- Глава 17. Generics (Дженерики)
 
 >Code and Tasks is the learning material for the book [Swift Apprentice](https://www.raywenderlich.com/books/swift-apprentice)
