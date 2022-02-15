@@ -149,3 +149,51 @@ extension Array: Meowable where Element: Meowable {
     forEach { $0.meow() }
   }
 }
+
+/*: ## Part 04. Arrays (Массивы), Dictionaries (Словари), Optionals */
+
+//let animalAges: [Int] = [2,5,7,9]
+
+let animalAges: Array<Int> = [2,5,7,9]
+//: Dictionaries
+let intNames: Dictionary<Int, String> = [42: "forty-two"]
+let intNames2: [Int: String] = [42: "forty-two", 7: "seven"]
+let intNames3 = [42: "forty-two", 7: "seven"]
+//: Optionals
+enum OptionalDate {
+  case none
+  case some(Date)
+}
+
+enum OptionalString {
+  case none
+  case some(String)
+}
+
+struct FormResults {
+  // other properties here
+  var birthday: OptionalDate
+  var lastName: OptionalString
+}
+
+// Keep this commented out so we can keep using Swift's Optional type, not our own.
+//enum Optional<Wrapped> {
+//  case none
+//  case some(Wrapped)
+//}
+
+var birthdate: Optional<Date> = .none
+if birthdate == .none {
+  // no birthdate
+}
+
+var birthdate2: Date? = nil
+if birthdate2 == nil {
+  // no birthdate
+}
+
+func swapped<T, U>(_ x: T, _ y: U) -> (U, T) {
+  (y, x)
+}
+
+swapped(33, "Jay")  // returns ("Jay", 33)
