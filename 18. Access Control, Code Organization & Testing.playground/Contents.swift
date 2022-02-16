@@ -215,3 +215,14 @@ while let string = strings.pop() {
 //Swift
 //is
 //Great!
+
+/*: ### Challenge 3: Character battle (Битва персонажей) */
+let elf = GameCharacterFactory.make(ofType: .elf)
+let giant = GameCharacterFactory.make(ofType: .giant)
+let wizard = GameCharacterFactory.make(ofType: .wizard)
+
+battle(elf, vs: giant)
+battle(wizard, vs: giant)
+battle(wizard, vs: elf)
+
+
