@@ -158,13 +158,60 @@ BankingTests.defaultTestSuite.run()
 
 class Logger {
   
-  // A private initializer is required to restrict instantiation so only the class itself can create objects.
+  // Приватный инициализатор необходим для ограничения инстанцирования, чтобы только сам класс мог создавать объекты..
   private init() {}
   
-  // The single, shared instance.
+  // Единый, общий экземпляр.
   static let sharedInstance = Logger()
   
   func log(_ text: String) {
     print(text)
   }
 }
+
+Logger.sharedInstance.log("Hello, Swift!")
+
+//Logger().log("Can't do this :)") // Can't be instantiated outside of `Logger`
+
+/*: ## Challenge 2. Stack */
+struct Stack<Element> {
+  
+  private var elements: [Element] = []
+  
+  var count: Int {
+    elements.count
+  }
+  
+  func peek() -> Element? {
+    elements.last
+  }
+  
+  mutating func push(_ element: Element) {
+    elements.append(element)
+  }
+  
+  mutating func pop() -> Element? {
+    if elements.isEmpty {
+      return nil
+    }
+    return elements.removeLast()
+  }
+}
+
+var strings = Stack<String>()
+
+strings.push("Great!")
+strings.push("is")
+strings.push("Swift")
+
+//strings.elements.removeAll() // The implementation details of `Stack` are hidden.
+
+strings.peek()
+
+while let string = strings.pop() {
+  Logger.sharedInstance.log(string)
+}
+//Hello, Swift!
+//Swift
+//is
+//Great!
