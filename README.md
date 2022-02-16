@@ -20,5 +20,6 @@ Examples and tasks for learning the basics of the Swift programming language
 - Глава 15. Enumerations (Перечисления)
 - Глава 16. Protocols (Протоколы)
 - Глава 17. Generics (Дженерики)
+- Глава 18. Access Control, Code Organization & Testing (Контроль доступа, организация кода и тестирование)
 
 >Code and Tasks is the learning material for the book [Swift Apprentice](https://www.raywenderlich.com/books/swift-apprentice)
