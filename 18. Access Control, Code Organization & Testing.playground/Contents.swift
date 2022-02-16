@@ -53,7 +53,7 @@ janeChecking.balance // 200.00
 // Jane’s balance this time :]
 janeChecking.deposit(check)
 janeChecking.balance // 200.00
-*/
+
 /*: ## Part 03. Testing (Тестирование)*/
 
 import XCTest
@@ -153,3 +153,18 @@ class BankingTests: XCTestCase {
 }
 
 BankingTests.defaultTestSuite.run()
+*/
+/*: ## Challenge 1. Singleton pattern */
+
+class Logger {
+  
+  // A private initializer is required to restrict instantiation so only the class itself can create objects.
+  private init() {}
+  
+  // The single, shared instance.
+  static let sharedInstance = Logger()
+  
+  func log(_ text: String) {
+    print(text)
+  }
+}
