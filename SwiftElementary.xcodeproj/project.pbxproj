@@ -23,7 +23,7 @@
 		CCC9502D27AC508A00D96FE9 /* 11. Properties.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "11. Properties.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCCD949327B5418D004F0E27 /* 14. Advanced Classes.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "14. Advanced Classes.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCCE26EC27B6862B001F251B /* 15. Enumerations.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "15. Enumerations.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		CCD043A427A2FBCC004D82B9 /* Test (Bonus).playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Test (Bonus).playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CCD043A427A2FBCC004D82B9 /* Test (Tinkoff Chall).playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Test (Tinkoff Chall).playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCDAB3422785FEBD00965F2C /* 01. Expressions, Variables & Constants.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "01. Expressions, Variables & Constants.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCEA0F402796CBE000253C98 /* 06. Optionals.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "06. Optionals.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
@@ -50,7 +50,7 @@
 				CC81B82027B952E0005A4E20 /* 16. Protocols.playground */,
 				CCA2D4C127BBE2720019C47B /* 17. Generics.playground */,
 				CC8C96E927BD30F300D9E747 /* 18. Access Control, Code Organization & Testing.playground */,
-				CCD043A427A2FBCC004D82B9 /* Test (Bonus).playground */,
+				CCD043A427A2FBCC004D82B9 /* Test (Tinkoff Chall).playground */,
 			);
 			sourceTree = "<group>";
 		};
